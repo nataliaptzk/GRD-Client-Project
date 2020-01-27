@@ -7,5 +7,6 @@ public class SortingGame : MonoBehaviour
 {
     [SerializeField] private MiniGameInfo _gameInfo;
 
-   
+
+
 }
