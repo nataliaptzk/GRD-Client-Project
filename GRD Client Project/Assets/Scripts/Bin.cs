@@ -2,6 +2,8 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class MiniGame : ScriptableObject
+
+public class Bin : MonoBehaviour
 {
+    public rubbishTypes type;
 }

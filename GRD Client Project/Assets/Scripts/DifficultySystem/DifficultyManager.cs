@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class DifficultyManager : MonoBehaviour
 {
-    public void GenerateDifficultySeedForMiniGame(Difficulty diff, MiniGame level)
+    public void GenerateDifficultySeedForMiniGame(Difficulty diff, MiniGameInfo level)
     {
     }
 }
