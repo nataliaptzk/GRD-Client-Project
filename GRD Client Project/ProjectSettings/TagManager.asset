@@ -42,9 +42,9 @@ TagManager:
   - name: Default
     uniqueID: 0
     locked: 0
-  - name: Rubbish
-    uniqueID: 528792999
-    locked: 0
   - name: Bins
     uniqueID: 2341127791
+    locked: 0
+  - name: Rubbish
+    uniqueID: 528792999
     locked: 0

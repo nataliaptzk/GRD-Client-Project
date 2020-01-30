@@ -4,15 +4,19 @@ using UnityEngine;
 
 public class SessionManager : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
+    public Difficulty currentDifficulty;
+    public Score score;
+    public string nickname;
+
+    void GenerateSession()
     {
-        
     }
 
-    // Update is called once per frame
-    void Update()
+    void CreateNickname()
     {
-        
+    }
+
+    void ChooseDifficulty()
+    {
     }
 }

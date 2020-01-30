@@ -9,7 +9,7 @@ public class Rubbish : MonoBehaviour
 
 public enum rubbishTypes
 {
-    landfil,
+    landfill,
     industrialCompostable,
     plastic
 }
