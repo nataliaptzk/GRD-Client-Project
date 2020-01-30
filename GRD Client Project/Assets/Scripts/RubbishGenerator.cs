@@ -67,8 +67,6 @@ class RubbishTypeAndSprites
 {
     public Difficulty difficulty;
 
-    //  public List<Sprite>[] myTypes = new List<Sprite>[3];
-
     public List<Sprite> plasticSprites = new List<Sprite>();
     public List<Sprite> compostableSprites = new List<Sprite>();
     public List<Sprite> landfillSprites = new List<Sprite>();

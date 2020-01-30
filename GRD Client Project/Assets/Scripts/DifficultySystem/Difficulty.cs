@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 
 [CreateAssetMenu(menuName = "Difficulties/New Difficulty")]
+
 public class Difficulty : ScriptableObject
 {
     public string name;

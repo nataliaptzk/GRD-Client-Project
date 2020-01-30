@@ -4,6 +4,22 @@ using UnityEngine;
 
 public class SessionManager : MonoBehaviour
 {
+    public static SessionManager sessionManager;
+
+    private void Awake()
+    {
+        if (sessionManager == null)
+        {
+            DontDestroyOnLoad(gameObject);
+            sessionManager = this;
+        }
+        else if (sessionManager != this)
+        {
+            Destroy(gameObject);
+        }
+    }
+
+
     public Difficulty currentDifficulty;
     public Score score;
     public string nickname;
@@ -16,7 +32,8 @@ public class SessionManager : MonoBehaviour
     {
     }
 
-    void ChooseDifficulty()
+    public void ChooseDifficulty(Difficulty difficulty)
     {
+        currentDifficulty = difficulty;
     }
 }

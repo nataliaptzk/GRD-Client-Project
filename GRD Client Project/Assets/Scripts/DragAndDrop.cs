@@ -1,14 +1,20 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
 public class DragAndDrop : MonoBehaviour
 {
     [SerializeField] private Score _score;
-    //  public ContactFilter2D contactFilter = new ContactFilter2D();
+
+    private SessionManager _sessionManager;
 
 
-    // Start is called before the first frame update
+    private void Awake()
+    {
+        _sessionManager = FindObjectOfType<SessionManager>();
+    }
+
     private void OnMouseDown()
     {
     }
@@ -20,18 +26,17 @@ public class DragAndDrop : MonoBehaviour
         ContactFilter2D contactFilter = new ContactFilter2D();
         int colliderCount = myCollider.OverlapCollider(contactFilter, colliders);
 
-        // GameObject myColl = colliders[0].gameObject;
 
         if (colliders[0] != null && colliders[0].gameObject.HasComponent<Bin>())
         {
             if (colliders[0].gameObject.GetComponent<Bin>().type == gameObject.GetComponent<Rubbish>().type)
             {
-                _score.AddScore(1);
+                _score.AddScore(1 * _sessionManager.currentDifficulty.pointsGainWhenCorrect);
             }
 
             else
             {
-                _score.AddScore(-1);
+                _score.AddScore(-1 * _sessionManager.currentDifficulty.pointsLossWhenIncorrect);
             }
 
             Destroy(gameObject);
