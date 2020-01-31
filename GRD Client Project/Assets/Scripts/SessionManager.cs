@@ -1,29 +1,29 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
 public class SessionManager : MonoBehaviour
 {
-    public static SessionManager sessionManager;
+    private static SessionManager _sessionManager;
+    public Difficulty currentDifficulty;
+    public Score score;
+    public string nickname;
 
     private void Awake()
     {
-        if (sessionManager == null)
+        if (_sessionManager == null)
         {
             DontDestroyOnLoad(gameObject);
-            sessionManager = this;
+            _sessionManager = this;
         }
-        else if (sessionManager != this)
+        else if (_sessionManager != this)
         {
             Destroy(gameObject);
         }
     }
 
-
-    public Difficulty currentDifficulty;
-    public Score score;
-    public string nickname;
-
+ 
     void GenerateSession()
     {
     }

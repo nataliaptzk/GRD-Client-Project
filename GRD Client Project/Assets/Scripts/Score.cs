@@ -13,7 +13,18 @@ public class Score : MonoBehaviour
     private void Awake()
     {
         score = 0;
-        UpdateScoreUI();
+
+        var tempGO = GameObject.FindGameObjectWithTag("ScoreField");
+        if (tempGO != null)
+        {
+            scoreField = tempGO.GetComponent<TextMeshProUGUI>();
+        }
+
+
+        if (scoreField != null)
+        {
+            UpdateScoreUI();
+        }
     }
 
     private void UpdateScoreUI()
@@ -25,6 +36,6 @@ public class Score : MonoBehaviour
     {
         score += points;
         score = Mathf.Max(0, score);
-       UpdateScoreUI();
+        UpdateScoreUI();
     }
 }

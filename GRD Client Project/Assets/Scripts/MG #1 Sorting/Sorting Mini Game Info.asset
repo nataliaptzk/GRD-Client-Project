@@ -13,3 +13,5 @@ MonoBehaviour:
   m_Name: Sorting Mini Game Info
   m_EditorClassIdentifier: 
   title: Sorting Game!!!!
+  helpTips: []
+  sceneTitleToLoad: 04 SortingGameScreen

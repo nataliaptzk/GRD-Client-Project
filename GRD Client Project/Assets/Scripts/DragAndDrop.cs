@@ -5,7 +5,7 @@ using UnityEngine;
 
 public class DragAndDrop : MonoBehaviour
 {
-    [SerializeField] private Score _score;
+    private Score _score;
 
     private SessionManager _sessionManager;
 
@@ -13,6 +13,7 @@ public class DragAndDrop : MonoBehaviour
     private void Awake()
     {
         _sessionManager = FindObjectOfType<SessionManager>();
+        _score = FindObjectOfType<Score>();
     }
 
     private void OnMouseDown()

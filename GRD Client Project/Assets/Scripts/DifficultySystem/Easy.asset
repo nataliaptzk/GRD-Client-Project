@@ -15,5 +15,5 @@ MonoBehaviour:
   name: easy
   typeToRecogniseBy: 0
   duration: 0
-  pointsGainWhenCorrect: 2
+  pointsGainWhenCorrect: 1
   pointsLossWhenIncorrect: 0

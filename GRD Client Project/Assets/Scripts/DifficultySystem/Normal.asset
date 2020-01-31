@@ -15,5 +15,5 @@ MonoBehaviour:
   name: normal
   typeToRecogniseBy: 1
   duration: 1
-  pointsGainWhenCorrect: 2
+  pointsGainWhenCorrect: 1
   pointsLossWhenIncorrect: 1
