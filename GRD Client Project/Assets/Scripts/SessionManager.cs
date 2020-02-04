@@ -3,37 +3,41 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class SessionManager : MonoBehaviour
+public static class SessionManager
 {
-    private static SessionManager _sessionManager;
-    public Difficulty currentDifficulty;
-    public Score score;
-    public string nickname;
+    private static Difficulty _currentDifficulty;
 
-    private void Awake()
+    private static Score _score;
+
+    private static string _nickname;
+
+    public static Difficulty CurrentDifficulty
     {
-        if (_sessionManager == null)
-        {
-            DontDestroyOnLoad(gameObject);
-            _sessionManager = this;
-        }
-        else if (_sessionManager != this)
-        {
-            Destroy(gameObject);
-        }
+        get => _currentDifficulty;
+        set => _currentDifficulty = value;
     }
 
- 
-    void GenerateSession()
+    public static Score Score
     {
+        get => _score;
+        set => _score = value;
     }
 
-    void CreateNickname()
+    public static string Nickname
     {
+        get => _nickname;
+        set => _nickname = value;
     }
 
-    public void ChooseDifficulty(Difficulty difficulty)
+
+    public static void ChooseDifficulty(Difficulty difficulty)
     {
-        currentDifficulty = difficulty;
+        _currentDifficulty = difficulty;
+    }
+
+    public static void ResetSession(Difficulty difficulty)
+    {
+        _currentDifficulty = difficulty;
+        // fill in!
     }
 }

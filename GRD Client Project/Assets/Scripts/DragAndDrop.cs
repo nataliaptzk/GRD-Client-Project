@@ -7,12 +7,12 @@ public class DragAndDrop : MonoBehaviour
 {
     private Score _score;
 
-    private SessionManager _sessionManager;
+   // private SessionManager _sessionManager;
 
 
     private void Awake()
     {
-        _sessionManager = FindObjectOfType<SessionManager>();
+     //   _sessionManager = FindObjectOfType<SessionManager>();
         _score = FindObjectOfType<Score>();
     }
 
@@ -32,12 +32,12 @@ public class DragAndDrop : MonoBehaviour
         {
             if (colliders[0].gameObject.GetComponent<Bin>().type == gameObject.GetComponent<Rubbish>().type)
             {
-                _score.AddScore(1 * _sessionManager.currentDifficulty.pointsGainWhenCorrect);
+                _score.AddScore(1 * SessionManager.CurrentDifficulty.pointsGainWhenCorrect);
             }
 
             else
             {
-                _score.AddScore(-1 * _sessionManager.currentDifficulty.pointsLossWhenIncorrect);
+                _score.AddScore(-1 * SessionManager.CurrentDifficulty.pointsLossWhenIncorrect);
             }
 
             Destroy(gameObject);
