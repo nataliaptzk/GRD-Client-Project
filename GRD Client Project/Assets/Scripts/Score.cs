@@ -8,12 +8,10 @@ public class Score : MonoBehaviour
 {
     [SerializeField] private TextMeshProUGUI scoreField;
 
-    [NonSerialized] public int score;
+    // [NonSerialized] public int score;
 
-    private void Awake()
+    private void Start()
     {
-        score = 0;
-
         var tempGO = GameObject.FindGameObjectWithTag("ScoreField");
         if (tempGO != null)
         {
@@ -29,13 +27,13 @@ public class Score : MonoBehaviour
 
     private void UpdateScoreUI()
     {
-        scoreField.text = score.ToString();
+        scoreField.text =  SessionManager.Score.ToString();
     }
 
     public void AddScore(int points)
     {
-        score += points;
-        score = Mathf.Max(0, score);
+        SessionManager.Score += points;
+        SessionManager.Score = Mathf.Max(0, SessionManager.Score);
         UpdateScoreUI();
     }
 }

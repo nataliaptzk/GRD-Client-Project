@@ -7,12 +7,9 @@ public class DragAndDrop : MonoBehaviour
 {
     private Score _score;
 
-   // private SessionManager _sessionManager;
-
 
     private void Awake()
     {
-     //   _sessionManager = FindObjectOfType<SessionManager>();
         _score = FindObjectOfType<Score>();
     }
 
@@ -27,6 +24,10 @@ public class DragAndDrop : MonoBehaviour
         ContactFilter2D contactFilter = new ContactFilter2D();
         int colliderCount = myCollider.OverlapCollider(contactFilter, colliders);
 
+        if (gameObject.HasComponent<Rigidbody2D>())
+        {
+            gameObject.GetComponent<Rigidbody2D>().bodyType = RigidbodyType2D.Dynamic;
+        }
 
         if (colliders[0] != null && colliders[0].gameObject.HasComponent<Bin>())
         {
@@ -48,5 +49,9 @@ public class DragAndDrop : MonoBehaviour
     {
         Vector2 mousePos = Camera.main.ScreenToWorldPoint(Input.mousePosition) - transform.position;
         transform.Translate(mousePos);
+        if (gameObject.HasComponent<Rigidbody2D>())
+        {
+            gameObject.GetComponent<Rigidbody2D>().bodyType = RigidbodyType2D.Static;
+        }
     }
 }

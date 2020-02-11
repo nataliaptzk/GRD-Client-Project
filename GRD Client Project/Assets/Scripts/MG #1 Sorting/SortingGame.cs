@@ -9,7 +9,6 @@ public class SortingGame : MonoBehaviour
 
     [SerializeField] private GameObject _rubbishSlotsParent;
 
-//    [SerializeField] private SessionManager _sessionManager;
     private GameManager _gameManager;
     private RubbishGenerator _rubbishGenerator;
 
@@ -21,7 +20,6 @@ public class SortingGame : MonoBehaviour
 
     private void Start()
     {
-        // _sessionManager = FindObjectOfType<SessionManager>();
         _rubbishGenerator.GeneratePlasticObjects(SessionManager.CurrentDifficulty, _rubbishSlotsParent);
     }
 }

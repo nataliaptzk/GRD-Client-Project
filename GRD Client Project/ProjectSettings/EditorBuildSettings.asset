@@ -17,4 +17,10 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/04 SortingGameScreen.unity
     guid: 6293466546de413419da37e632b236fe
+  - enabled: 1
+    path: Assets/Scenes/05 InvestigationGameScreen.unity
+    guid: 4541275dd90e6374ebf076dc543bf9ad
+  - enabled: 1
+    path: Assets/Scenes/06 QuizGameScene.unity
+    guid: 7099f6c22b2fb744ea132911cd86befe
   m_configObjects: {}

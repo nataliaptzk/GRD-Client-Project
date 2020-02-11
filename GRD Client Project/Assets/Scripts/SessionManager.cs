@@ -7,7 +7,7 @@ public static class SessionManager
 {
     private static Difficulty _currentDifficulty;
 
-    private static Score _score;
+    private static int _score;
 
     private static string _nickname;
 
@@ -17,10 +17,11 @@ public static class SessionManager
         set => _currentDifficulty = value;
     }
 
-    public static Score Score
+    public static int Score
     {
         get => _score;
         set => _score = value;
+
     }
 
     public static string Nickname
@@ -29,6 +30,7 @@ public static class SessionManager
         set => _nickname = value;
     }
 
+    
 
     public static void ChooseDifficulty(Difficulty difficulty)
     {
