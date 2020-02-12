@@ -18,9 +18,18 @@ EditorBuildSettings:
     path: Assets/Scenes/04 SortingGameScreen.unity
     guid: 6293466546de413419da37e632b236fe
   - enabled: 1
+    path: Assets/Scenes/05b DidYouKnowScreen.unity
+    guid: 08b1953d1de829e4f922ec84baaf28a1
+  - enabled: 1
     path: Assets/Scenes/05 InvestigationGameScreen.unity
     guid: 4541275dd90e6374ebf076dc543bf9ad
   - enabled: 1
+    path: Assets/Scenes/04b DidYouKnowScreen.unity
+    guid: daa267b34950c0f4aadbbc1e6fb0cf74
+  - enabled: 1
     path: Assets/Scenes/06 QuizGameScene.unity
     guid: 7099f6c22b2fb744ea132911cd86befe
+  - enabled: 1
+    path: Assets/Scenes/07 EndScreen.unity
+    guid: 54adaad48b1a1e44e8808cbf1897b4b5
   m_configObjects: {}

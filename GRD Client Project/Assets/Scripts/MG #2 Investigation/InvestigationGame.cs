@@ -9,6 +9,7 @@ public class InvestigationGame : MonoBehaviour
     [SerializeField] private GameObject _rubbishSlotsParent;
 
     [SerializeField] private GameObject _claw;
+    [SerializeField] private GameObject _hook;
     [SerializeField] private List<GameObject> _slotsToMoveTheClaw = new List<GameObject>();
     private int _currentSlot; // 0-2 -> 0 left, 1 middle, 2 right
 
@@ -49,5 +50,14 @@ public class InvestigationGame : MonoBehaviour
 
         transform.position = _slotsToMoveTheClaw[_currentSlot].transform.position;
         yield return null;
+    }
+
+    public void Release()
+    {
+        //unparent the plastic
+    }
+
+    public void AttachPlastic()
+    { // attach the plastic  - child it to the hook
     }
 }
