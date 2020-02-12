@@ -1,4 +1,5 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -9,9 +10,11 @@ public class InvestigationGame : MonoBehaviour
     [SerializeField] private GameObject _rubbishSlotsParent;
 
     [SerializeField] private GameObject _claw;
-    [SerializeField] private GameObject _hook;
+    [SerializeField] private Transform _hook;
     [SerializeField] private List<GameObject> _slotsToMoveTheClaw = new List<GameObject>();
     private int _currentSlot; // 0-2 -> 0 left, 1 middle, 2 right
+    private bool _isClawMoving = false;
+
 
     private GameManager _gameManager;
     private RubbishGenerator _rubbishGenerator;
@@ -20,7 +23,8 @@ public class InvestigationGame : MonoBehaviour
     {
         _gameManager = FindObjectOfType<GameManager>();
         _rubbishGenerator = FindObjectOfType<RubbishGenerator>();
-        MoveClaw(1); // move claw to middle
+        //    MoveClaw(1); // move claw to middle
+        _currentSlot = 1;
     }
 
     private void Start()
@@ -30,16 +34,20 @@ public class InvestigationGame : MonoBehaviour
 
     public void MoveClaw(int i)
     {
-        _currentSlot += i;
-        _currentSlot = Mathf.Clamp(_currentSlot, 0, 2);
-        //_claw.transform.localPosition = _slotsToMoveTheClaw[_currentSlot].transform.position;
-        StartCoroutine(MoveClawEnumerator());
+        if (!_isClawMoving)
+        {
+            _currentSlot += i;
+            _currentSlot = Mathf.Clamp(_currentSlot, 0, 2);
+            //_claw.transform.localPosition = _slotsToMoveTheClaw[_currentSlot].transform.position;
+            StartCoroutine(MoveClawEnumerator());
+        }
     }
 
     private IEnumerator MoveClawEnumerator()
     {
+        _isClawMoving = true;
         float elapsedTime = 0;
-        float waitTime = 2f;
+        float waitTime = 1f;
         while (elapsedTime < waitTime)
         {
             _claw.transform.localPosition = Vector3.Lerp(_claw.transform.localPosition, _slotsToMoveTheClaw[_currentSlot].transform.position, (elapsedTime / waitTime));
@@ -49,15 +57,27 @@ public class InvestigationGame : MonoBehaviour
         }
 
         transform.position = _slotsToMoveTheClaw[_currentSlot].transform.position;
+        _isClawMoving = false;
+
         yield return null;
     }
 
+    [ContextMenu("Release")]
     public void Release()
     {
-        //unparent the plastic
+        //todo Make the Claw that will open on release, so no need to switch off RB2
+        _hook.transform.GetChild(0).gameObject.GetComponent<Rigidbody2D>().bodyType = RigidbodyType2D.Dynamic;
+        _hook.transform.GetChild(0).SetParent(null);
     }
 
+    [ContextMenu("AttachPlastic")]
     public void AttachPlastic()
-    { // attach the plastic  - child it to the hook
+    {
+        if (_rubbishSlotsParent.transform.childCount != 0)
+        {
+            _rubbishSlotsParent.transform.GetChild(0).parent = _hook;
+            _hook.transform.GetChild(0).localPosition = new Vector3(0, -0.12f, 0);
+            _hook.transform.GetChild(0).gameObject.GetComponent<Rigidbody2D>().bodyType = RigidbodyType2D.Static;
+        }
     }
 }

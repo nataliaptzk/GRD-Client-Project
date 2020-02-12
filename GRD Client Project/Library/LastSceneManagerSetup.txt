@@ -1,5 +1,5 @@
 sceneSetups:
-- path: Assets/Scenes/05 InvestigationGameScreen.unity
+- path: C:/Users/PC/Desktop/FINAL - 2D Metal Chains/Assets/Scenes/DemoScene.unity
   isLoaded: 1
   isActive: 1
   isSubScene: 0
