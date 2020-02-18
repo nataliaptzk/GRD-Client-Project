@@ -1,5 +1,5 @@
 sceneSetups:
-- path: C:/Users/PC/Desktop/FINAL - 2D Metal Chains/Assets/Scenes/DemoScene.unity
+- path: Assets/Scenes/06 QuizGameScene.unity
   isLoaded: 1
   isActive: 1
   isSubScene: 0

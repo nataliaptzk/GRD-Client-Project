@@ -62,18 +62,19 @@ public class InvestigationGame : MonoBehaviour
         yield return null;
     }
 
-    [ContextMenu("Release")]
     public void Release()
     {
-        //todo Make the Claw that will open on release, so no need to switch off RB2
-        _hook.transform.GetChild(0).gameObject.GetComponent<Rigidbody2D>().bodyType = RigidbodyType2D.Dynamic;
-        _hook.transform.GetChild(0).SetParent(null);
+        if (_hook.transform.childCount > 0)
+        {
+            //todo Make the Claw that will open on release, so no need to switch off RB2
+            _hook.transform.GetChild(0).gameObject.GetComponent<Rigidbody2D>().bodyType = RigidbodyType2D.Dynamic;
+            _hook.transform.GetChild(0).SetParent(null);
+        }
     }
 
-    [ContextMenu("AttachPlastic")]
     public void AttachPlastic()
     {
-        if (_rubbishSlotsParent.transform.childCount != 0)
+        if (_rubbishSlotsParent.transform.childCount != 0 && _hook.transform.childCount == 0)
         {
             _rubbishSlotsParent.transform.GetChild(0).parent = _hook;
             _hook.transform.GetChild(0).localPosition = new Vector3(0, -0.12f, 0);
