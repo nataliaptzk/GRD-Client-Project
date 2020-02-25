@@ -703,10 +703,10 @@ PlayerSettings:
   facebookXfbml: 0
   facebookFrictionlessRequests: 1
   apiCompatibilityLevel: 6
-  cloudProjectId: 
+  cloudProjectId: 6f9ed3e9-ff5a-446f-8eb6-b0a6afe4f9b0
   framebufferDepthMemorylessMode: 0
-  projectName: 
-  organizationId: 
+  projectName: GRD Client Project
+  organizationId: nataliaptzk
   cloudEnabled: 0
   enableNativePlatformBackendsForNewInputSystem: 0
   disableOldInputManagerSupport: 0
