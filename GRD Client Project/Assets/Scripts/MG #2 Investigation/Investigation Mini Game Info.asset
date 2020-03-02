@@ -14,3 +14,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   title: Investigation
   helpTips: []
+  sceneTitleToLoad: 05b DidYouKnowScreen

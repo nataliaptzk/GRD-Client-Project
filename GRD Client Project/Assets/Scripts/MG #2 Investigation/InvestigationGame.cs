@@ -3,10 +3,8 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class InvestigationGame : MonoBehaviour
+public class InvestigationGame : Level
 {
-    [SerializeField] private MiniGameInfo _gameInfo;
-
     [SerializeField] private GameObject _rubbishSlotsParent;
 
     [SerializeField] private GameObject _claw;
@@ -15,13 +13,10 @@ public class InvestigationGame : MonoBehaviour
     private int _currentSlot; // 0-2 -> 0 left, 1 middle, 2 right
     private bool _isClawMoving = false;
 
-
-    private GameManager _gameManager;
     private RubbishGenerator _rubbishGenerator;
 
     private void Awake()
     {
-        _gameManager = FindObjectOfType<GameManager>();
         _rubbishGenerator = FindObjectOfType<RubbishGenerator>();
         //    MoveClaw(1); // move claw to middle
         _currentSlot = 1;
@@ -30,6 +25,7 @@ public class InvestigationGame : MonoBehaviour
     private void Start()
     {
         _rubbishGenerator.GeneratePlasticObjects(SessionManager.CurrentDifficulty, _rubbishSlotsParent);
+        StartCoroutine(_timer.Countdown(SessionManager.CurrentDifficulty.duration * _miniGameBaseTime));
     }
 
     public void MoveClaw(int i)

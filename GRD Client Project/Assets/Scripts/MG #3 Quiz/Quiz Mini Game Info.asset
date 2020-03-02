@@ -14,3 +14,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   title: quiz
   helpTips: []
+  sceneTitleToLoad: 07 EndScreen
