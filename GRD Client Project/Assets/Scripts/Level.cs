@@ -20,6 +20,7 @@ public class Level : MonoBehaviour
     public void FinishMiniGame()
     {
         DisplayFinishedLevelInfo();
+        LoadNextLevel();
     }
 
     public void LoadNextLevel()
