@@ -1044,25 +1044,6 @@ MonoBehaviour:
   - {fileID: 1583287544}
   - {fileID: 147267250}
   - {fileID: 687147380}
-  _questions:
-  - question: Choose A?
-    answers:
-    - Q1 A
-    - Q1 B
-    - Q1 C
-    correctAnswer: 0
-  - question: Choose B?
-    answers:
-    - Q2 A
-    - Q2 B
-    - Q2 C
-    correctAnswer: 1
-  - question: Choose c?
-    answers:
-    - Q3 A
-    - Q3 B
-    - Q3 C
-    correctAnswer: 2
 --- !u!4 &672747243
 Transform:
   m_ObjectHideFlags: 0
