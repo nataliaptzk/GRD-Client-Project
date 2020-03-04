@@ -35,7 +35,7 @@ public class Answer : MonoBehaviour
         int colliderCount = myCollider.OverlapCollider(contactFilter, colliders);
 
 
-        if (colliders[0] != null && colliders[0].gameObject.HasComponent<AnswerDropArea>())
+        /*if (colliders[0] != null && colliders[0].gameObject.HasComponent<AnswerDropArea>())
         {
             if (_quiz.Questions[_quiz.CurrentQuestion].correctAnswer == answerIndex)
             {
@@ -49,7 +49,7 @@ public class Answer : MonoBehaviour
 
             ResetToStartPosition();
             _quiz.NextQuestion();
-        }
+        }*/
     }
 
     private void ResetToStartPosition()
