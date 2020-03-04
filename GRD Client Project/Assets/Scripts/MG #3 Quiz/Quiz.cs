@@ -13,7 +13,7 @@ public class Quiz : Level
 
     [SerializeField] private List<GameObject> answerObjects = new List<GameObject>();
 
-    //[SerializeField] private List<Question> _questions = new List<Question>();
+    [SerializeField] private List<Question> _questions = new List<Question>();
     private int _currentQuestion;
 
     //public List<Question> Questions => _questions;
@@ -53,21 +53,21 @@ public class Quiz : Level
         }*/
     }
 
-   
+    [Serializable]
+    public class Question
+    {
+        public string question;
+        public string answer1;
+        public string answer2;
+        public string answer3;
+        public string difficulty;
+         public string include;
+    }
 
     [Serializable]
     public class RootObject
-    { [Serializable]
-        public class QuestionObject
-        {
-            public string question;
-            public string answer1;
-            public string answer2;
-            public string answer3;
-            public string difficulty;
-            public string include;
-        }
-        public List<QuestionObject> questionObjects;
+    {
+        public List<Question> questions;
     }
 
     [ContextMenu("asdf")]
@@ -76,8 +76,8 @@ public class Quiz : Level
         using (StreamReader r = new StreamReader("Assets/Resources/quizdata.json"))
         {
             string json = r.ReadToEnd();
-            JsonUtility.FromJson<RootObject>(json);
-            Debug.Log(JsonUtility.FromJson<RootObject>(json).questionObjects.First());
+            _questions = JsonUtility.FromJson<RootObject>(json).questions;
+
         }
     }
 }
