@@ -8,7 +8,7 @@ public class InvestigationGame : Level
     [SerializeField] private GameObject _rubbishSlotsParent;
 
     [SerializeField] private GameObject _claw;
-    [SerializeField] private Transform _hook;
+    [SerializeField] private Transform _rubbishSlot;
     [SerializeField] private HingeJoint2D _hookHinge;
     [SerializeField] private List<GameObject> _slotsToMoveTheClaw = new List<GameObject>();
     private int _currentSlot; // 0-2 -> 0 left, 1 middle, 2 right
@@ -21,6 +21,7 @@ public class InvestigationGame : Level
         _rubbishGenerator = FindObjectOfType<RubbishGenerator>();
         //    MoveClaw(1); // move claw to middle
         _currentSlot = 1;
+
     }
 
     private void Start()
@@ -64,6 +65,11 @@ public class InvestigationGame : Level
         StartCoroutine(Release());
     }
 
+    private void Update()
+    {
+        Debug.Log(_hookHinge.limitState);
+    }
+
     private IEnumerator Release()
     {
         int openingSpeed = 100;
@@ -74,23 +80,33 @@ public class InvestigationGame : Level
         bool opening = true;
         JointMotor2D motor = _hookHinge.motor;
 
-        motor.motorSpeed = openingSpeed;
-        _hookHinge.motor = motor;
+    //    motor.motorSpeed = openingSpeed;
+      //  _hookHinge.motor = motor;
 
         while (!finishedRelease)
         {
-            if (_hookHinge.limitState == JointLimitState2D.UpperLimit)
+            if (_hookHinge.limitState == JointLimitState2D.Inactive && opening)
+            {
+                motor.motorSpeed = openingSpeed;
+                _hookHinge.motor = motor;
+                Debug.Log("1");
+            }
+            else if (_hookHinge.limitState == JointLimitState2D.UpperLimit)
+            {
+                opening = false;
+                motor.motorSpeed = closingSpeed;
+                _hookHinge.motor = motor;
+                Debug.Log("2");
+
+            }
+            else if (_hookHinge.limitState == JointLimitState2D.LowerLimit && !opening)
             {
                 motor.motorSpeed = closingSpeed;
                 _hookHinge.motor = motor;
-            }
-
-
-            if (_hookHinge.limitState == JointLimitState2D.LowerLimit)
-            {
-                motor.motorSpeed = stoppedSpeed;
-                _hookHinge.motor = motor;
                 finishedRelease = true;
+                Debug.Log("3");
+
+                yield return null;
             }
 
 
@@ -116,8 +132,6 @@ public class InvestigationGame : Level
                 motor.motorSpeed = stoppedSpeed;
                 _hookHinge.motor = motor;
             }*/
-
-            yield return null;
         }
 
 
@@ -126,10 +140,10 @@ public class InvestigationGame : Level
 
     public void AttachPlastic()
     {
-        if (_rubbishSlotsParent.transform.childCount != 0 && _hook.transform.childCount == 0)
+        if (_rubbishSlotsParent.transform.childCount != 0 && _rubbishSlot.transform.childCount == 0)
         {
-            _rubbishSlotsParent.transform.GetChild(0).parent = _hook;
-            _hook.transform.GetChild(0).localPosition = new Vector3(0, 0f, 0);
+            _rubbishSlotsParent.transform.GetChild(0).parent = _rubbishSlot;
+            _rubbishSlot.transform.GetChild(0).localPosition = new Vector3(0, 0f, 0);
         }
     }
 }
