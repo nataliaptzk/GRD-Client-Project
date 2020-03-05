@@ -20,4 +20,13 @@ public class SortingGame : Level
         _rubbishGenerator.GeneratePlasticObjects(SessionManager.CurrentDifficulty, _rubbishSlotsParent);
         StartCoroutine(_timer.Countdown(SessionManager.CurrentDifficulty.duration * _miniGameBaseTime));
     }
+
+
+    public void CheckIfFinished()
+    {
+        if (_rubbishSlotsParent.transform.childCount == 1)
+        {
+            Invoke("FinishMiniGame", 0.1f);
+        }
+    }
 }

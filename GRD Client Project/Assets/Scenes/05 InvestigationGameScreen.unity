@@ -513,7 +513,7 @@ GameObject:
   - component: {fileID: 344921889}
   - component: {fileID: 344921888}
   m_Layer: 0
-  m_Name: Release (1)
+  m_Name: ReleaseRight
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -540,7 +540,7 @@ FixedJoint2D:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 344921886}
-  m_Enabled: 0
+  m_Enabled: 1
   serializedVersion: 4
   m_EnableCollision: 0
   m_ConnectedRigidBody: {fileID: 1526563806}
@@ -558,7 +558,7 @@ HingeJoint2D:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 344921886}
-  m_Enabled: 1
+  m_Enabled: 0
   serializedVersion: 4
   m_EnableCollision: 0
   m_ConnectedRigidBody: {fileID: 1526563806}
@@ -1611,7 +1611,7 @@ GameObject:
   - component: {fileID: 666397282}
   - component: {fileID: 666397281}
   m_Layer: 0
-  m_Name: link (1)
+  m_Name: link
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -3884,7 +3884,7 @@ GameObject:
   - component: {fileID: 1526563805}
   - component: {fileID: 1526563804}
   m_Layer: 0
-  m_Name: link (2)
+  m_Name: link
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -5116,7 +5116,7 @@ GameObject:
   - component: {fileID: 1749578079}
   - component: {fileID: 1749578083}
   m_Layer: 0
-  m_Name: Release
+  m_Name: ReleaseLeft
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -5143,7 +5143,7 @@ HingeJoint2D:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1749578077}
-  m_Enabled: 1
+  m_Enabled: 0
   serializedVersion: 4
   m_EnableCollision: 0
   m_ConnectedRigidBody: {fileID: 666397283}

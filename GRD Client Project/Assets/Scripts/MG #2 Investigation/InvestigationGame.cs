@@ -23,7 +23,6 @@ public class InvestigationGame : Level
     private void Awake()
     {
         _rubbishGenerator = FindObjectOfType<RubbishGenerator>();
-        //    MoveClaw(1); // move claw to middle
         _currentSlot = 1;
     }
 
@@ -39,7 +38,6 @@ public class InvestigationGame : Level
         {
             _currentSlot += i;
             _currentSlot = Mathf.Clamp(_currentSlot, 0, 2);
-            //_claw.transform.localPosition = _slotsToMoveTheClaw[_currentSlot].transform.position;
             StartCoroutine(MoveClawEnumerator());
         }
     }
@@ -94,7 +92,7 @@ public class InvestigationGame : Level
             _hookHingeLeft.motor = motor;
 
             JointMotor2D motor2 = _hookHingeRight.motor;
-            motor2.motorSpeed = speed* -1;
+            motor2.motorSpeed = speed * -1;
             _hookHingeRight.motor = motor2;
 
             yield return null;
@@ -106,7 +104,7 @@ public class InvestigationGame : Level
         _hookFixedRight.enabled = true;
         _hookHingeRight.enabled = false;
         _isReleasing = false;
-
+        AttachPlastic();
         yield return null;
     }
 
@@ -118,6 +116,10 @@ public class InvestigationGame : Level
             {
                 _rubbishSlotsParent.transform.GetChild(0).parent = _rubbishSlot;
                 _rubbishSlot.transform.GetChild(0).localPosition = new Vector3(0, 0f, 0);
+            }
+            else if (_rubbishSlotsParent.transform.childCount == 0)
+            {
+                FinishMiniGame();
             }
         }
     }

@@ -6,10 +6,11 @@ using UnityEngine;
 public class DragAndDrop : MonoBehaviour
 {
     private Score _score;
-
+    private SortingGame _sortingGame;
 
     private void Awake()
     {
+        _sortingGame = FindObjectOfType<SortingGame>();
         _score = FindObjectOfType<Score>();
     }
 
@@ -41,6 +42,7 @@ public class DragAndDrop : MonoBehaviour
                 _score.AddScore(-1 * SessionManager.CurrentDifficulty.pointsLossWhenIncorrect);
             }
 
+            _sortingGame.CheckIfFinished();
             Destroy(gameObject);
         }
     }
