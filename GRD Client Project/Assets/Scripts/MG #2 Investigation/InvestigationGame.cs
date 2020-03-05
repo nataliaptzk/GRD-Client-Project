@@ -10,9 +10,11 @@ public class InvestigationGame : Level
     [SerializeField] private GameObject _claw;
     [SerializeField] private Transform _rubbishSlot;
     [SerializeField] private HingeJoint2D _hookHinge;
+    [SerializeField] private FixedJoint2D _hookFixed;
     [SerializeField] private List<GameObject> _slotsToMoveTheClaw = new List<GameObject>();
     private int _currentSlot; // 0-2 -> 0 left, 1 middle, 2 right
     private bool _isClawMoving = false;
+    private bool _isReleasing = false;
 
     private RubbishGenerator _rubbishGenerator;
 
@@ -21,7 +23,6 @@ public class InvestigationGame : Level
         _rubbishGenerator = FindObjectOfType<RubbishGenerator>();
         //    MoveClaw(1); // move claw to middle
         _currentSlot = 1;
-
     }
 
     private void Start()
@@ -62,15 +63,17 @@ public class InvestigationGame : Level
 
     public void ReleaseHandler()
     {
-        StartCoroutine(Release());
+        if (!_isReleasing)
+        {
+            _hookHinge.enabled = true;
+            _hookFixed.enabled = false;
+
+            StartCoroutine(Release());
+        }
     }
 
-    private void Update()
-    {
-        Debug.Log(_hookHinge.limitState);
-    }
 
-    private IEnumerator Release()
+/*    private IEnumerator Release()
     {
         int openingSpeed = 100;
         int closingSpeed = -100;
@@ -131,19 +134,47 @@ public class InvestigationGame : Level
             {
                 motor.motorSpeed = stoppedSpeed;
                 _hookHinge.motor = motor;
-            }*/
+            }#1#
         }
 
+
+        yield return null;
+    }*/
+    private IEnumerator Release()
+    {
+        int speed = 100;
+        _isReleasing = true;
+
+        do
+        {
+            if (_hookHinge.limitState == JointLimitState2D.UpperLimit && speed > 0)
+            {
+                speed = speed * -1;
+            }
+
+            JointMotor2D motor = _hookHinge.motor;
+            motor.motorSpeed = speed;
+            _hookHinge.motor = motor;
+            yield return null;
+        } while (_hookHinge.jointAngle > _hookHinge.limits.min);
+
+        //reset motorspeed
+        _hookFixed.enabled = true;
+        _hookHinge.enabled = false;
+        _isReleasing = false;
 
         yield return null;
     }
 
     public void AttachPlastic()
     {
-        if (_rubbishSlotsParent.transform.childCount != 0 && _rubbishSlot.transform.childCount == 0)
+        if (!_isReleasing)
         {
-            _rubbishSlotsParent.transform.GetChild(0).parent = _rubbishSlot;
-            _rubbishSlot.transform.GetChild(0).localPosition = new Vector3(0, 0f, 0);
+            if (_rubbishSlotsParent.transform.childCount != 0 && _rubbishSlot.transform.childCount == 0)
+            {
+                _rubbishSlotsParent.transform.GetChild(0).parent = _rubbishSlot;
+                _rubbishSlot.transform.GetChild(0).localPosition = new Vector3(0, 0f, 0);
+            }
         }
     }
 }
