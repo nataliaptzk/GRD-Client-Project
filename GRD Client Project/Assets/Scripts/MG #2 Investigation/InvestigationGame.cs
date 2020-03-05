@@ -9,6 +9,7 @@ public class InvestigationGame : Level
 
     [SerializeField] private GameObject _claw;
     [SerializeField] private Transform _hook;
+    [SerializeField] private HingeJoint2D _hookHinge;
     [SerializeField] private List<GameObject> _slotsToMoveTheClaw = new List<GameObject>();
     private int _currentSlot; // 0-2 -> 0 left, 1 middle, 2 right
     private bool _isClawMoving = false;
@@ -58,14 +59,69 @@ public class InvestigationGame : Level
         yield return null;
     }
 
-    public void Release()
+    public void ReleaseHandler()
     {
-        if (_hook.transform.childCount > 0)
+        StartCoroutine(Release());
+    }
+
+    private IEnumerator Release()
+    {
+        int openingSpeed = 100;
+        int closingSpeed = -100;
+        int stoppedSpeed = 0;
+
+        bool finishedRelease = false;
+        bool opening = true;
+        JointMotor2D motor = _hookHinge.motor;
+
+        motor.motorSpeed = openingSpeed;
+        _hookHinge.motor = motor;
+
+        while (!finishedRelease)
         {
-            //todo Make the Claw that will open on release, so no need to switch off RB2
-            _hook.transform.GetChild(0).gameObject.GetComponent<Rigidbody2D>().bodyType = RigidbodyType2D.Dynamic;
-            _hook.transform.GetChild(0).SetParent(null);
+            if (_hookHinge.limitState == JointLimitState2D.UpperLimit)
+            {
+                motor.motorSpeed = closingSpeed;
+                _hookHinge.motor = motor;
+            }
+
+
+            if (_hookHinge.limitState == JointLimitState2D.LowerLimit)
+            {
+                motor.motorSpeed = stoppedSpeed;
+                _hookHinge.motor = motor;
+                finishedRelease = true;
+            }
+
+
+            /*if (_hook.transform.childCount > 0)
+            {
+                _hook.transform.GetChild(0).SetParent(null);
+            }
+
+            while (_hookHinge.jointAngle < _hookHinge.limits.max && opening)
+            {
+                motor.motorSpeed = openingSpeed;
+                _hookHinge.motor = motor;
+            }
+
+            opening = false;
+
+            motor.motorSpeed = closingSpeed;
+            _hookHinge.motor = motor;
+
+
+            while (!opening && _hookHinge.jointAngle > _hookHinge.limits.min)
+            {
+                motor.motorSpeed = stoppedSpeed;
+                _hookHinge.motor = motor;
+            }*/
+
+            yield return null;
         }
+
+
+        yield return null;
     }
 
     public void AttachPlastic()
@@ -73,8 +129,7 @@ public class InvestigationGame : Level
         if (_rubbishSlotsParent.transform.childCount != 0 && _hook.transform.childCount == 0)
         {
             _rubbishSlotsParent.transform.GetChild(0).parent = _hook;
-            _hook.transform.GetChild(0).localPosition = new Vector3(0, -0.12f, 0);
-            _hook.transform.GetChild(0).gameObject.GetComponent<Rigidbody2D>().bodyType = RigidbodyType2D.Static;
+            _hook.transform.GetChild(0).localPosition = new Vector3(0, 0f, 0);
         }
     }
 }
