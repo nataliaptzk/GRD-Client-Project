@@ -11,5 +11,7 @@ public enum rubbishTypes
 {
     landfill,
     industrialCompostable,
-    plastic
+    plastic,
+    likelyRecycled,
+    notLikelyRecycled
 }

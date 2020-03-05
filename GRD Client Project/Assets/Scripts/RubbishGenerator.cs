@@ -14,10 +14,10 @@ public class RubbishGenerator : MonoBehaviour
     {
         int myDifficulty = 0;
 
-        // search for the given difficulty in the list of rubbishtypesandsprites
+        // search for the given difficulty in the list of _rubbishTypesAndSprites
         for (int i = 0; i < _rubbishTypesAndSprites.Count; i++)
         {
-            if (_rubbishTypesAndSprites[i].difficulty == difficulty)
+            if (_rubbishTypesAndSprites[i].difficulty == difficulty) // 0 - easy, 1 - normal, 2 - hard
             {
                 myDifficulty = i;
             }
@@ -28,8 +28,20 @@ public class RubbishGenerator : MonoBehaviour
             var randomContainer = Random.Range(0, _containers.Count);
             slotsParent.transform.GetChild(i).GetComponent<SpriteRenderer>().sprite = _containers[randomContainer];
             int randomSprite = 0;
+            int typeIndex = 0;
 
-            var typeIndex = Random.Range(0, 3); // randomise the TYPE of recyclable
+
+            if (myDifficulty == 0 || myDifficulty == 1)
+            {
+                typeIndex = Random.Range(0, 3); // randomise the TYPE of recyclable
+            }
+
+            if (myDifficulty == 2)
+            {
+                typeIndex = Random.Range(0, 5); // randomise the TYPE of recyclable, hard difficulty has more options
+            }
+
+
             switch (typeIndex)
             {
                 case 0: // 0 TYPE plastic
@@ -57,6 +69,22 @@ public class RubbishGenerator : MonoBehaviour
                     slotsParent.transform.GetChild(i).GetComponent<Rubbish>().type = rubbishTypes.landfill;
 
                     break;
+                case 3: // 3 TYPE likely recycled
+
+                    // randomise the sprite of TYPE
+                    randomSprite = Random.Range(0, _rubbishTypesAndSprites[myDifficulty].likelyRecycled.Count);
+                    slotsParent.transform.GetChild(i).GetChild(0).GetComponent<SpriteRenderer>().sprite = _rubbishTypesAndSprites[myDifficulty].likelyRecycled[randomSprite];
+                    slotsParent.transform.GetChild(i).GetComponent<Rubbish>().type = rubbishTypes.likelyRecycled;
+
+                    break;
+                case 4: // 2 TYPE not likely recycled
+
+                    // randomise the sprite of TYPE
+                    randomSprite = Random.Range(0, _rubbishTypesAndSprites[myDifficulty].notLikelyRecycled.Count);
+                    slotsParent.transform.GetChild(i).GetChild(0).GetComponent<SpriteRenderer>().sprite = _rubbishTypesAndSprites[myDifficulty].notLikelyRecycled[randomSprite];
+                    slotsParent.transform.GetChild(i).GetComponent<Rubbish>().type = rubbishTypes.notLikelyRecycled;
+
+                    break;
             }
         }
     }
@@ -70,4 +98,6 @@ class RubbishTypeAndSprites
     public List<Sprite> plasticSprites = new List<Sprite>();
     public List<Sprite> compostableSprites = new List<Sprite>();
     public List<Sprite> landfillSprites = new List<Sprite>();
+    public List<Sprite> likelyRecycled = new List<Sprite>();
+    public List<Sprite> notLikelyRecycled = new List<Sprite>();
 }

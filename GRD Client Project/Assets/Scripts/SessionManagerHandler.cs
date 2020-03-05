@@ -10,10 +10,9 @@ public class SessionManagerHandler : MonoBehaviour
 
     private void Awake()
     {
-        _gameManager = FindObjectOfType<GameManager>();
-
-        if (SessionManager.CurrentDifficulty == null && SceneManager.sceneCountInBuildSettings <= 2)
+        if (SessionManager.CurrentDifficulty == null && SceneManager.GetActiveScene().buildIndex > 2)
         {
+            _gameManager = FindObjectOfType<GameManager>();
             SessionManager.CurrentDifficulty = _gameManager.Difficulties[0];
         }
     }
