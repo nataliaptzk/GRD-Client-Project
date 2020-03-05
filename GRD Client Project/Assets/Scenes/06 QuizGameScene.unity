@@ -285,8 +285,8 @@ MonoBehaviour:
   m_fontMaterials: []
   m_fontColor32:
     serializedVersion: 2
-    rgba: 4294967295
-  m_fontColor: {r: 1, g: 1, b: 1, a: 1}
+    rgba: 4278190080
+  m_fontColor: {r: 0, g: 0, b: 0, a: 1}
   m_enableVertexGradient: 0
   m_colorMode: 3
   m_fontColorGradient:
@@ -390,7 +390,7 @@ GameObject:
   - component: {fileID: 147267255}
   - component: {fileID: 147267253}
   m_Layer: 0
-  m_Name: Answer (1)
+  m_Name: Answer2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -452,13 +452,13 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 147267250}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: -0.05, y: -2.97, z: 0}
   m_LocalScale: {x: 20, y: 10, z: 1}
   m_Children:
   - {fileID: 1234595573}
-  m_Father: {fileID: 0}
-  m_RootOrder: 9
+  m_Father: {fileID: 757331186}
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!50 &147267253
 Rigidbody2D:
@@ -652,8 +652,8 @@ MonoBehaviour:
   m_fontMaterials: []
   m_fontColor32:
     serializedVersion: 2
-    rgba: 4294967295
-  m_fontColor: {r: 1, g: 1, b: 1, a: 1}
+    rgba: 4278190080
+  m_fontColor: {r: 0, g: 0, b: 0, a: 1}
   m_enableVertexGradient: 0
   m_colorMode: 3
   m_fontColorGradient:
@@ -1044,6 +1044,137 @@ MonoBehaviour:
   - {fileID: 1583287544}
   - {fileID: 147267250}
   - {fileID: 687147380}
+  _questions:
+  - question: What does biodegradable plastic  mean?
+    answer1: Microorganisms can break the plastic down, even if takes a long time
+    answer2: The colour of the plastic is green
+    answer3: A plastic breaks down into microplastics
+    difficulty: easy
+    include: N
+  - question: If plastic packaging says compostable, what does this mean?
+    answer1: It can break down in an industrial composting plant
+    answer2: That you can throw it in the rubbish bin and it will decompose.
+    answer3: It will decompose in a general garden compost
+    difficulty: hard
+    include: N
+  - question: What does renewable mean?
+    answer1: It means that the amount of something can be restored in less than a
+      human lifetime
+    answer2: It means something is infinite or that we can use it forever
+    answer3: It means that something will be of green colour
+    difficulty: hard
+    include: N
+  - question: What is a plastic?
+    answer1: A long molecule made from carbon and hydrogen chains
+    answer2: 1. A type of mineral
+    answer3: A material only used for making shopping bags
+    difficulty: normal
+    include: N
+  - question: Why are so many things made of plastic?
+    answer1: Because it is a cheap, lightweight, durable material
+    answer2: Because it is a cheap, heavy, durable material
+    answer3: Because it is an expensive, heavy, durable material
+    difficulty: easy
+    include: N
+  - question: What is a bioplastic?
+    answer1: A plastic made from renewable biomass sources
+    answer2: A plastic made from biological organisms
+    answer3: A plastic made from non-renewable biomass sources
+    difficulty: easy
+    include: N
+  - question: Are all biodegradable plastics renewable?
+    answer1: No
+    answer2: Yes
+    answer3: I don't know
+    difficulty: easy
+    include: Y
+  - question: Are all renewable plastics biodegradable?
+    answer1: No
+    answer2: Yes
+    answer3: I don't know
+    difficulty: easy
+    include: N
+  - question: Can biodegradable plastics be made from oil?
+    answer1: Yes
+    answer2: No
+    answer3: It's still a mystery
+    difficulty: normal
+    include: N
+  - question: What are plastics made of?
+    answer1: Either oil or plants
+    answer2: Oil
+    answer3: Plants
+    difficulty: easy
+    include: N
+  - question: What could plastics be made from?
+    answer1: A range of materials including the others listed !
+    answer2: Pine needles, oranges and lemon peel
+    answer3: Sugar, plant fibres and algae
+    difficulty: easy
+    include: N
+  - question: "What\u2019s the difference between biodegradable and renewable?"
+    answer1: Renewable plastics are made from sustainable resources. Biodegradable
+      plastics are able to degrade into harmless molecules under the right conditions
+    answer2: here is no difference, they are the same
+    answer3: Renewable plastics are made from recycled plastic and biodegradable plastic
+      breaks down until it is very small (micro-sized) plastic
+    difficulty: hard
+    include: Y
+  - question: In what year do scientists think the plastics in the ocean will weigh
+      more than the fish?
+    answer1: 2050
+    answer2: 2025
+    answer3: 2075
+    difficulty: normal
+    include: N
+  - question: PLA is a renewable plastic, but how can it be recycled?
+    answer1: Only using an industrial composter
+    answer2: "It can\u2019t"
+    answer3: Any plastics recycling bin
+    difficulty: hard
+    include: N
+  - question: What is PLA made from?
+    answer1: Either Corn Starch or Sugar Cane
+    answer2: Corn starch
+    answer3: Sugarcane
+    difficulty: hard
+    include: N
+  - question: What is currently the most common source of plastic?
+    answer1: Crude Oil
+    answer2: Recycled plastic
+    answer3: Bio-based materials
+    difficulty: normal
+    include: N
+  - question: Plastic bottles are made from a non renewable plastic PET, but how can
+      it be recycled?
+    answer1: It can be recycled in a plastics recycling bin
+    answer2: It can only be recycled in an industrial composter
+    answer3: It can't
+    difficulty: easy
+    include: N
+  - question: Which of these plastics is both biodegradable and renewable?
+    answer1: PLA - Polylactic acid
+    answer2: "PGA \u2013 polyglycolic acid"
+    answer3: PET - Polyethylene terephthalate
+    difficulty: hard
+    include: N
+  - question: What is the lifetime of traditional plastic in the environment?
+    answer1: Hundred of years, but it depends on the type of plastic and where it
+      is
+    answer2: One to one hundred years
+    answer3: One to two years
+    difficulty: hard
+    include: N
+  - question: Why is polyglycolic acid (PGA) biodegradable but not renewable?
+    answer1: 'It is a biodegradable plastic as it is able to degrade into harmless
+      molecules under the right conditions. It is not renewable as it is made from
+      oil '
+    answer2: It is not renewable as it is made from recycled plastic
+    answer3: It is not renewable as it will remain in the natural environment for
+      thousands of years
+    difficulty: normal
+    include: Y
+  _currentDifficultyQuestions: []
 --- !u!4 &672747243
 Transform:
   m_ObjectHideFlags: 0
@@ -1086,7 +1217,7 @@ GameObject:
   - component: {fileID: 687147385}
   - component: {fileID: 687147383}
   m_Layer: 0
-  m_Name: Answer (2)
+  m_Name: Answer3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1148,13 +1279,13 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 687147380}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 4.05, y: -2.97, z: 0}
   m_LocalScale: {x: 20, y: 10, z: 1}
   m_Children:
   - {fileID: 10232432}
-  m_Father: {fileID: 0}
-  m_RootOrder: 10
+  m_Father: {fileID: 757331186}
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!50 &687147383
 Rigidbody2D:
@@ -1216,6 +1347,39 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   answerIndex: 2
+--- !u!1 &757331185
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 757331186}
+  m_Layer: 0
+  m_Name: Answers Game Objects
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &757331186
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 757331185}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children:
+  - {fileID: 1583287546}
+  - {fileID: 147267252}
+  - {fileID: 687147382}
+  m_Father: {fileID: 0}
+  m_RootOrder: 8
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1004079008
 GameObject:
   m_ObjectHideFlags: 0
@@ -1402,8 +1566,8 @@ MonoBehaviour:
   m_fontMaterials: []
   m_fontColor32:
     serializedVersion: 2
-    rgba: 4294967295
-  m_fontColor: {r: 1, g: 1, b: 1, a: 1}
+    rgba: 4278190080
+  m_fontColor: {r: 0, g: 0, b: 0, a: 1}
   m_enableVertexGradient: 0
   m_colorMode: 3
   m_fontColorGradient:
@@ -1856,8 +2020,8 @@ MonoBehaviour:
   m_fontMaterials: []
   m_fontColor32:
     serializedVersion: 2
-    rgba: 4294967295
-  m_fontColor: {r: 1, g: 1, b: 1, a: 1}
+    rgba: 4278190080
+  m_fontColor: {r: 0, g: 0, b: 0, a: 1}
   m_enableVertexGradient: 0
   m_colorMode: 3
   m_fontColorGradient:
@@ -1961,7 +2125,7 @@ GameObject:
   - component: {fileID: 1583287549}
   - component: {fileID: 1583287547}
   m_Layer: 0
-  m_Name: Answer
+  m_Name: Answer1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2023,13 +2187,13 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1583287544}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: -4.49, y: -2.97, z: 0}
   m_LocalScale: {x: 20, y: 10, z: 1}
   m_Children:
   - {fileID: 1404971617}
-  m_Father: {fileID: 0}
-  m_RootOrder: 8
+  m_Father: {fileID: 757331186}
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!50 &1583287547
 Rigidbody2D:
@@ -2367,7 +2531,7 @@ Camera:
   m_Enabled: 1
   serializedVersion: 2
   m_ClearFlags: 1
-  m_BackGroundColor: {r: 0.19215687, g: 0.3019608, b: 0.4745098, a: 0}
+  m_BackGroundColor: {r: 0.64705884, g: 0.9764706, b: 1, a: 0}
   m_projectionMatrixMode: 1
   m_GateFitMode: 2
   m_FOVAxisMode: 0

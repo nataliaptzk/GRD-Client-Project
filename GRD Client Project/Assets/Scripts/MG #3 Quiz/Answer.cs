@@ -35,9 +35,9 @@ public class Answer : MonoBehaviour
         int colliderCount = myCollider.OverlapCollider(contactFilter, colliders);
 
 
-        /*if (colliders[0] != null && colliders[0].gameObject.HasComponent<AnswerDropArea>())
+        if (colliders[0] != null && colliders[0].gameObject.HasComponent<AnswerDropArea>())
         {
-            if (_quiz.Questions[_quiz.CurrentQuestion].correctAnswer == answerIndex)
+            if (_quiz.correctAnswer == answerIndex)
             {
                 _score.AddScore(1 * SessionManager.CurrentDifficulty.pointsGainWhenCorrect);
             }
@@ -47,9 +47,9 @@ public class Answer : MonoBehaviour
                 _score.AddScore(-1 * SessionManager.CurrentDifficulty.pointsLossWhenIncorrect);
             }
 
-            ResetToStartPosition();
+         //   ResetToStartPosition();
             _quiz.NextQuestion();
-        }*/
+        }
     }
 
     private void ResetToStartPosition()

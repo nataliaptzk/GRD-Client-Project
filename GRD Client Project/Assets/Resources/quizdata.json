@@ -5,7 +5,7 @@
             "answer1": "Microorganisms can break the plastic down, even if takes a long time",
             "answer2": "The colour of the plastic is green",
             "answer3": "A plastic breaks down into microplastics",
-            "difficulty": "E",
+            "difficulty": "easy",
             "include": "N"
         },
         {
@@ -13,7 +13,7 @@
             "answer1": "It can break down in an industrial composting plant",
             "answer2": "That you can throw it in the rubbish bin and it will decompose.",
             "answer3": "It will decompose in a general garden compost",
-            "difficulty": "H",
+            "difficulty": "hard",
             "include": "N"
         },
         {
@@ -21,7 +21,7 @@
             "answer1": "It means that the amount of something can be restored in less than a human lifetime",
             "answer2": "It means something is infinite or that we can use it forever",
             "answer3": "It means that something will be of green colour",
-            "difficulty": "H",
+            "difficulty": "hard",
             "include": "N"
         },
         {
@@ -29,7 +29,7 @@
             "answer1": "A long molecule made from carbon and hydrogen chains",
             "answer2": "1. A type of mineral",
             "answer3": "A material only used for making shopping bags",
-            "difficulty": "N",
+            "difficulty": "normal",
             "include": "N"
         },
         {
@@ -37,7 +37,7 @@
             "answer1": "Because it is a cheap, lightweight, durable material",
             "answer2": "Because it is a cheap, heavy, durable material",
             "answer3": "Because it is an expensive, heavy, durable material",
-            "difficulty": "E",
+            "difficulty": "easy",
             "include": "N"
         },
         {
@@ -45,7 +45,7 @@
             "answer1": "A plastic made from renewable biomass sources",
             "answer2": "A plastic made from biological organisms",
             "answer3": "A plastic made from non-renewable biomass sources",
-            "difficulty": "E",
+            "difficulty": "easy",
             "include": "N"
         },
         {
@@ -53,7 +53,7 @@
             "answer1": "No",
             "answer2": "Yes",
             "answer3": "I don't know",
-            "difficulty": "E",
+            "difficulty": "easy",
             "include": "Y"
         },
         {
@@ -61,7 +61,7 @@
             "answer1": "No",
             "answer2": "Yes",
             "answer3": "I don't know",
-            "difficulty": "E",
+            "difficulty": "easy",
             "include": "N"
         },
         {
@@ -69,7 +69,7 @@
             "answer1": "Yes",
             "answer2": "No",
             "answer3": "It's still a mystery",
-            "difficulty": "N",
+            "difficulty": "normal",
             "include": "N"
         },
         {
@@ -77,7 +77,7 @@
             "answer1": "Either oil or plants",
             "answer2": "Oil",
             "answer3": "Plants",
-            "difficulty": "E",
+            "difficulty": "easy",
             "include": "N"
         },
         {
@@ -85,7 +85,7 @@
             "answer1": "A range of materials including the others listed !",
             "answer2": "Pine needles, oranges and lemon peel",
             "answer3": "Sugar, plant fibres and algae",
-            "difficulty": "E",
+            "difficulty": "easy",
             "include": "N"
         },
         {
@@ -93,7 +93,7 @@
             "answer1": "Renewable plastics are made from sustainable resources. Biodegradable plastics are able to degrade into harmless molecules under the right conditions",
             "answer2": "here is no difference, they are the same",
             "answer3": "Renewable plastics are made from recycled plastic and biodegradable plastic breaks down until it is very small (micro-sized) plastic",
-            "difficulty": "H",
+            "difficulty": "hard",
             "include": "Y"
         },
         {
@@ -101,7 +101,7 @@
             "answer1": "2050",
             "answer2": "2025",
             "answer3": "2075",
-            "difficulty": "N",
+            "difficulty": "normal",
             "include": "N"
         },
         {
@@ -109,7 +109,7 @@
             "answer1": "Only using an industrial composter",
             "answer2": "It can’t",
             "answer3": "Any plastics recycling bin",
-            "difficulty": "H",
+            "difficulty": "hard",
             "include": "N"
         },
         {
@@ -117,7 +117,7 @@
             "answer1": "Either Corn Starch or Sugar Cane",
             "answer2": "Corn starch",
             "answer3": "Sugarcane",
-            "difficulty": "H",
+            "difficulty": "hard",
             "include": "N"
         },
         {
@@ -125,7 +125,7 @@
             "answer1": "Crude Oil",
             "answer2": "Recycled plastic",
             "answer3": "Bio-based materials",
-            "difficulty": "N",
+            "difficulty": "normal",
             "include": "N"
         },
         {
@@ -133,7 +133,7 @@
             "answer1": "It can be recycled in a plastics recycling bin",
             "answer2": "It can only be recycled in an industrial composter",
             "answer3": "It can't",
-            "difficulty": "E",
+            "difficulty": "easy",
             "include": "N"
         },
         {
@@ -141,7 +141,7 @@
             "answer1": "PLA - Polylactic acid",
             "answer2": "PGA – polyglycolic acid",
             "answer3": "PET - Polyethylene terephthalate",
-            "difficulty": "H",
+            "difficulty": "hard",
             "include": "N"
         },
         {
@@ -149,7 +149,7 @@
             "answer1": "Hundred of years, but it depends on the type of plastic and where it is",
             "answer2": "One to one hundred years",
             "answer3": "One to two years",
-            "difficulty": "H",
+            "difficulty": "hard",
             "include": "N"
         },
         {
@@ -157,7 +157,7 @@
             "answer1": "It is a biodegradable plastic as it is able to degrade into harmless molecules under the right conditions. It is not renewable as it is made from oil ",
             "answer2": "It is not renewable as it is made from recycled plastic",
             "answer3": "It is not renewable as it will remain in the natural environment for thousands of years",
-            "difficulty": "N",
+            "difficulty": "normal",
             "include": "Y"
         }
     ]
