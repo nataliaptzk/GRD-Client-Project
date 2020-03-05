@@ -2,16 +2,17 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class SessionManagerHandler : MonoBehaviour
 {
-    private GameManager _gameManager;
+    [SerializeField] private GameManager _gameManager;
 
     private void Awake()
     {
         _gameManager = FindObjectOfType<GameManager>();
 
-        if (SessionManager.CurrentDifficulty == null)
+        if (SessionManager.CurrentDifficulty == null && SceneManager.sceneCountInBuildSettings <= 2)
         {
             SessionManager.CurrentDifficulty = _gameManager.Difficulties[0];
         }

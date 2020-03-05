@@ -34,7 +34,7 @@ public class InvestigationGame : Level
 
     public void MoveClaw(int i)
     {
-        if (!_isClawMoving)
+        if (!_isClawMoving && !_isReleasing)
         {
             _currentSlot += i;
             _currentSlot = Mathf.Clamp(_currentSlot, 0, 2);
@@ -63,7 +63,7 @@ public class InvestigationGame : Level
 
     public void ReleaseHandler()
     {
-        if (!_isReleasing)
+        if (!_isReleasing && !_isClawMoving)
         {
             _hookHingeLeft.enabled = true;
             _hookFixedLeft.enabled = false;

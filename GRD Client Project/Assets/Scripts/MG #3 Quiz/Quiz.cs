@@ -105,8 +105,7 @@ public class Quiz : Level
         public List<Question> questions;
     }
 
-    [ContextMenu("Load Json questions")]
-    public void LoadJson()
+    private void LoadJson()
     {
         using (StreamReader r = new StreamReader("Assets/Resources/quizdata.json"))
         {
