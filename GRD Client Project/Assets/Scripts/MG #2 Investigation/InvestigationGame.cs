@@ -9,8 +9,10 @@ public class InvestigationGame : Level
 
     [SerializeField] private GameObject _claw;
     [SerializeField] private Transform _rubbishSlot;
-    [SerializeField] private HingeJoint2D _hookHinge;
-    [SerializeField] private FixedJoint2D _hookFixed;
+    [SerializeField] private HingeJoint2D _hookHingeLeft;
+    [SerializeField] private HingeJoint2D _hookHingeRight;
+    [SerializeField] private FixedJoint2D _hookFixedLeft;
+    [SerializeField] private FixedJoint2D _hookFixedRight;
     [SerializeField] private List<GameObject> _slotsToMoveTheClaw = new List<GameObject>();
     private int _currentSlot; // 0-2 -> 0 left, 1 middle, 2 right
     private bool _isClawMoving = false;
@@ -65,81 +67,16 @@ public class InvestigationGame : Level
     {
         if (!_isReleasing)
         {
-            _hookHinge.enabled = true;
-            _hookFixed.enabled = false;
+            _hookHingeLeft.enabled = true;
+            _hookFixedLeft.enabled = false;
+            _hookHingeRight.enabled = true;
+            _hookFixedRight.enabled = false;
 
             StartCoroutine(Release());
         }
     }
 
 
-/*    private IEnumerator Release()
-    {
-        int openingSpeed = 100;
-        int closingSpeed = -100;
-        int stoppedSpeed = 0;
-
-        bool finishedRelease = false;
-        bool opening = true;
-        JointMotor2D motor = _hookHinge.motor;
-
-    //    motor.motorSpeed = openingSpeed;
-      //  _hookHinge.motor = motor;
-
-        while (!finishedRelease)
-        {
-            if (_hookHinge.limitState == JointLimitState2D.Inactive && opening)
-            {
-                motor.motorSpeed = openingSpeed;
-                _hookHinge.motor = motor;
-                Debug.Log("1");
-            }
-            else if (_hookHinge.limitState == JointLimitState2D.UpperLimit)
-            {
-                opening = false;
-                motor.motorSpeed = closingSpeed;
-                _hookHinge.motor = motor;
-                Debug.Log("2");
-
-            }
-            else if (_hookHinge.limitState == JointLimitState2D.LowerLimit && !opening)
-            {
-                motor.motorSpeed = closingSpeed;
-                _hookHinge.motor = motor;
-                finishedRelease = true;
-                Debug.Log("3");
-
-                yield return null;
-            }
-
-
-            /*if (_hook.transform.childCount > 0)
-            {
-                _hook.transform.GetChild(0).SetParent(null);
-            }
-
-            while (_hookHinge.jointAngle < _hookHinge.limits.max && opening)
-            {
-                motor.motorSpeed = openingSpeed;
-                _hookHinge.motor = motor;
-            }
-
-            opening = false;
-
-            motor.motorSpeed = closingSpeed;
-            _hookHinge.motor = motor;
-
-
-            while (!opening && _hookHinge.jointAngle > _hookHinge.limits.min)
-            {
-                motor.motorSpeed = stoppedSpeed;
-                _hookHinge.motor = motor;
-            }#1#
-        }
-
-
-        yield return null;
-    }*/
     private IEnumerator Release()
     {
         int speed = 100;
@@ -147,20 +84,27 @@ public class InvestigationGame : Level
 
         do
         {
-            if (_hookHinge.limitState == JointLimitState2D.UpperLimit && speed > 0)
+            if (_hookHingeLeft.limitState == JointLimitState2D.UpperLimit && speed > 0)
             {
                 speed = speed * -1;
             }
 
-            JointMotor2D motor = _hookHinge.motor;
+            JointMotor2D motor = _hookHingeLeft.motor;
             motor.motorSpeed = speed;
-            _hookHinge.motor = motor;
-            yield return null;
-        } while (_hookHinge.jointAngle > _hookHinge.limits.min);
+            _hookHingeLeft.motor = motor;
 
-        //reset motorspeed
-        _hookFixed.enabled = true;
-        _hookHinge.enabled = false;
+            JointMotor2D motor2 = _hookHingeRight.motor;
+            motor2.motorSpeed = speed* -1;
+            _hookHingeRight.motor = motor2;
+
+            yield return null;
+        } while (_hookHingeLeft.jointAngle > _hookHingeLeft.limits.min);
+
+        _hookFixedLeft.enabled = true;
+        _hookHingeLeft.enabled = false;
+
+        _hookFixedRight.enabled = true;
+        _hookHingeRight.enabled = false;
         _isReleasing = false;
 
         yield return null;
