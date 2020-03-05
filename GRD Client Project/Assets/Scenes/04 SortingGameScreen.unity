@@ -286,7 +286,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _gameInfo: {fileID: 11400000, guid: f43dce7ef7a848642b989cf08ae13177, type: 2}
-  _miniGameBaseTime: 10
+  _miniGameBaseTime: 15
   _timer: {fileID: 72301655}
   _sceneSwitcher: {fileID: 378983417}
   _rubbishSlotsParent: {fileID: 1553361659}

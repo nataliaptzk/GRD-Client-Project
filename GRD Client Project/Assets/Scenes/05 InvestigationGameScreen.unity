@@ -5700,23 +5700,30 @@ MonoBehaviour:
     - {fileID: 21300000, guid: 9d23b3c709f152b468d44c26f1859214, type: 3}
     landfillSprites:
     - {fileID: 21300000, guid: 9b125b8be43d3234aaa6651b871d222b, type: 3}
+    likelyRecycled: []
+    notLikelyRecycled: []
   - difficulty: {fileID: 11400000, guid: 640b7024cb35e484fbe7d1144f7a18ff, type: 2}
     plasticSprites:
-    - {fileID: 21300000, guid: bb313876d30a4b24da0dcb88030922d6, type: 3}
+    - {fileID: 21300000, guid: 68d1b4b7e5ec43347b82b6e83851b8de, type: 3}
     compostableSprites:
-    - {fileID: 21300000, guid: 7e83a86e8af460041a5b00283f1c27d6, type: 3}
+    - {fileID: 21300000, guid: 948a6a3eede63904190d1d7d9158ad89, type: 3}
     landfillSprites:
-    - {fileID: 21300000, guid: 81dd01db86344ac47bb4c1a6e28e415e, type: 3}
+    - {fileID: 21300000, guid: 4576762bf20ac8e418a2e6c2d49a8328, type: 3}
+    likelyRecycled: []
+    notLikelyRecycled: []
   - difficulty: {fileID: 11400000, guid: c38cffda82198584691b26b58717cf64, type: 2}
     plasticSprites:
-    - {fileID: 21300000, guid: 1dd168ec7148f4847b1c445ae3ebed6d, type: 3}
-    - {fileID: 21300000, guid: e01802a4246d35f43881d20c7e73fefa, type: 3}
+    - {fileID: 21300000, guid: 68d1b4b7e5ec43347b82b6e83851b8de, type: 3}
     compostableSprites:
-    - {fileID: 21300000, guid: 6f8cc9e7541a23842ae3520ee7e05e70, type: 3}
-    - {fileID: 21300000, guid: 925fd125488ba954b82f249d33e2bc14, type: 3}
+    - {fileID: 21300000, guid: 68d1b4b7e5ec43347b82b6e83851b8de, type: 3}
     landfillSprites:
-    - {fileID: 21300000, guid: 32c377d73282f14478fc7c6c8cdf6dff, type: 3}
-    - {fileID: 21300000, guid: 352dfb4a0692be546a12fc16c0a350fc, type: 3}
+    - {fileID: 21300000, guid: 4576762bf20ac8e418a2e6c2d49a8328, type: 3}
+    likelyRecycled:
+    - {fileID: 21300000, guid: c1041afc6643bb441adffc4e9e632b92, type: 3}
+    - {fileID: 21300000, guid: 951ed36fc2c445e4d877e92890aebd9a, type: 3}
+    notLikelyRecycled:
+    - {fileID: 21300000, guid: 5e21d65dd50c98748ab6b38e7ebcf3ce, type: 3}
+    - {fileID: 21300000, guid: dd3d13a63984bd14aa4bf1b5432768ec, type: 3}
 --- !u!114 &1687948136
 MonoBehaviour:
   m_ObjectHideFlags: 0

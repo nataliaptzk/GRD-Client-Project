@@ -13,7 +13,6 @@ MonoBehaviour:
   m_Name: Normal
   m_EditorClassIdentifier: 
   name: normal
-  typeToRecogniseBy: 1
   duration: 2
   pointsGainWhenCorrect: 1
   pointsLossWhenIncorrect: 1
