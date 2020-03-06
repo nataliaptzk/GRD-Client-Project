@@ -1095,6 +1095,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1284086403}
   - component: {fileID: 1284086402}
+  - component: {fileID: 1284086404}
   m_Layer: 0
   m_Name: DidYouKnowManager
   m_TagString: Untagged
@@ -1117,6 +1118,7 @@ MonoBehaviour:
   _DYKMessages: []
   _currentDifficultyDYKMessages: []
   _messageText: {fileID: 1148899244}
+  _timer: {fileID: 0}
 --- !u!4 &1284086403
 Transform:
   m_ObjectHideFlags: 0
@@ -1131,6 +1133,22 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1284086404
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1284086401}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7a0fdf1657d0e71428ac721c9dd2d629, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  timeText: {fileID: 0}
+  _currentMiniGame: {fileID: 0}
+  timeLeft: 0
+  timePassed: 0
 --- !u!1 &1319690358
 GameObject:
   m_ObjectHideFlags: 0

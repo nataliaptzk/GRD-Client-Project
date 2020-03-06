@@ -9,7 +9,7 @@ public class Timer : MonoBehaviour
     [SerializeField] private TextMeshProUGUI timeText;
 
     [SerializeField] private Level _currentMiniGame;
-    public int timeLeft;
+    public int timeLeft, timePassed;
 
     private void Start()
     {
@@ -22,8 +22,8 @@ public class Timer : MonoBehaviour
         while (totalTime <= duration)
         {
             totalTime += Time.deltaTime;
-            timeLeft = (int) totalTime;
-            timeText.text = timeLeft.ToString();
+            timePassed = (int) totalTime;
+            Debug.Log(timePassed);
             yield return null;
         }
     }

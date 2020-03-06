@@ -12,12 +12,16 @@ public class DidYouKnow : MonoBehaviour
     [SerializeField] private List<Message> _currentDifficultyDYKMessages = new List<Message>();
     [SerializeField] private TextMeshProUGUI _messageText;
 
+    [SerializeField] private Timer _timer;
+
     private void Awake()
     {
+        _timer = GetComponent<Timer>();
     }
 
     private void Start()
     {
+        StartCoroutine(_timer.StartStopwatch(60));
         LoadJson();
     }
 
