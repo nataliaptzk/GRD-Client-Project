@@ -14,7 +14,8 @@ public class InvestigationGame : Level
     [SerializeField] private FixedJoint2D _hookFixedLeft;
     [SerializeField] private FixedJoint2D _hookFixedRight;
     [SerializeField] private List<GameObject> _slotsToMoveTheClaw = new List<GameObject>();
-    private int _currentSlot; // 0-2 -> 0 left, 1 middle, 2 right
+    [SerializeField] private List<GameObject> _slotsToMoveTheClawHardDifficulty = new List<GameObject>();
+    private int _currentSlot; // 0-2 -> 0 left, 1 middle, 2 right || hard difficulty 0-4 -> 0 - left, 1 - mid left, 2 - mid, 3 - right mid, 4 - right
     private bool _isClawMoving = false;
     private bool _isReleasing = false;
 
@@ -23,13 +24,20 @@ public class InvestigationGame : Level
     private void Awake()
     {
         _rubbishGenerator = FindObjectOfType<RubbishGenerator>();
-        _currentSlot = 1;
     }
 
     private void Start()
     {
         _rubbishGenerator.GeneratePlasticObjects(SessionManager.CurrentDifficulty, _rubbishSlotsParent);
         StartCoroutine(_timer.Countdown(SessionManager.CurrentDifficulty.duration * _miniGameBaseTime));
+        if (SessionManager.CurrentDifficulty.name == "easy" || SessionManager.CurrentDifficulty.name == "normal")
+        {
+            _currentSlot = 1;
+        }
+        else if (SessionManager.CurrentDifficulty.name == "hard")
+        {
+            _currentSlot = 2;
+        }
     }
 
     public void MoveClaw(int i)
@@ -37,25 +45,33 @@ public class InvestigationGame : Level
         if (!_isClawMoving && !_isReleasing)
         {
             _currentSlot += i;
-            _currentSlot = Mathf.Clamp(_currentSlot, 0, 2);
-            StartCoroutine(MoveClawEnumerator());
+            if (SessionManager.CurrentDifficulty.name == "easy" || SessionManager.CurrentDifficulty.name == "normal")
+            {
+                _currentSlot = Mathf.Clamp(_currentSlot, 0, 2);
+                StartCoroutine(MoveClawEnumerator(_slotsToMoveTheClaw));
+            }
+            else if (SessionManager.CurrentDifficulty.name == "hard")
+            {
+                _currentSlot = Mathf.Clamp(_currentSlot, 0, 4);
+                StartCoroutine(MoveClawEnumerator(_slotsToMoveTheClawHardDifficulty));
+            }
         }
     }
 
-    private IEnumerator MoveClawEnumerator()
+    private IEnumerator MoveClawEnumerator(List<GameObject> pointsToMoveAcross)
     {
         _isClawMoving = true;
         float elapsedTime = 0;
         float waitTime = 1f;
         while (elapsedTime < waitTime)
         {
-            _claw.transform.localPosition = Vector3.Lerp(_claw.transform.localPosition, _slotsToMoveTheClaw[_currentSlot].transform.position, (elapsedTime / waitTime));
+            _claw.transform.localPosition = Vector3.Lerp(_claw.transform.localPosition, pointsToMoveAcross[_currentSlot].transform.position, (elapsedTime / waitTime));
             elapsedTime += Time.deltaTime;
 
             yield return null;
         }
 
-        transform.position = _slotsToMoveTheClaw[_currentSlot].transform.position;
+        transform.position = pointsToMoveAcross[_currentSlot].transform.position;
         _isClawMoving = false;
 
         yield return null;
@@ -104,7 +120,14 @@ public class InvestigationGame : Level
         _hookFixedRight.enabled = true;
         _hookHingeRight.enabled = false;
         _isReleasing = false;
-        AttachPlastic();
+
+
+        if (_rubbishSlot.transform.childCount != 0)
+        {
+            _rubbishSlot.GetChild(0).parent = null;
+            AttachPlastic();
+        }
+
         yield return null;
     }
 
