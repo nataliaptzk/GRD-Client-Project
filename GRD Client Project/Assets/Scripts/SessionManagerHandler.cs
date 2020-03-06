@@ -43,13 +43,15 @@ public class SessionManagerHandler : MonoBehaviour
 
     public void ResetSessionHandler(Difficulty difficulty)
     {
-        SceneManager.LoadScene("01 WelcomeScreen");
+        _gameManager.GetComponent<DataCollection>().WhenRestarted(SceneManager.GetActiveScene().name);
+
         SessionManager.ResetSession(difficulty);
+
+        SceneManager.LoadScene("01 WelcomeScreen");
     }
 
     public void CreateSessionHandler()
     {
         SessionManager.CreateSession();
-
     }
 }

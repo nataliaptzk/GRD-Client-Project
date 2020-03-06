@@ -21,7 +21,6 @@ public class DidYouKnow : MonoBehaviour
 
     private void Start()
     {
-        StartCoroutine(_timer.StartStopwatch(60));
         LoadJson();
     }
 

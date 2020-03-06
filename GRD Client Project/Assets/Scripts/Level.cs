@@ -11,17 +11,22 @@ public class Level : MonoBehaviour
     [SerializeField] private Timer _timer;
     [SerializeField] private SceneSwitcher _sceneSwitcher;
     [SerializeField] private GameObject _tutorialScreen;
+    [SerializeField] private GameObject _helpScreen;
     [SerializeField] private GameObject _endScreen;
     protected GameManager _gameManager;
+    protected DataCollection _dataCollection;
 
     private int _correctAnswers;
     private int _incorrectAnswers;
-
+    private int _amountHelpScreenOpened;
+    
     [SerializeField] private TextMeshProUGUI _titleTextBox;
     [SerializeField] private TextMeshProUGUI _remainingTimeTextBox;
     [SerializeField] private TextMeshProUGUI _correctAnswersTextBox;
     [SerializeField] private TextMeshProUGUI _incorrectAnswersTextBox;
     [SerializeField] private TextMeshProUGUI _scoreTextBox;
+
+    public MiniGameInfo GameInfo => _gameInfo;
 
 
     public void FinishMiniGame()
@@ -31,17 +36,20 @@ public class Level : MonoBehaviour
 
     public void LoadNextLevel()
     {
-        _sceneSwitcher.SwitchScene(_gameInfo.sceneTitleToLoad);
+        _sceneSwitcher.SwitchScene(GameInfo.sceneTitleToLoad);
     }
 
     private void DisplayFinishedLevelInfo()
     {
         _endScreen.SetActive(true);
-        _titleTextBox.text = _gameInfo.title;
+        _titleTextBox.text = GameInfo.title;
         _remainingTimeTextBox.text = _timer.timeLeft.ToString();
         _correctAnswersTextBox.text = _gameManager.GetComponent<Score>().correct.ToString();
         _incorrectAnswersTextBox.text = _gameManager.GetComponent<Score>().incorrect.ToString();
         _scoreTextBox.text = SessionManager.Score.ToString();
+
+        _gameManager.GetComponent<DataCollection>().SendFinishedLevelInfo(GameInfo.title, _gameManager.GetComponent<Score>().correct, _gameManager.GetComponent<Score>().incorrect);
+        _gameManager.GetComponent<DataCollection>().HelpScreenOpened( GameInfo.title, _amountHelpScreenOpened);
     }
 
     protected void DisplayTutorialScreen()
@@ -54,5 +62,16 @@ public class Level : MonoBehaviour
         // here start timer
         _tutorialScreen.SetActive(false);
         StartCoroutine(_timer.Countdown(SessionManager.CurrentDifficulty.duration * _miniGameBaseTime));
+    }
+
+    public void OpenHelpScreen()
+    {
+        _helpScreen.SetActive(true);
+        _amountHelpScreenOpened++;
+    }
+
+    public void CloseHelpScreen()
+    {
+        _helpScreen.SetActive(false);
     }
 }

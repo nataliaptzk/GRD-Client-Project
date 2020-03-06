@@ -448,6 +448,7 @@ MonoBehaviour:
   timeText: {fileID: 1750131863}
   _currentMiniGame: {fileID: 0}
   timeLeft: 0
+  timePassed: 0
 --- !u!114 &72301656
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -465,6 +466,7 @@ MonoBehaviour:
   _timer: {fileID: 72301655}
   _sceneSwitcher: {fileID: 378983417}
   _tutorialScreen: {fileID: 107166580}
+  _helpScreen: {fileID: 1633305754}
   _endScreen: {fileID: 988541316}
   _titleTextBox: {fileID: 535979675}
   _remainingTimeTextBox: {fileID: 2084670647}
@@ -604,9 +606,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1633305754}
-        m_MethodName: SetActive
-        m_Mode: 6
+      - m_Target: {fileID: 72301656}
+        m_MethodName: OpenHelpScreen
+        m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
@@ -5943,9 +5945,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1633305754}
-        m_MethodName: SetActive
-        m_Mode: 6
+      - m_Target: {fileID: 72301656}
+        m_MethodName: CloseHelpScreen
+        m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
@@ -6885,6 +6887,7 @@ GameObject:
   - component: {fileID: 2144164190}
   - component: {fileID: 2144164188}
   - component: {fileID: 2144164191}
+  - component: {fileID: 2144164192}
   m_Layer: 0
   m_Name: GameManager
   m_TagString: Untagged
@@ -6989,3 +6992,15 @@ MonoBehaviour:
   scoreField: {fileID: 1471108955}
   correct: 0
   incorrect: 0
+--- !u!114 &2144164192
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2144164187}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9600b6dcd00d9f948b4ad564856f146d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
