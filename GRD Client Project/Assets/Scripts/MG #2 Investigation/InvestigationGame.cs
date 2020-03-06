@@ -93,6 +93,11 @@ public class InvestigationGame : Level
 
     private IEnumerator Release()
     {
+        if (_rubbishSlot.transform.childCount != 0)
+        {
+            _rubbishSlot.GetChild(0).parent = null;
+        }
+
         int speed = 100;
         _isReleasing = true;
 
@@ -119,13 +124,12 @@ public class InvestigationGame : Level
 
         _hookFixedRight.enabled = true;
         _hookHingeRight.enabled = false;
+
+
         _isReleasing = false;
-
-
-        if (_rubbishSlot.transform.childCount != 0)
+        if (_rubbishSlotsParent.transform.childCount == 0)
         {
-            _rubbishSlot.GetChild(0).parent = null;
-            AttachPlastic();
+            Invoke("FinishMiniGame", 1f);
         }
 
         yield return null;
@@ -139,10 +143,6 @@ public class InvestigationGame : Level
             {
                 _rubbishSlotsParent.transform.GetChild(0).parent = _rubbishSlot;
                 _rubbishSlot.transform.GetChild(0).localPosition = new Vector3(0, 0f, 0);
-            }
-            else if (_rubbishSlotsParent.transform.childCount == 0)
-            {
-                FinishMiniGame();
             }
         }
     }
