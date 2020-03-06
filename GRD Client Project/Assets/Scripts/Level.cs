@@ -10,21 +10,22 @@ public class Level : MonoBehaviour
     [SerializeField] private Timer _timer;
     [SerializeField] private SceneSwitcher _sceneSwitcher;
     [SerializeField] private GameObject _tutorialScreen;
+    [SerializeField] private GameObject _endScreen;
     protected GameManager _gameManager;
 
     public void FinishMiniGame()
     {
         DisplayFinishedLevelInfo();
-        LoadNextLevel();
     }
 
-    private void LoadNextLevel()
+    public void LoadNextLevel()
     {
         _sceneSwitcher.SwitchScene(_gameInfo.sceneTitleToLoad);
     }
 
     private void DisplayFinishedLevelInfo()
     {
+        _endScreen.SetActive(true);
     }
 
     protected void DisplayTutorialScreen()
