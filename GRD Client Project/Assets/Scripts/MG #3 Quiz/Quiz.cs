@@ -20,16 +20,18 @@ public class Quiz : Level
 
     private void Awake()
     {
+        DisplayTutorialScreen();
+        _gameManager = FindObjectOfType<GameManager>();
         _currentQuestion = 0;
         LoadJson();
-        LoadCurrentDifficultyQuestions();
-        FirstQuestion();
+
         _answersPositions = new List<Vector3> {answerObjects[0].transform.position, answerObjects[1].transform.position, answerObjects[2].transform.position};
     }
 
     private void Start()
     {
-        StartCoroutine(_timer.Countdown(SessionManager.CurrentDifficulty.duration * _miniGameBaseTime));
+        LoadCurrentDifficultyQuestions();
+        FirstQuestion();
     }
 
     private void FirstQuestion()

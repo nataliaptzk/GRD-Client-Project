@@ -7,15 +7,10 @@ public class Level : MonoBehaviour
 {
     [SerializeField] protected MiniGameInfo _gameInfo;
     [SerializeField] protected float _miniGameBaseTime;
-    [SerializeField] protected Timer _timer;
+    [SerializeField] private Timer _timer;
     [SerializeField] private SceneSwitcher _sceneSwitcher;
+    [SerializeField] private GameObject _tutorialScreen;
     protected GameManager _gameManager;
-
-
-    private void Awake()
-    {
-        _gameManager = FindObjectOfType<GameManager>();
-    }
 
     public void FinishMiniGame()
     {
@@ -31,4 +26,17 @@ public class Level : MonoBehaviour
     private void DisplayFinishedLevelInfo()
     {
     }
+
+    protected void DisplayTutorialScreen()
+    {
+        _tutorialScreen.SetActive(true);
+    }
+
+    public void CloseTutorial()
+    {
+        // here start timer
+        _tutorialScreen.SetActive(false);
+        StartCoroutine(_timer.Countdown(SessionManager.CurrentDifficulty.duration * _miniGameBaseTime));
+    }
+
 }
