@@ -35,11 +35,15 @@ public class DragAndDrop : MonoBehaviour
             if (colliders[0].gameObject.GetComponent<Bin>().type == gameObject.GetComponent<Rubbish>().type)
             {
                 _score.AddScore(1 * SessionManager.CurrentDifficulty.pointsGainWhenCorrect);
+                _score.CountCorrect();
+
             }
 
             else
             {
                 _score.AddScore(-1 * SessionManager.CurrentDifficulty.pointsLossWhenIncorrect);
+                _score.CountIncorrect();
+
             }
 
             _sortingGame.CheckIfFinished();

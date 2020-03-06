@@ -40,6 +40,7 @@ public static class SessionManager
     public static void ResetSession(Difficulty difficulty)
     {
         _currentDifficulty = difficulty;
+        _score = 0;
         // fill in!
     }
 }

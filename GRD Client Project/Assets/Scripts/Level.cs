@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections;
 using System.Collections.Generic;
+using TMPro;
 using UnityEngine;
 
 public class Level : MonoBehaviour
@@ -12,6 +13,16 @@ public class Level : MonoBehaviour
     [SerializeField] private GameObject _tutorialScreen;
     [SerializeField] private GameObject _endScreen;
     protected GameManager _gameManager;
+
+    private int _correctAnswers;
+    private int _incorrectAnswers;
+
+    [SerializeField] private TextMeshProUGUI _titleTextBox;
+    [SerializeField] private TextMeshProUGUI _remainingTimeTextBox;
+    [SerializeField] private TextMeshProUGUI _correctAnswersTextBox;
+    [SerializeField] private TextMeshProUGUI _incorrectAnswersTextBox;
+    [SerializeField] private TextMeshProUGUI _scoreTextBox;
+
 
     public void FinishMiniGame()
     {
@@ -26,6 +37,11 @@ public class Level : MonoBehaviour
     private void DisplayFinishedLevelInfo()
     {
         _endScreen.SetActive(true);
+        _titleTextBox.text = _gameInfo.title;
+        _remainingTimeTextBox.text = _timer.timeLeft.ToString();
+        _correctAnswersTextBox.text = _gameManager.GetComponent<Score>().correct.ToString();
+        _incorrectAnswersTextBox.text = _gameManager.GetComponent<Score>().incorrect.ToString();
+        _scoreTextBox.text = SessionManager.Score.ToString();
     }
 
     protected void DisplayTutorialScreen()
@@ -39,5 +55,4 @@ public class Level : MonoBehaviour
         _tutorialScreen.SetActive(false);
         StartCoroutine(_timer.Countdown(SessionManager.CurrentDifficulty.duration * _miniGameBaseTime));
     }
-
 }

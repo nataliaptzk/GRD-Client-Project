@@ -40,14 +40,16 @@ public class Answer : MonoBehaviour
             if (_quiz.correctAnswer == answerIndex)
             {
                 _score.AddScore(1 * SessionManager.CurrentDifficulty.pointsGainWhenCorrect);
+                _score.CountCorrect();
             }
 
             else
             {
                 _score.AddScore(-1 * SessionManager.CurrentDifficulty.pointsLossWhenIncorrect);
+                _score.CountIncorrect();
             }
 
-         //   ResetToStartPosition();
+            //   ResetToStartPosition();
             _quiz.NextQuestion();
         }
     }

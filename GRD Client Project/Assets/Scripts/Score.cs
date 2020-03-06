@@ -8,6 +8,8 @@ public class Score : MonoBehaviour
 {
     [SerializeField] private TextMeshProUGUI scoreField;
 
+    public int correct;
+    public int incorrect;
     // [NonSerialized] public int score;
 
     private void Start()
@@ -35,5 +37,15 @@ public class Score : MonoBehaviour
         SessionManager.Score += points;
         SessionManager.Score = Mathf.Max(0, SessionManager.Score);
         UpdateScoreUI();
+    }
+
+    public void CountCorrect()
+    {
+        correct++;
+    }
+
+    public void CountIncorrect()
+    {
+        incorrect++;
     }
 }

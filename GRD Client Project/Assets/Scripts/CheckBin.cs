@@ -19,10 +19,13 @@ public class CheckBin : MonoBehaviour
             if (other.GetComponent<Rubbish>().type == gameObject.GetComponent<Bin>().type)
             {
                 _score.AddScore(1 * SessionManager.CurrentDifficulty.pointsGainWhenCorrect);
+                _score.CountCorrect();
             }
             else
             {
                 _score.AddScore(-1 * SessionManager.CurrentDifficulty.pointsLossWhenIncorrect);
+                _score.CountIncorrect();
+
             }
 
             Destroy(other.gameObject);

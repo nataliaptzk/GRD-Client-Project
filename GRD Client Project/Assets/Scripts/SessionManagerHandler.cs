@@ -24,6 +24,7 @@ public class SessionManagerHandler : MonoBehaviour
 
     public void ResetSessionHandler(Difficulty difficulty)
     {
+        SceneManager.LoadScene("01 WelcomeScreen");
         SessionManager.ResetSession(difficulty);
     }
 }
