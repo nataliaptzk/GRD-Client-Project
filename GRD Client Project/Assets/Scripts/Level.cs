@@ -14,7 +14,6 @@ public class Level : MonoBehaviour
     [SerializeField] private GameObject _helpScreen;
     [SerializeField] private GameObject _endScreen;
     protected GameManager _gameManager;
-    protected DataCollection _dataCollection;
 
     private int _correctAnswers;
     private int _incorrectAnswers;
