@@ -53,5 +53,6 @@ public class SessionManagerHandler : MonoBehaviour
     public void CreateSessionHandler()
     {
         SessionManager.CreateSession();
+        DataCollectionFileManager.WriteStringNewLine(SessionManager.SessionId, SessionManager.Consent.ToString());
     }
 }

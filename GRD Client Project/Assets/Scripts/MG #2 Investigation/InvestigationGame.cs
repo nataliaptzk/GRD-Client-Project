@@ -147,4 +147,17 @@ public class InvestigationGame : Level
             }
         }
     }
+
+    public void FillInDataCollectionForRemainingObjects()
+    {
+        //in case the timer runs out of time
+        int tempCount = 0;
+        tempCount = _rubbishSlotsParent.transform.childCount;
+
+        for (int i = 0; i < tempCount; i++)
+        {
+            DataCollectionFileManager.WriteStringContinuation("run out of time");
+            DataCollectionFileManager.WriteStringContinuation("N/A");
+        }
+    }
 }

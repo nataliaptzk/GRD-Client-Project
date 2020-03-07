@@ -47,6 +47,8 @@ public class DataCollection : MonoBehaviour
             restartInfo.Add("SessionID", SessionManager.SessionId);
             restartInfo.Add("DuringGameTitle", title);
 
+            // Custom Data Collection
+            DataCollectionFileManager.WriteStringContinuation(title);
 
             AnalyticsResult ar = Analytics.CustomEvent("RESTART_INFO", restartInfo);
 
@@ -63,6 +65,10 @@ public class DataCollection : MonoBehaviour
             didYouKnowInfo.Add("CurrentDidYouKnowScene", SceneManager.GetActiveScene().name);
             didYouKnowInfo.Add("Answer", answer);
             didYouKnowInfo.Add("TimeSpentOnThePage", Time.timeSinceLevelLoad);
+
+            // Custom Data Collection
+            DataCollectionFileManager.WriteStringContinuation(answer);
+            DataCollectionFileManager.WriteStringContinuation(Time.timeSinceLevelLoad.ToString());
 
             AnalyticsResult ar = Analytics.CustomEvent("DYK_INFO", didYouKnowInfo);
 

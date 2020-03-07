@@ -18,7 +18,7 @@ public class Level : MonoBehaviour
     private int _correctAnswers;
     private int _incorrectAnswers;
     private int _amountHelpScreenOpened;
-    
+
     [SerializeField] private TextMeshProUGUI _titleTextBox;
     [SerializeField] private TextMeshProUGUI _remainingTimeTextBox;
     [SerializeField] private TextMeshProUGUI _correctAnswersTextBox;
@@ -30,6 +30,14 @@ public class Level : MonoBehaviour
 
     public void FinishMiniGame()
     {
+        // In case of time running out collect data
+        SortingGame sortingGame = GetComponent<SortingGame>();
+        if (sortingGame) sortingGame.FillInDataCollectionForRemainingObjects();
+        InvestigationGame investigationGame = GetComponent<InvestigationGame>();
+        if (investigationGame) investigationGame.FillInDataCollectionForRemainingObjects();
+        Quiz quiz = GetComponent<Quiz>();
+        if (quiz) quiz.FillInDataCollectionForRemainingObjects();
+
         DisplayFinishedLevelInfo();
     }
 
@@ -47,8 +55,11 @@ public class Level : MonoBehaviour
         _incorrectAnswersTextBox.text = _gameManager.GetComponent<Score>().incorrect.ToString();
         _scoreTextBox.text = SessionManager.Score.ToString();
 
+        // Unity Analytics calls
         _gameManager.GetComponent<DataCollection>().SendFinishedLevelInfo(GameInfo.title, _gameManager.GetComponent<Score>().correct, _gameManager.GetComponent<Score>().incorrect);
-        _gameManager.GetComponent<DataCollection>().HelpScreenOpened( GameInfo.title, _amountHelpScreenOpened);
+        _gameManager.GetComponent<DataCollection>().HelpScreenOpened(GameInfo.title, _amountHelpScreenOpened);
+        // Custom Data Collection Calls
+        DataCollectionFileManager.WriteStringContinuation(_amountHelpScreenOpened.ToString());
     }
 
     protected void DisplayTutorialScreen()

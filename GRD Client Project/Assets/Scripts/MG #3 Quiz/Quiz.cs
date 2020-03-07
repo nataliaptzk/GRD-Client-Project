@@ -52,6 +52,15 @@ public class Quiz : Level
         }
         else if (_currentQuestion >= _currentDifficultyQuestions.Count)
         {
+            // Count the difference between amount of questions, and fill in remaining fields with N/A text (for custom data collection)
+            int tempQuestionCount = 0;
+            tempQuestionCount = 8 - _currentDifficultyQuestions.Count;
+
+            for (int i = 0; i < tempQuestionCount; i++)
+            {
+                DataCollectionFileManager.WriteStringContinuation("N/A");
+            }
+
             FinishMiniGame();
         }
     }
@@ -113,6 +122,27 @@ public class Quiz : Level
         {
             string json = r.ReadToEnd();
             _questions = JsonUtility.FromJson<RootObject>(json).questions;
+        }
+    }
+
+    public void FillInDataCollectionForRemainingObjects()
+    {
+        //in case the timer runs out of time
+        int tempCount = 0;
+        tempCount = _currentDifficultyQuestions.Count - _currentQuestion;
+
+        for (int i = 0; i < tempCount; i++)
+        {
+            DataCollectionFileManager.WriteStringContinuation("run out of time");
+        }
+
+        // Count the difference between amount of questions, and fill in remaining fields with N/A text (for custom data collection)
+        int tempQuestionCount = 0;
+        tempQuestionCount = 8 - _currentDifficultyQuestions.Count;
+
+        for (int i = 0; i < tempQuestionCount; i++)
+        {
+            DataCollectionFileManager.WriteStringContinuation("N/A");
         }
     }
 }

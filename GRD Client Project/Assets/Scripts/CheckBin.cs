@@ -20,12 +20,15 @@ public class CheckBin : MonoBehaviour
             {
                 _score.AddScore(1 * SessionManager.CurrentDifficulty.pointsGainWhenCorrect);
                 _score.CountCorrect();
+                DataCollectionFileManager.WriteStringContinuation(other.GetComponent<Rubbish>().type.ToString());
+                DataCollectionFileManager.WriteStringContinuation("correct");
             }
             else
             {
                 _score.AddScore(-1 * SessionManager.CurrentDifficulty.pointsLossWhenIncorrect);
                 _score.CountIncorrect();
-
+                DataCollectionFileManager.WriteStringContinuation(other.GetComponent<Rubbish>().type.ToString());
+                DataCollectionFileManager.WriteStringContinuation("incorrect");
             }
 
             Destroy(other.gameObject);

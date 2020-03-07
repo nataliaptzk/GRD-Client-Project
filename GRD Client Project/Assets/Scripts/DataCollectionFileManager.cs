@@ -10,21 +10,24 @@ public static class DataCollectionFileManager
 
     public static void WriteStringContinuation(string text)
     {
-        if (CheckIfFileExists(_fileName))
+        if (SessionManager.Consent)
         {
-            string path = Application.persistentDataPath + _fileName;
-
-            using (StreamWriter outputFile = new StreamWriter(path, true))
+            if (CheckIfFileExists(_fileName))
             {
-                outputFile.Write(text + ";"); //adds to the current line
+                string path = Application.persistentDataPath + _fileName;
 
-                outputFile.Flush();
-                outputFile.Close();
+                using (StreamWriter outputFile = new StreamWriter(path, true))
+                {
+                    outputFile.Write(text + ";"); //adds to the current line
+
+                    outputFile.Flush();
+                    outputFile.Close();
+                }
             }
         }
     }
 
-    public static void WriteStringNewLine(string text)
+    public static void WriteStringNewLine(string text, string text2)
     {
         if (CheckIfFileExists(_fileName))
         {
@@ -34,6 +37,7 @@ public static class DataCollectionFileManager
             {
                 outputFile.WriteLine(""); //makes a new line
                 outputFile.Write(text + ";"); //adds to the current line
+                outputFile.Write(text2 + ";"); //adds to the current line
 
                 outputFile.Flush();
                 outputFile.Close();

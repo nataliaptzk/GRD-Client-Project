@@ -3984,7 +3984,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _gameInfo: {fileID: 11400000, guid: e19eeb2624caf0644adc4c08647e7fee, type: 2}
-  _miniGameBaseTime: 70
+  _miniGameBaseTime: 10
   _timer: {fileID: 672747244}
   _sceneSwitcher: {fileID: 519182105}
   _tutorialScreen: {fileID: 421056951}
