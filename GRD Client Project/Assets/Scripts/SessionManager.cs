@@ -45,6 +45,7 @@ public static class SessionManager
     {
         _sessionID = DateTime.Now + " " + _currentDifficulty.name;
         _nickname = nickA + " " + nickB;
+        Debug.Log(_nickname);
     }
 
     public static void ResetSession(Difficulty difficulty)

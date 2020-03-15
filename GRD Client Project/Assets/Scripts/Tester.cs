@@ -9,6 +9,6 @@ public class Tester : MonoBehaviour
     [ContextMenu("test")]
     public void Test()
     {
-        SessionManager.CreateSession();
+      //  SessionManager.CreateSession();
     }
 }
