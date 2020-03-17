@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using System.IO;
 using TMPro;
 using UnityEngine;
+using UnityEngine.Networking;
 using Random = UnityEngine.Random;
 
 public class NicknameManager : MonoBehaviour
@@ -51,11 +52,55 @@ public class NicknameManager : MonoBehaviour
 
     private void LoadJsonNames()
     {
-        using (StreamReader r = new StreamReader("Assets/Resources/names.json"))
+        /*
+        var _path = Application.streamingAssetsPath + "/names.json";
+        UnityEngine.Networking.UnityWebRequest www = UnityEngine.Networking.UnityWebRequest.Get(_path);
+        www.SendWebRequest();
+        while (!www.isDone)
+        {
+        }
+
+        string jsonString = www.downloadHandler.text;
+
+        _firstPart = JsonUtility.FromJson<RootObject>(jsonString).First;
+        _secondPart = JsonUtility.FromJson<RootObject>(jsonString).Second;
+        */
+/*
+        using (StreamReader r = new StreamReader("Assets/StreamingAssets/names.json"))
         {
             string json = r.ReadToEnd();
             _firstPart = JsonUtility.FromJson<RootObject>(json).First;
             _secondPart = JsonUtility.FromJson<RootObject>(json).Second;
+        }*/
+/*
+        var _path = Application.streamingAssetsPath + "/names.json";
+        UnityEngine.Networking.UnityWebRequest www = UnityEngine.Networking.UnityWebRequest.Get(_path);
+        www.SendWebRequest();
+        while (!www.isDone)
+        {
+        }
+        string jsonString = www.downloadHandler.text;
+        */
+
+        string filePath = Application.streamingAssetsPath + "/names.json";
+        string jsonString;
+
+        //   if (Application.platform == RuntimePlatform.Android) //Need to extract file from apk first
+        {
+            UnityWebRequest www = UnityWebRequest.Get(filePath);
+            www.SendWebRequest();
+            while (!www.isDone)
+            {
+            }
+
+            jsonString = www.downloadHandler.text;
+
+            _firstPart = JsonUtility.FromJson<RootObject>(jsonString).First;
+            _secondPart = JsonUtility.FromJson<RootObject>(jsonString).Second;
+        }
+        //    else
+        {
+            //        jsonString = File.ReadAllText(filePath);
         }
     }
 }

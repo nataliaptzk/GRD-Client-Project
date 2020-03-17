@@ -65,7 +65,7 @@ public class DidYouKnow : MonoBehaviour
 
     private void LoadJson()
     {
-        using (StreamReader r = new StreamReader("Assets/Resources/didYouKnowData.json"))
+        using (StreamReader r = new StreamReader("Assets/StreamingAssets/didYouKnowData.json"))
         {
             string json = r.ReadToEnd();
             _DYKMessages = JsonUtility.FromJson<RootObject>(json).messages;

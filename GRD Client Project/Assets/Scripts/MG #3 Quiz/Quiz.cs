@@ -118,7 +118,7 @@ public class Quiz : Level
 
     private void LoadJson()
     {
-        using (StreamReader r = new StreamReader("Assets/Resources/quizdata.json"))
+        using (StreamReader r = new StreamReader("Assets/StreamingAssets/quizdata.json"))
         {
             string json = r.ReadToEnd();
             _questions = JsonUtility.FromJson<RootObject>(json).questions;
