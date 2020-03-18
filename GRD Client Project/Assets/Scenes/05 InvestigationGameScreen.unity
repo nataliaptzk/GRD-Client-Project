@@ -1026,7 +1026,7 @@ MonoBehaviour:
   m_firstVisibleCharacter: 0
   m_useMaxVisibleDescender: 1
   m_pageToDisplay: 1
-  m_margin: {x: 0, y: 0, z: 0, w: 2.107483}
+  m_margin: {x: 0, y: 0, z: 7.8553467, w: 2.107483}
   m_textInfo:
     textComponent: {fileID: 218992318}
     characterCount: 7
@@ -3488,6 +3488,81 @@ MonoBehaviour:
   _currentMiniGame: {fileID: 0}
   timeLeft: 0
   timePassed: 0
+--- !u!1 &691350933
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 691350934}
+  - component: {fileID: 691350936}
+  - component: {fileID: 691350935}
+  m_Layer: 5
+  m_Name: Image
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &691350934
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 691350933}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1848237103}
+  m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 1585, y: 941}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &691350935
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 691350933}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
+      Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+  m_Sprite: {fileID: 21300000, guid: 632d0efbbd3e2e1449f83ab6d94749ab, type: 3}
+  m_Type: 0
+  m_PreserveAspect: 1
+  m_FillCenter: 1
+  m_FillMethod: 4
+  m_FillAmount: 1
+  m_FillClockwise: 1
+  m_FillOrigin: 0
+  m_UseSpriteMesh: 0
+  m_PixelsPerUnitMultiplier: 1
+--- !u!222 &691350936
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 691350933}
+  m_CullTransparentMesh: 0
 --- !u!1 &766964485
 GameObject:
   m_ObjectHideFlags: 0
@@ -5959,7 +6034,7 @@ MonoBehaviour:
   m_firstVisibleCharacter: 0
   m_useMaxVisibleDescender: 1
   m_pageToDisplay: 1
-  m_margin: {x: 0, y: 0, z: 0, w: 2.107483}
+  m_margin: {x: 0, y: 0, z: 8.225967, w: 2.107483}
   m_textInfo:
     textComponent: {fileID: 1559842246}
     characterCount: 6
@@ -7400,7 +7475,7 @@ Camera:
   m_Enabled: 1
   serializedVersion: 2
   m_ClearFlags: 1
-  m_BackGroundColor: {r: 0.64705884, g: 0.9764706, b: 1, a: 0}
+  m_BackGroundColor: {r: 0.28627452, g: 0.74509805, b: 0.7176471, a: 0}
   m_projectionMatrixMode: 1
   m_GateFitMode: 2
   m_FOVAxisMode: 0
@@ -7488,6 +7563,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: TutorialScreen
+      objectReference: {fileID: 0}
+    - target: {fileID: 2285252354702261225, guid: c6f215e3c974427449ecb4012333480b,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 2285252354702261224, guid: c6f215e3c974427449ecb4012333480b,
         type: 3}
@@ -7609,6 +7689,12 @@ PrefabInstance:
 --- !u!224 &1848237102 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 2285252354702261224, guid: c6f215e3c974427449ecb4012333480b,
+    type: 3}
+  m_PrefabInstance: {fileID: 1848237101}
+  m_PrefabAsset: {fileID: 0}
+--- !u!224 &1848237103 stripped
+RectTransform:
+  m_CorrespondingSourceObject: {fileID: 2285252356048300149, guid: c6f215e3c974427449ecb4012333480b,
     type: 3}
   m_PrefabInstance: {fileID: 1848237101}
   m_PrefabAsset: {fileID: 0}
