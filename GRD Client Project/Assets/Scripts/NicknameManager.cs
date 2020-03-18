@@ -52,55 +52,17 @@ public class NicknameManager : MonoBehaviour
 
     private void LoadJsonNames()
     {
-        /*
-        var _path = Application.streamingAssetsPath + "/names.json";
-        UnityEngine.Networking.UnityWebRequest www = UnityEngine.Networking.UnityWebRequest.Get(_path);
-        www.SendWebRequest();
-        while (!www.isDone)
-        {
-        }
-
-        string jsonString = www.downloadHandler.text;
-
-        _firstPart = JsonUtility.FromJson<RootObject>(jsonString).First;
-        _secondPart = JsonUtility.FromJson<RootObject>(jsonString).Second;
-        */
-/*
-        using (StreamReader r = new StreamReader("Assets/StreamingAssets/names.json"))
-        {
-            string json = r.ReadToEnd();
-            _firstPart = JsonUtility.FromJson<RootObject>(json).First;
-            _secondPart = JsonUtility.FromJson<RootObject>(json).Second;
-        }*/
-/*
-        var _path = Application.streamingAssetsPath + "/names.json";
-        UnityEngine.Networking.UnityWebRequest www = UnityEngine.Networking.UnityWebRequest.Get(_path);
-        www.SendWebRequest();
-        while (!www.isDone)
-        {
-        }
-        string jsonString = www.downloadHandler.text;
-        */
-
         string filePath = Application.streamingAssetsPath + "/names.json";
-        string jsonString;
 
-        //   if (Application.platform == RuntimePlatform.Android) //Need to extract file from apk first
+        UnityWebRequest www = UnityWebRequest.Get(filePath);
+        www.SendWebRequest();
+        while (!www.isDone)
         {
-            UnityWebRequest www = UnityWebRequest.Get(filePath);
-            www.SendWebRequest();
-            while (!www.isDone)
-            {
-            }
-
-            jsonString = www.downloadHandler.text;
-
-            _firstPart = JsonUtility.FromJson<RootObject>(jsonString).First;
-            _secondPart = JsonUtility.FromJson<RootObject>(jsonString).Second;
         }
-        //    else
-        {
-            //        jsonString = File.ReadAllText(filePath);
-        }
+
+        string json = System.Text.Encoding.UTF8.GetString(www.downloadHandler.data, 3, www.downloadHandler.data.Length - 3);
+
+        _firstPart = JsonUtility.FromJson<RootObject>(json).First;
+        _secondPart = JsonUtility.FromJson<RootObject>(json).Second;
     }
 }

@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using System.IO;
 using TMPro;
 using UnityEngine;
+using UnityEngine.Networking;
 using UnityEngine.SceneManagement;
 
 public class DidYouKnow : MonoBehaviour
@@ -65,12 +66,17 @@ public class DidYouKnow : MonoBehaviour
 
     private void LoadJson()
     {
-        using (StreamReader r = new StreamReader("Assets/StreamingAssets/didYouKnowData.json"))
+        string filePath = Application.streamingAssetsPath + "/didYouKnowData.json";
+
+        UnityWebRequest www = UnityWebRequest.Get(filePath);
+        www.SendWebRequest();
+        while (!www.isDone)
         {
-            string json = r.ReadToEnd();
-            _DYKMessages = JsonUtility.FromJson<RootObject>(json).messages;
         }
 
+        string json = System.Text.Encoding.UTF8.GetString(www.downloadHandler.data, 3, www.downloadHandler.data.Length - 3);
+
+        _DYKMessages = JsonUtility.FromJson<RootObject>(json).messages;
         LoadCurrentDifficultyDYKMessages();
     }
 }

@@ -5,6 +5,7 @@ using System.IO;
 using System.Linq;
 using UnityEngine;
 using TMPro;
+using UnityEngine.Networking;
 
 public class Quiz : Level
 {
@@ -118,11 +119,16 @@ public class Quiz : Level
 
     private void LoadJson()
     {
-        using (StreamReader r = new StreamReader("Assets/StreamingAssets/quizdata.json"))
+        string filePath = Application.streamingAssetsPath + "/quizdata.json";
+
+        UnityWebRequest www = UnityWebRequest.Get(filePath);
+        www.SendWebRequest();
+        while (!www.isDone)
         {
-            string json = r.ReadToEnd();
-            _questions = JsonUtility.FromJson<RootObject>(json).questions;
         }
+
+        string json = System.Text.Encoding.UTF8.GetString(www.downloadHandler.data, 3, www.downloadHandler.data.Length - 3);
+        _questions = JsonUtility.FromJson<RootObject>(json).questions;
     }
 
     public void FillInDataCollectionForRemainingObjects()
