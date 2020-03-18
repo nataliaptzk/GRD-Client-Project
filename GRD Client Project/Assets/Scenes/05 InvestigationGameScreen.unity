@@ -132,6 +132,7 @@ GameObject:
   - component: {fileID: 18629042}
   - component: {fileID: 18629041}
   - component: {fileID: 18629040}
+  - component: {fileID: 18629043}
   m_Layer: 8
   m_Name: BinLandfil
   m_TagString: Bin
@@ -242,6 +243,18 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &18629043
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 18629038}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e3b6d97804d711e4398f5c15510b3f8b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &95754593
 GameObject:
   m_ObjectHideFlags: 0
@@ -452,6 +465,7 @@ GameObject:
   - component: {fileID: 124604317}
   - component: {fileID: 124604316}
   - component: {fileID: 124604315}
+  - component: {fileID: 124604318}
   m_Layer: 8
   m_Name: BinPlastic
   m_TagString: Bin
@@ -562,6 +576,18 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &124604318
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 124604313}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e3b6d97804d711e4398f5c15510b3f8b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &143277948
 GameObject:
   m_ObjectHideFlags: 0
@@ -1298,6 +1324,7 @@ GameObject:
   - component: {fileID: 270420862}
   - component: {fileID: 270420861}
   - component: {fileID: 270420860}
+  - component: {fileID: 270420863}
   m_Layer: 8
   m_Name: BinIndCompostoble
   m_TagString: Bin
@@ -1408,6 +1435,18 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &270420863
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 270420858}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e3b6d97804d711e4398f5c15510b3f8b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &296608279
 GameObject:
   m_ObjectHideFlags: 0
@@ -1684,7 +1723,7 @@ PrefabInstance:
     - target: {fileID: 3978027065629566623, guid: f108db0a1c4cfc444af84dc99d2db039,
         type: 3}
       propertyPath: m_RootOrder
-      value: 2
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 3978027065629566623, guid: f108db0a1c4cfc444af84dc99d2db039,
         type: 3}
@@ -2362,8 +2401,8 @@ RectTransform:
   m_LocalScale: {x: 0, y: 0, z: 0}
   m_Children:
   - {fileID: 433128547}
-  - {fileID: 621269128}
   - {fileID: 403047898}
+  - {fileID: 621269128}
   - {fileID: 1848237102}
   m_Father: {fileID: 0}
   m_RootOrder: 4
@@ -2451,6 +2490,7 @@ GameObject:
   - component: {fileID: 531118824}
   - component: {fileID: 531118823}
   - component: {fileID: 531118822}
+  - component: {fileID: 531118825}
   m_Layer: 8
   m_Name: BinIndCompostoble
   m_TagString: Bin
@@ -2561,6 +2601,18 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &531118825
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 531118820}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e3b6d97804d711e4398f5c15510b3f8b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &563170739
 GameObject:
   m_ObjectHideFlags: 0
@@ -3028,7 +3080,7 @@ PrefabInstance:
     - target: {fileID: 770836246737729358, guid: 836128fa96e85264b9732b137f0788e1,
         type: 3}
       propertyPath: m_RootOrder
-      value: 1
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 770836246737729358, guid: 836128fa96e85264b9732b137f0788e1,
         type: 3}
@@ -7179,6 +7231,7 @@ GameObject:
   - component: {fileID: 1733781800}
   - component: {fileID: 1733781799}
   - component: {fileID: 1733781798}
+  - component: {fileID: 1733781801}
   m_Layer: 8
   m_Name: BinPlastic
   m_TagString: Bin
@@ -7289,6 +7342,18 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &1733781801
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1733781796}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e3b6d97804d711e4398f5c15510b3f8b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1749578077
 GameObject:
   m_ObjectHideFlags: 0
@@ -8016,6 +8081,7 @@ GameObject:
   - component: {fileID: 1906479409}
   - component: {fileID: 1906479408}
   - component: {fileID: 1906479407}
+  - component: {fileID: 1906479410}
   m_Layer: 8
   m_Name: BinLikelyRecycled
   m_TagString: Bin
@@ -8126,6 +8192,18 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &1906479410
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1906479405}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e3b6d97804d711e4398f5c15510b3f8b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1908492666
 GameObject:
   m_ObjectHideFlags: 0
@@ -8376,6 +8454,7 @@ GameObject:
   - component: {fileID: 1923424771}
   - component: {fileID: 1923424770}
   - component: {fileID: 1923424769}
+  - component: {fileID: 1923424772}
   m_Layer: 8
   m_Name: BinLandfil
   m_TagString: Bin
@@ -8486,6 +8565,18 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &1923424772
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1923424767}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e3b6d97804d711e4398f5c15510b3f8b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1944790684
 GameObject:
   m_ObjectHideFlags: 0
@@ -8880,6 +8971,7 @@ GameObject:
   - component: {fileID: 2027889311}
   - component: {fileID: 2027889310}
   - component: {fileID: 2027889309}
+  - component: {fileID: 2027889312}
   m_Layer: 8
   m_Name: BinNotLikelyRecycled
   m_TagString: Bin
@@ -8990,6 +9082,18 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &2027889312
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2027889307}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e3b6d97804d711e4398f5c15510b3f8b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &2032296129
 GameObject:
   m_ObjectHideFlags: 0
