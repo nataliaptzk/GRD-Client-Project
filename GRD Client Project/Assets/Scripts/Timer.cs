@@ -3,13 +3,15 @@ using System.Collections;
 using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class Timer : MonoBehaviour
 {
     [SerializeField] private TextMeshProUGUI timeText;
-
+    [SerializeField] private Image _timerImage;
     [SerializeField] private Level _currentMiniGame;
     public int timeLeft, timePassed;
+
 
     private void Start()
     {
@@ -30,11 +32,14 @@ public class Timer : MonoBehaviour
 
     public IEnumerator Countdown(float duration)
     {
+        float timeRatio;
         float totalTime = duration;
         while (totalTime >= 0)
         {
             totalTime -= Time.deltaTime;
             timeLeft = (int) totalTime;
+            timeRatio = timeLeft / duration;
+            _timerImage.fillAmount = timeRatio;
             timeText.text = timeLeft.ToString();
             yield return null;
         }

@@ -378,6 +378,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   timeText: {fileID: 1750131863}
+  _timerImage: {fileID: 541634517}
   _currentMiniGame: {fileID: 0}
   timeLeft: 0
   timePassed: 0
@@ -1627,6 +1628,18 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &541634517 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 5531355841305778664, guid: 3c8380c3e4493234c9d48362927cba80,
+    type: 3}
+  m_PrefabInstance: {fileID: 5531355841683468845}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!1 &547414343
