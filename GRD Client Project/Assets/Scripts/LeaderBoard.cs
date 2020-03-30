@@ -2,10 +2,18 @@
 using System.Collections;
 using System.Collections.Generic;
 using System.IO;
+using TMPro;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class LeaderBoard : MonoBehaviour
 {
+    [SerializeField] private List<TextMeshProUGUI> _names = new List<TextMeshProUGUI>();
+    [SerializeField] private List<TextMeshProUGUI> _scores = new List<TextMeshProUGUI>();
+    [SerializeField] private List<TextMeshProUGUI> _indexes = new List<TextMeshProUGUI>();
+    [SerializeField] private TextMeshProUGUI _title;
+    private List<Entry> _entries = new List<Entry>();
+
     [Serializable]
     public class Entry
     {
@@ -21,10 +29,19 @@ public class LeaderBoard : MonoBehaviour
         }
     }
 
-    private List<Entry> _entries = new List<Entry>();
-
+    private void Start()
+    {
+        if (SceneManager.GetActiveScene().name == "07 EndScreen"){
+            ReadLeaderboardFile();
+        }
+    }
 
     private void ReadLeaderboardFile()
+    {
+        DisplayLeaderboard();
+    }
+
+    private void DisplayLeaderboard()
     {
     }
 
