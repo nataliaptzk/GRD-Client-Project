@@ -36,7 +36,11 @@ public class Level : MonoBehaviour
         InvestigationGame investigationGame = GetComponent<InvestigationGame>();
         if (investigationGame) investigationGame.FillInDataCollectionForRemainingObjects();
         Quiz quiz = GetComponent<Quiz>();
-        if (quiz) quiz.FillInDataCollectionForRemainingObjects();
+        if (quiz)
+        {
+            GetComponent<LeaderBoard>().SaveFinalResultToLeaderboardFile();
+            quiz.FillInDataCollectionForRemainingObjects();
+        }
 
         DisplayFinishedLevelInfo();
     }

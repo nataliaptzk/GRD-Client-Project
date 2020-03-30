@@ -12,7 +12,6 @@ public class Timer : MonoBehaviour
     [SerializeField] private Level _currentMiniGame;
     public int timeLeft, timePassed;
 
-
     private void Start()
     {
         _currentMiniGame = FindObjectOfType<Level>();
