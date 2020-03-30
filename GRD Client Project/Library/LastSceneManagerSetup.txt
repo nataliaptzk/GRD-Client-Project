@@ -1,5 +1,5 @@
 sceneSetups:
-- path: Assets/Scenes/06 QuizGameScene.unity
+- path: Assets/Scenes/02 AdminScreen.unity
   isLoaded: 1
   isActive: 1
   isSubScene: 0

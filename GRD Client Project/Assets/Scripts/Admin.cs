@@ -1,18 +1,19 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
+using System.Security.Cryptography;
 using UnityEngine;
+using UnityGoogleDrive;
 
 public class Admin : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
+    [ContextMenu("test function")]
+    public void Test()
     {
-        
-    }
+        string testContent = "Hello my name is Biodegradability";
 
-    // Update is called once per frame
-    void Update()
-    {
-        
+        byte[] bytes = System.Text.Encoding.UTF8.GetBytes(testContent);
+
+        var file = new UnityGoogleDrive.Data.File() {Name = "test.txt", Content = bytes};
+        GoogleDriveFiles.Create(file).Send();
     }
 }
