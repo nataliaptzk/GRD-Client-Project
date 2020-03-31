@@ -2,11 +2,15 @@
 using System.Collections;
 using System.Collections.Generic;
 using System.IO;
+using System.Linq;
 using System.Text;
-using Newtonsoft.Json;
+using Newtonsoft.Json.Utilities;
 using TMPro;
 using UnityEngine;
+using UnityEngine.Networking;
 using UnityEngine.SceneManagement;
+
+// https://stackoverflow.com/questions/44658808/unity-json-add-data-to-existing-json-data
 
 public class LeaderBoard : MonoBehaviour
 {
@@ -14,59 +18,109 @@ public class LeaderBoard : MonoBehaviour
     [SerializeField] private List<TextMeshProUGUI> _scores = new List<TextMeshProUGUI>();
     [SerializeField] private List<TextMeshProUGUI> _indexes = new List<TextMeshProUGUI>();
     [SerializeField] private TextMeshProUGUI _title;
- [SerializeField]   private List<Entry> _entries = new List<Entry>();
+
+    [SerializeField] private List<Entry> _entries = new List<Entry>();
 
     [Serializable]
     public class Entry
     {
         public string name;
-        public string finalScore;
+        public int finalScore;
         public string currentDifficulty;
+        public string sessionID;
 
-        public Entry(string name, string finalScore, Difficulty currentDifficulty)
+        public Entry(string name, int finalScore, string currentDifficulty, string sessionID)
         {
             this.name = name;
             this.finalScore = finalScore;
-            this.currentDifficulty = currentDifficulty.name;
+            this.currentDifficulty = currentDifficulty;
+            this.sessionID = sessionID;
         }
-    }
-
-    [Serializable]
-    public class RootObject
-    {
-        public List<Entry> entries;
     }
 
     private void Start()
     {
         if (SceneManager.GetActiveScene().name == "07 EndScreen")
         {
-            ReadLeaderboardFile();
+            ReadLeaderboardFile(false);
         }
     }
 
-    private void ReadLeaderboardFile()
+    private void ReadLeaderboardFile(bool usedForSaving)
     {
-        //   string json = System.Text.Encoding.UTF8.GetString(www.downloadHandler.data, 3, www.downloadHandler.data.Length - 3);
-        //    _questions = JsonUtility.FromJson<RootObject>(json).questions;
+        string filePath = Path.Combine(Application.persistentDataPath, "leaderboard.json");
 
-        string json = File.ReadAllText(Application.persistentDataPath + "/leaderboard.json");
-       // _entries = JsonUtility.FromJson<RootObject>(json).entries;
-        
-        Entry newEntries = JsonUtility.FromJson<Entry>(json);
-        Debug.Log(newEntries);
-        DisplayLeaderboard();
-    }
+        if (!System.IO.File.Exists(filePath))
+        {
+            System.IO.File.WriteAllText(filePath, "");
+        }
 
-    private void DisplayLeaderboard()
-    {
+
+        string jsonToLoad = File.ReadAllText(filePath);
+
+        if (jsonToLoad != "")
+        {
+            Entry[] tempLoadListData = JsonHelper.FromJson<Entry>(jsonToLoad);
+            _entries = tempLoadListData.OfType<Entry>().ToList();
+        }
+
+        if (!usedForSaving)
+        {
+            DisplayLeaderboard();
+        }
     }
 
     public void SaveFinalResultToLeaderboardFile()
     {
-        Entry newEntry = new Entry(SessionManager.Nickname, SessionManager.Score.ToString(), SessionManager.CurrentDifficulty);
+        ReadLeaderboardFile(true);
 
-        string data = JsonUtility.ToJson(newEntry);
-        System.IO.File.AppendAllText(Application.persistentDataPath + "/leaderboard.json", data);
+        Entry saveData = new Entry(SessionManager.Nickname, SessionManager.Score, SessionManager.CurrentDifficulty.name, SessionManager.SessionId);
+        _entries.Add(saveData);
+
+
+        string filePath = Path.Combine(Application.persistentDataPath, "leaderboard.json");
+        string jsonToSave = JsonHelper.ToJson(_entries.ToArray());
+
+        File.WriteAllText(filePath, jsonToSave);
+    }
+
+    private void DisplayLeaderboard()
+    {
+        string currentDifficulty = SessionManager.CurrentDifficulty.name;
+
+        _title.text = "top 5 of the day on " + currentDifficulty + " difficulty";
+
+
+        List<Entry> currentDifficultyEntryListCopy = new List<Entry>(_entries.Where(entry => entry.currentDifficulty == SessionManager.CurrentDifficulty.name));
+        List<Entry> sortedPlayersCurrentDifficulty = currentDifficultyEntryListCopy.OrderByDescending(entry => entry.finalScore).ToList();
+
+        int checkLength = 5;
+        if (sortedPlayersCurrentDifficulty.Count < 5)
+        {
+            checkLength = sortedPlayersCurrentDifficulty.Count;
+        }
+
+
+        for (int i = 0; i < checkLength; i++)
+        {
+            _indexes[i].gameObject.SetActive(true);
+            _names[i].gameObject.SetActive(true);
+            _scores[i].gameObject.SetActive(true);
+
+            _names[i].text = sortedPlayersCurrentDifficulty[i].name;
+            _scores[i].text = sortedPlayersCurrentDifficulty[i].finalScore.ToString();
+        }
+
+        int currentPlayerIndex = sortedPlayersCurrentDifficulty.FindIndex(entry => entry.sessionID == SessionManager.SessionId);
+
+        if (currentPlayerIndex >= 5)
+        {
+            _indexes[5].gameObject.SetActive(true);
+            _names[5].gameObject.SetActive(true);
+            _scores[5].gameObject.SetActive(true);
+            _indexes[5].text = currentPlayerIndex.ToString();
+            _names[5].text = sortedPlayersCurrentDifficulty[currentPlayerIndex].name;
+            _scores[5].text = sortedPlayersCurrentDifficulty[currentPlayerIndex].finalScore.ToString();
+        }
     }
 }
