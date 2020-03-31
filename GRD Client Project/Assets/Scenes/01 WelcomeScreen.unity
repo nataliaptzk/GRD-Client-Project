@@ -1723,7 +1723,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1856450479}
+      - m_Target: {fileID: 1856450480}
         m_MethodName: AdminLoginAttempt
         m_Mode: 2
         m_Arguments:
@@ -2659,7 +2659,6 @@ GameObject:
   - component: {fileID: 1856450476}
   - component: {fileID: 1856450478}
   - component: {fileID: 1856450477}
-  - component: {fileID: 1856450479}
   - component: {fileID: 1856450480}
   m_Layer: 5
   m_Name: AdminLoginPanel
@@ -2731,20 +2730,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1856450475}
   m_CullTransparentMesh: 0
---- !u!114 &1856450479
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1856450475}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d0a0d0310d3b73e4e992796a13e1cb59, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _incorrectMessage: {fileID: 1222080718}
-  _hashedPassword: 
 --- !u!114 &1856450480
 MonoBehaviour:
   m_ObjectHideFlags: 0
