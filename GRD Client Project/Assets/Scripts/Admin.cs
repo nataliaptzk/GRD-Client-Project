@@ -6,12 +6,13 @@ using TMPro;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityGoogleDrive;
-using UnityEngine.Windows;
+//using UnityEngine.Windows;
 
 public class Admin : MonoBehaviour
 {
     [SerializeField] private GameObject _incorrectMessage;
-    [SerializeField] private byte[] _hashedPassword;
+  //  [SerializeField] private byte[] _hashedPassword;
+  [SerializeField] private MD5 _hashedPassword;
 
     public void Test()
     {
@@ -36,13 +37,21 @@ public class Admin : MonoBehaviour
         }
     }
 
+    public void LogoutUser()
+    {
+     //   GoogleDriveSettings.DeleteCachedAuthTokens;
+    }
+
     private bool ComputePassword(string enteredPassword)
     {
-        byte[] bytes = System.Text.Encoding.UTF8.GetBytes(enteredPassword);
+     //   byte[] bytes = System.Text.Encoding.UTF8.GetBytes(enteredPassword);
 
-        var newHash = Crypto.ComputeMD5Hash(bytes);
+      //  var newHash = Crypto.ComputeMD5Hash(bytes);
+        
+        MD5 md5 = MD5.Create(enteredPassword);
 
-        if (_hashedPassword.SequenceEqual(newHash))
+     //   if (_hashedPassword.SequenceEqual(md5))
+        if (_hashedPassword == md5)
         {
             return true;
         }
