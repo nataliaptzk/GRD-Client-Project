@@ -1718,6 +1718,12 @@ PrefabInstance:
       propertyPath: m_RootOrder
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 6533066787237136417, guid: c6f215e3c974427449ecb4012333480b,
+        type: 3}
+      propertyPath: m_text
+      value: "It\u2019s the final round of the quiz, your team is counting on you
+        to cover the questions on sustainability. Good luck!"
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c6f215e3c974427449ecb4012333480b, type: 3}
 --- !u!224 &470553856 stripped

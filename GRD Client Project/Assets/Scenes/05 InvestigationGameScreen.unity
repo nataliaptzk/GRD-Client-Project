@@ -7883,6 +7883,13 @@ PrefabInstance:
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Arguments.m_BoolArgument
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 6533066787237136417, guid: c6f215e3c974427449ecb4012333480b,
+        type: 3}
+      propertyPath: m_text
+      value: "The local recycling plant is having issues with their sorting machines!
+        As a recycling extraordinaire you\u2019ve been hired to help out while they
+        fix things."
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c6f215e3c974427449ecb4012333480b, type: 3}
 --- !u!224 &1848237102 stripped

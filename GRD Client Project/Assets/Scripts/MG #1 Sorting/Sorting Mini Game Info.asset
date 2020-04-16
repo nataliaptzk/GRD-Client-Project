@@ -12,6 +12,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 807c651b9aa42ff4a81b17111e246a93, type: 3}
   m_Name: Sorting Mini Game Info
   m_EditorClassIdentifier: 
-  title: Sorting Game!!!!
-  helpTips: []
+  title: Litter Picking
   sceneTitleToLoad: 04b DidYouKnowScreen

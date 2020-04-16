@@ -6,7 +6,6 @@ using UnityEngine;
 public class MiniGameInfo : ScriptableObject
 {
     public string title;
-    public string description;
     public string sceneTitleToLoad;
     
 }
