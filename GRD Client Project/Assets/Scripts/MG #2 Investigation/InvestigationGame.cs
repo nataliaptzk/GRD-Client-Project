@@ -41,6 +41,18 @@ public class InvestigationGame : Level
         }
     }
 
+    private void Update()
+    {
+        if (Input.GetKeyDown(KeyCode.LeftArrow) || Input.GetKeyDown(KeyCode.A))
+        {
+            MoveClaw(-1);
+        }
+        else if (Input.GetKeyDown(KeyCode.RightArrow) || Input.GetKeyDown(KeyCode.D))
+        {
+            MoveClaw(1);
+        }
+    }
+
     public void MoveClaw(int i)
     {
         if (!_isClawMoving && !_isReleasing)
@@ -165,6 +177,5 @@ public class InvestigationGame : Level
             DataCollectionFileManager.WriteStringContinuation("run out of time", true);
             DataCollectionFileManager.WriteStringContinuation("N/A", true);
         }
-        
     }
 }
