@@ -32,17 +32,26 @@ public class Level : MonoBehaviour
     {
         // In case of time running out collect data
         SortingGame sortingGame = GetComponent<SortingGame>();
-        if (sortingGame) sortingGame.FillInDataCollectionForRemainingObjects();
+        if (sortingGame)
+        {
+            sortingGame.FillInDataCollectionForRemainingObjects();
+            DisplayFinishedLevelInfo(true);
+        }
+
         InvestigationGame investigationGame = GetComponent<InvestigationGame>();
-        if (investigationGame) investigationGame.FillInDataCollectionForRemainingObjects();
+        if (investigationGame)
+        {
+            investigationGame.FillInDataCollectionForRemainingObjects();
+            DisplayFinishedLevelInfo(true);
+        }
+
         Quiz quiz = GetComponent<Quiz>();
         if (quiz)
         {
             GetComponent<LeaderBoard>().SaveFinalResultToLeaderboardFile();
             quiz.FillInDataCollectionForRemainingObjects();
+            DisplayFinishedLevelInfo(false);
         }
-
-        DisplayFinishedLevelInfo();
     }
 
     public void LoadNextLevel()
@@ -50,7 +59,7 @@ public class Level : MonoBehaviour
         _sceneSwitcher.SwitchScene(GameInfo.sceneTitleToLoad);
     }
 
-    private void DisplayFinishedLevelInfo()
+    private void DisplayFinishedLevelInfo(bool value) // the bool value decides whether the function using it will add a ; at the end of the file entry or not
     {
         _endScreen.SetActive(true);
         _titleTextBox.text = GameInfo.title;
@@ -63,7 +72,7 @@ public class Level : MonoBehaviour
         _gameManager.GetComponent<DataCollection>().SendFinishedLevelInfo(GameInfo.title, _gameManager.GetComponent<Score>().correct, _gameManager.GetComponent<Score>().incorrect);
         _gameManager.GetComponent<DataCollection>().HelpScreenOpened(GameInfo.title, _amountHelpScreenOpened);
         // Custom Data Collection Calls
-        DataCollectionFileManager.WriteStringContinuation(_amountHelpScreenOpened.ToString());
+        DataCollectionFileManager.WriteStringContinuation(_amountHelpScreenOpened.ToString(), value);
     }
 
     protected void DisplayTutorialScreen()

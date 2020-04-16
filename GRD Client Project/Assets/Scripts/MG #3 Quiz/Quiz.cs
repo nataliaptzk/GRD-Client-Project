@@ -59,7 +59,7 @@ public class Quiz : Level
 
             for (int i = 0; i < tempQuestionCount; i++)
             {
-                DataCollectionFileManager.WriteStringContinuation("N/A");
+                DataCollectionFileManager.WriteStringContinuation("N/A", true);
             }
 
             FinishMiniGame();
@@ -139,7 +139,7 @@ public class Quiz : Level
 
         for (int i = 0; i < tempCount; i++)
         {
-            DataCollectionFileManager.WriteStringContinuation("run out of time");
+            DataCollectionFileManager.WriteStringContinuation("run out of time", true);
         }
 
         // Count the difference between amount of questions, and fill in remaining fields with N/A text (for custom data collection)
@@ -148,7 +148,7 @@ public class Quiz : Level
 
         for (int i = 0; i < tempQuestionCount; i++)
         {
-            DataCollectionFileManager.WriteStringContinuation("N/A");
+            DataCollectionFileManager.WriteStringContinuation("N/A", true);
         }
     }
 }

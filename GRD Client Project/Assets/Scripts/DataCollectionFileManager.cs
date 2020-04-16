@@ -6,38 +6,24 @@ using UnityEngine;
 
 public static class DataCollectionFileManager
 {
-    private static string _fileName = "/testfile.txt";
+    private static string _fileName = "/datacollection.txt";
 
-    public static void WriteStringContinuation(string text)
+    public static void WriteStringContinuation(string text, bool ifAddSemicolon)
     {
         if (SessionManager.Consent)
-        {
-            if (CheckIfFileExists(_fileName))
-            {
-                string path = Application.persistentDataPath + _fileName;
-
-                using (StreamWriter outputFile = new StreamWriter(path, true))
-                {
-                    outputFile.Write(text + ";"); //adds to the current line
-
-                    outputFile.Flush();
-                    outputFile.Close();
-                }
-            }
-        }
-    }
-
-    public static void WriteStringNewLine(string text, string text2)
-    {
-        if (CheckIfFileExists(_fileName))
         {
             string path = Application.persistentDataPath + _fileName;
 
             using (StreamWriter outputFile = new StreamWriter(path, true))
             {
-                outputFile.WriteLine(""); //makes a new line
-                outputFile.Write(text + ";"); //adds to the current line
-                outputFile.Write(text2 + ";"); //adds to the current line
+                if (ifAddSemicolon)
+                {
+                    outputFile.Write(text + ";"); //adds to the current line
+                }
+                else
+                {
+                    outputFile.Write(text); //adds to the current line
+                }
 
                 outputFile.Flush();
                 outputFile.Close();
@@ -45,19 +31,23 @@ public static class DataCollectionFileManager
         }
     }
 
-
-    private static bool CheckIfFileExists(string fileName)
+    public static void WriteStringNewLine(string text, string text2)
     {
-        bool temp;
-        if (File.Exists(Application.persistentDataPath + fileName))
+        string path = Application.persistentDataPath + _fileName;
+        if (!System.IO.File.Exists(path))
         {
-            temp = true;
-        }
-        else
-        {
-            temp = false;
+            System.IO.File.WriteAllText(path, "");
         }
 
-        return temp;
+
+        using (StreamWriter outputFile = new StreamWriter(path, true))
+        {
+            outputFile.WriteLine(""); //makes a new line
+            outputFile.Write(text + ";"); //adds to the current line
+            outputFile.Write(text2 + ";"); //adds to the current line
+
+            outputFile.Flush();
+            outputFile.Close();
+        }
     }
 }

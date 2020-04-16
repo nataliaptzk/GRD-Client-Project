@@ -31,8 +31,8 @@ public class SortingGame : Level
 
         for (int i = 0; i < tempCount; i++)
         {
-            DataCollectionFileManager.WriteStringContinuation("run out of time");
-            DataCollectionFileManager.WriteStringContinuation("N/A");
+            DataCollectionFileManager.WriteStringContinuation("run out of time", true);
+            DataCollectionFileManager.WriteStringContinuation("N/A", true);
 
         }
     }

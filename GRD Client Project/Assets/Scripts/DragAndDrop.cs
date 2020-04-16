@@ -36,16 +36,16 @@ public class DragAndDrop : MonoBehaviour
             {
                 _score.AddScore(1 * SessionManager.CurrentDifficulty.pointsGainWhenCorrect);
                 _score.CountCorrect();
-                DataCollectionFileManager.WriteStringContinuation(gameObject.GetComponent<Rubbish>().type.ToString());
-                DataCollectionFileManager.WriteStringContinuation("correct");
+                DataCollectionFileManager.WriteStringContinuation(gameObject.GetComponent<Rubbish>().type.ToString(), true);
+                DataCollectionFileManager.WriteStringContinuation("correct", true);
             }
 
             else
             {
                 _score.AddScore(-1 * SessionManager.CurrentDifficulty.pointsLossWhenIncorrect);
                 _score.CountIncorrect();
-                DataCollectionFileManager.WriteStringContinuation(gameObject.GetComponent<Rubbish>().type.ToString());
-                DataCollectionFileManager.WriteStringContinuation("incorrect");
+                DataCollectionFileManager.WriteStringContinuation(gameObject.GetComponent<Rubbish>().type.ToString(), true);
+                DataCollectionFileManager.WriteStringContinuation("incorrect", true);
             }
 
             _sortingGame.CheckIfFinished();
