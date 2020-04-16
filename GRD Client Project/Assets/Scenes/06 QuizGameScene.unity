@@ -3045,6 +3045,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: HelpScreen
       objectReference: {fileID: 0}
+    - target: {fileID: 3978027065629566622, guid: f108db0a1c4cfc444af84dc99d2db039,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 3978027065629566623, guid: f108db0a1c4cfc444af84dc99d2db039,
         type: 3}
       propertyPath: m_LocalPosition.x

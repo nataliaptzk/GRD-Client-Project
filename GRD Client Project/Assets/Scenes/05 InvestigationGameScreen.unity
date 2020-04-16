@@ -1136,7 +1136,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 221692163}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 058cba836c1846c3aa1c5fd2e28aea77, type: 3}
   m_Name: 
@@ -1863,6 +1863,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: HelpScreen
+      objectReference: {fileID: 0}
+    - target: {fileID: 3978027065629566622, guid: f108db0a1c4cfc444af84dc99d2db039,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3978027065629566623, guid: f108db0a1c4cfc444af84dc99d2db039,
         type: 3}
@@ -8222,7 +8227,7 @@ PrefabInstance:
     - target: {fileID: 2285252354702261225, guid: c6f215e3c974427449ecb4012333480b,
         type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 2285252354702261224, guid: c6f215e3c974427449ecb4012333480b,
         type: 3}
