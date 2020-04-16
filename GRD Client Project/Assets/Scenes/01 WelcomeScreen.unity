@@ -1039,7 +1039,7 @@ RectTransform:
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
   m_AnchoredPosition: {x: 0, y: 280}
-  m_SizeDelta: {x: 735.46, y: 130.4}
+  m_SizeDelta: {x: 914.76, y: 130.4}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &619596213
 MonoBehaviour:
@@ -1098,7 +1098,7 @@ MonoBehaviour:
   m_fontSizeMax: 72
   m_fontStyle: 0
   m_textAlignment: 4098
-  m_characterSpacing: 0
+  m_characterSpacing: 30
   m_wordSpacing: 0
   m_lineSpacing: 0
   m_lineSpacingMax: 0
@@ -2743,7 +2743,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _incorrectMessage: {fileID: 1222080718}
+  _driveInfo: {fileID: 0}
   _hashedPassword: b17b4570dd55466f8fde7e4881b2be45
+  _response: 
+  _confirmationWindow: {fileID: 0}
+  _removeFinishedWindow: {fileID: 0}
 --- !u!1 &1945586058
 GameObject:
   m_ObjectHideFlags: 0

@@ -5544,21 +5544,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 378983421}
     m_Modifications:
-    - target: {fileID: 7470631087920878141, guid: c6f215e3c974427449ecb4012333480b,
-        type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.size
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 7470631087920878141, guid: c6f215e3c974427449ecb4012333480b,
-        type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
-      value: 
-      objectReference: {fileID: 72301656}
-    - target: {fileID: 7470631087920878141, guid: c6f215e3c974427449ecb4012333480b,
-        type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: CloseTutorial
-      objectReference: {fileID: 0}
     - target: {fileID: 2285252354702261225, guid: c6f215e3c974427449ecb4012333480b,
         type: 3}
       propertyPath: m_Name
@@ -5771,6 +5756,41 @@ PrefabInstance:
       propertyPath: m_subTextObjects.Array.data[1]
       value: 
       objectReference: {fileID: 644316567}
+    - target: {fileID: 7470631087920878141, guid: c6f215e3c974427449ecb4012333480b,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7470631087920878141, guid: c6f215e3c974427449ecb4012333480b,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 72301656}
+    - target: {fileID: 7470631087920878141, guid: c6f215e3c974427449ecb4012333480b,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: CloseTutorial
+      objectReference: {fileID: 0}
+    - target: {fileID: 5790156618121030547, guid: c6f215e3c974427449ecb4012333480b,
+        type: 3}
+      propertyPath: m_text
+      value: Litter Picking
+      objectReference: {fileID: 0}
+    - target: {fileID: 5790156618121030547, guid: c6f215e3c974427449ecb4012333480b,
+        type: 3}
+      propertyPath: m_textInfo.characterCount
+      value: 14
+      objectReference: {fileID: 0}
+    - target: {fileID: 5790156618121030547, guid: c6f215e3c974427449ecb4012333480b,
+        type: 3}
+      propertyPath: m_textInfo.spaceCount
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5790156618121030547, guid: c6f215e3c974427449ecb4012333480b,
+        type: 3}
+      propertyPath: m_textInfo.wordCount
+      value: 2
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c6f215e3c974427449ecb4012333480b, type: 3}
 --- !u!224 &2285252354804809886 stripped

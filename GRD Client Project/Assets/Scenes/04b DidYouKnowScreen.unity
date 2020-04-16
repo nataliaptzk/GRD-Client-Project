@@ -398,6 +398,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   timeText: {fileID: 0}
+  _timerImage: {fileID: 0}
   _currentMiniGame: {fileID: 0}
   timeLeft: 0
   timePassed: 0
@@ -751,5 +752,10 @@ PrefabInstance:
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Target
       value: 
       objectReference: {fileID: 135222391}
+    - target: {fileID: 5165118192847300739, guid: 0d2bc50db2021074c9d2ddef863d1caf,
+        type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 773.1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 0d2bc50db2021074c9d2ddef863d1caf, type: 3}

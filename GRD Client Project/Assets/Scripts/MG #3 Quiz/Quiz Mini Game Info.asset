@@ -12,5 +12,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 807c651b9aa42ff4a81b17111e246a93, type: 3}
   m_Name: Quiz Mini Game Info
   m_EditorClassIdentifier: 
-  title: Final quiz
+  title: Final Quiz
   sceneTitleToLoad: 07 EndScreen
