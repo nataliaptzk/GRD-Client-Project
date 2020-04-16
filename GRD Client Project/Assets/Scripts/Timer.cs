@@ -39,7 +39,12 @@ public class Timer : MonoBehaviour
             timeLeft = (int) totalTime;
             timeRatio = timeLeft / duration;
             _timerImage.fillAmount = timeRatio;
-            timeText.text = timeLeft.ToString();
+
+            int min = Mathf.FloorToInt(timeLeft / 60);
+            int sec = Mathf.FloorToInt(timeLeft % 60);
+
+
+            timeText.text = min.ToString("00") + ":" + sec.ToString("00");
             yield return null;
         }
 
