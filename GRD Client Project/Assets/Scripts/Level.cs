@@ -89,12 +89,15 @@ public class Level : MonoBehaviour
 
     public void OpenHelpScreen()
     {
+        Time.timeScale = 0;
         _helpScreen.SetActive(true);
         _amountHelpScreenOpened++;
     }
 
     public void CloseHelpScreen()
     {
+        Time.timeScale = 1;
+
         _helpScreen.SetActive(false);
     }
 }
