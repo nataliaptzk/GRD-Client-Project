@@ -23,7 +23,10 @@ public class Admin : MonoBehaviour
 
     private void Update()
     {
-        CheckForLoggedInUser();
+        if (SceneManager.GetActiveScene().name == "02 AdminScreen")
+        {
+            CheckForLoggedInUser();
+        }
     }
 
     public void SendDataFile()
