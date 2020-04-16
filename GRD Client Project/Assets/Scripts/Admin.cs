@@ -1,7 +1,10 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
 using System.Security.Cryptography;
+using System.Text;
 using TMPro;
 using UnityEngine;
 using UnityEngine.SceneManagement;
@@ -12,20 +15,41 @@ using UnityGoogleDrive;
 public class Admin : MonoBehaviour
 {
     [SerializeField] private GameObject _incorrectMessage;
-
+    [SerializeField] private TextMeshProUGUI _driveInfo;
     [SerializeField] private byte[] _hashedPassword;
-//  [SerializeField] private MD5 _hashedPassword;
+    [SerializeField] private string _response;
+    [SerializeField] private GameObject _confirmationWindow;
+    [SerializeField] private GameObject _removeFinishedWindow;
 
-    public void Test()
+    private void Update()
     {
-        string testContent = "Hello my name is Biodegradability";
+        CheckForLoggedInUser();
+    }
+
+    public void SendDataFile()
+    {
+        string filePath = Application.persistentDataPath + "/datacollection.txt";
+
+        string testContent = File.ReadAllText(filePath);
 
         byte[] bytes = System.Text.Encoding.UTF8.GetBytes(testContent);
 
-        var file = new UnityGoogleDrive.Data.File() {Name = "test.txt", Content = bytes};
-        GoogleDriveFiles.Create(file).Send();
+        var file = new UnityGoogleDrive.Data.File() {Name = "BiodegradabilityCollectedData.txt", Content = bytes};
+        GoogleDriveFiles.Create(file).Send().OnDone += file1 => _response = Encoding.UTF8.GetString(file.Content);
     }
 
+    public void RemoveConfirmation()
+    {
+        _confirmationWindow.SetActive(true);
+    }
+
+    public void RemoveData()
+    {
+        string filePath = Application.persistentDataPath + "/datacollection.txt";
+        System.IO.File.WriteAllText(filePath, "");
+        _removeFinishedWindow.SetActive(true);
+        _confirmationWindow.SetActive(false);
+    }
 
     public void AdminLoginAttempt(TMP_InputField enteredPassword)
     {
@@ -39,39 +63,40 @@ public class Admin : MonoBehaviour
         }
     }
 
+    private void CheckForLoggedInUser()
+    {
+        var storedInfo = GoogleDriveSettings.LoadFromResources();
+
+        if (storedInfo.CachedAccessToken == "")
+        {
+            _driveInfo.text = "no Google Drive connected.";
+        }
+        else
+        {
+            _driveInfo.text = "Google Drive connected.";
+        }
+    }
+
+
     public void LogoutUser()
     {
-        //   GoogleDriveSettings.DeleteCachedAuthTokens;
+        var storedInfo = GoogleDriveSettings.LoadFromResources();
+        storedInfo.DeleteCachedAuthTokens();
     }
 
     private bool ComputePassword(string enteredPassword)
     {
         byte[] bytes = System.Text.Encoding.UTF8.GetBytes(enteredPassword);
 
-        //  var newHash = Crypto.ComputeMD5Hash(bytes);
-
         MD5CryptoServiceProvider md5 = new MD5CryptoServiceProvider();
 
-
-        //    MD5 md5 = MD5.Create(enteredPassword);
-
-
-        //  MD5 md5 = MD5.Create();
-        //byte[] bytes = Encoding.ASCII.GetBytes(usedString+secretKey);     // this wrong because can't receive korean character
-        //   byte[] bytes = Encoding.UTF8.GetBytes(usedString + secretKey);
         byte[] newHash = md5.ComputeHash(bytes);
 
-        //   _hashedPassword = newHash;
         if (_hashedPassword.SequenceEqual(newHash))
-            //  if (_hashedPassword == md5)
 
         {
-            Debug.Log("correct");
-
             return true;
         }
-
-        Debug.Log("incorrect");
 
         return false;
     }
