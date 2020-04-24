@@ -5343,7 +5343,7 @@ MonoBehaviour:
     plasticSprites:
     - {fileID: 21300000, guid: 68d1b4b7e5ec43347b82b6e83851b8de, type: 3}
     compostableSprites:
-    - {fileID: 21300000, guid: 68d1b4b7e5ec43347b82b6e83851b8de, type: 3}
+    - {fileID: 21300000, guid: 948a6a3eede63904190d1d7d9158ad89, type: 3}
     landfillSprites:
     - {fileID: 21300000, guid: 4576762bf20ac8e418a2e6c2d49a8328, type: 3}
     likelyRecycled:

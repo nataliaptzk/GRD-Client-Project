@@ -85,6 +85,8 @@ public class Level : MonoBehaviour
         // here start timer
         _tutorialScreen.SetActive(false);
         StartCoroutine(_timer.Countdown(SessionManager.CurrentDifficulty.duration * _miniGameBaseTime));
+        Time.timeScale = 1;
+
     }
 
     public void OpenHelpScreen()

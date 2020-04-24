@@ -23,26 +23,53 @@ public class RubbishGenerator : MonoBehaviour
             }
         }
 
+
+        List<int> tempValues = new List<int>();
+        int initial = 0;
+        int cap = 0;
+        int remaining = 0;
+
+        if (myDifficulty == 0 || myDifficulty == 1)
+        {
+            cap = 3;
+            remaining = slotsParent.transform.childCount % cap;
+            Debug.Log(remaining);
+        }
+        else if (myDifficulty == 2)
+        {
+            cap = 5;
+            remaining = slotsParent.transform.childCount % cap;
+            Debug.Log(remaining);
+        }
+
+
         for (int i = 0; i < slotsParent.transform.childCount; i++)
         {
-            var randomContainer = Random.Range(0, _containers.Count);
-            slotsParent.transform.GetChild(i).GetComponent<SpriteRenderer>().sprite = _containers[randomContainer];
+            if (i < slotsParent.transform.childCount - remaining)
+            {
+                tempValues.Add(initial);
+                initial++;
+                if (initial == cap)
+                {
+                    initial = 0;
+                }
+            }
+            else if (i == slotsParent.transform.childCount-1)
+            {
+                tempValues.Add(Random.Range(0, cap));
+            }
+        }
+
+        tempValues.Shuffle();
+
+        for (int i = 0; i < tempValues.Count; i++)
+        {
+            //     var randomContainer = Random.Range(0, _containers.Count);
+            //     slotsParent.transform.GetChild(i).GetComponent<SpriteRenderer>().sprite = _containers[randomContainer];
             int randomSprite = 0;
-            int typeIndex = 0;
 
 
-            if (myDifficulty == 0 || myDifficulty == 1)
-            {
-                typeIndex = Random.Range(0, 3); // randomise the TYPE of recyclable
-            }
-
-            if (myDifficulty == 2)
-            {
-                typeIndex = Random.Range(0, 5); // randomise the TYPE of recyclable, hard difficulty has more options
-            }
-
-
-            switch (typeIndex)
+            switch (tempValues[i])
             {
                 case 0: // 0 TYPE plastic
 

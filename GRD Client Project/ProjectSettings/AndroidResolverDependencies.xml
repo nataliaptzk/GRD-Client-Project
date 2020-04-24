@@ -15,7 +15,7 @@
   </files>
   <settings>
     <setting name="androidAbis" value="armeabi-v7a" />
-    <setting name="bundleId" value="com.nataliaptzk.biodegradability" />
+    <setting name="bundleId" value="com.nataliaptzk.Biodegradability" />
     <setting name="explodeAars" value="True" />
     <setting name="gradleBuildEnabled" value="True" />
     <setting name="gradleTemplateEnabled" value="False" />
