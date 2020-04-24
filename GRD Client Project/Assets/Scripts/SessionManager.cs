@@ -13,6 +13,7 @@ public static class SessionManager
 
     public static string nickA, nickB;
 
+    public static int scoreBeforeStartLevel;
     public static Difficulty CurrentDifficulty
     {
         get => _currentDifficulty;
@@ -55,6 +56,7 @@ public static class SessionManager
         _consent = false;
         _nickname = "";
         _sessionID = "";
+        scoreBeforeStartLevel =_score;
         // fill in!
     }
 }

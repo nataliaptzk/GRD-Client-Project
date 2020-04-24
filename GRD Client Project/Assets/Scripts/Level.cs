@@ -3,6 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class Level : MonoBehaviour
 {
@@ -90,6 +91,7 @@ public class Level : MonoBehaviour
         Time.timeScale = 1;
         _mainCamera = Camera.main;
         _cameraDefault = _mainCamera.backgroundColor;
+        SessionManager.scoreBeforeStartLevel = SessionManager.Score;
     }
 
     public void OpenHelpScreen()
@@ -131,4 +133,9 @@ public class Level : MonoBehaviour
             (Color val) => { _mainCamera.backgroundColor = val; });
     }
 
+    public void ReplayLevel()
+    {
+        SessionManager.Score = SessionManager.scoreBeforeStartLevel;
+        _sceneSwitcher.SwitchScene(SceneManager.GetActiveScene().name);
+    }
 }
