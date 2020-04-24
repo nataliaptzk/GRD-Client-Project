@@ -41,7 +41,7 @@ public class SortingGame : Level
     {
         if (_rubbishSlotsParent.transform.childCount == 1)
         {
-            Invoke("FinishMiniGame", 0.1f);
+            Invoke("FinishMiniGame", 1f);
         }
     }
 }

@@ -68,7 +68,7 @@ public class Quiz : Level
                 DataCollectionFileManager.WriteStringContinuation("N/A", true);
             }
 
-            FinishMiniGame();
+            Invoke("FinishMiniGame", 1f);
         }
     }
 

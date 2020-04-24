@@ -25,6 +25,8 @@ public class Level : MonoBehaviour
     [SerializeField] private TextMeshProUGUI _incorrectAnswersTextBox;
     [SerializeField] private TextMeshProUGUI _scoreTextBox;
 
+    private Camera _mainCamera;
+    private Color32 _cameraDefault;
     public MiniGameInfo GameInfo => _gameInfo;
 
 
@@ -86,7 +88,8 @@ public class Level : MonoBehaviour
         _tutorialScreen.SetActive(false);
         StartCoroutine(_timer.Countdown(SessionManager.CurrentDifficulty.duration * _miniGameBaseTime));
         Time.timeScale = 1;
-
+        _mainCamera = Camera.main;
+        _cameraDefault = _mainCamera.backgroundColor;
     }
 
     public void OpenHelpScreen()
@@ -102,4 +105,30 @@ public class Level : MonoBehaviour
 
         _helpScreen.SetActive(false);
     }
+
+    public void FlashCorrectColour()
+    {
+        Color newColour = new Color32(0, 205, 41, 0);
+
+
+        LeanTween.value(_mainCamera.gameObject, _cameraDefault, newColour, .4f).setEase(LeanTweenType.easeInOutQuint).setOnUpdate(
+            (Color val) => { _mainCamera.backgroundColor = val; }
+        ).setOnComplete(OnCompleteChangeCamColourToDefault);
+    }
+
+    public void FlashIncorrectColour()
+    {
+        Color newColour = new Color32(227, 63, 44, 0);
+
+        LeanTween.value(_mainCamera.gameObject, _cameraDefault, newColour, .4f).setEase(LeanTweenType.easeInOutQuint).setOnUpdate(
+            (Color val) => { _mainCamera.backgroundColor = val; }
+        ).setOnComplete(OnCompleteChangeCamColourToDefault);
+    }
+
+    private void OnCompleteChangeCamColourToDefault()
+    {
+        LeanTween.value(_mainCamera.gameObject, _mainCamera.backgroundColor, _cameraDefault, .2f).setEase(LeanTweenType.easeInQuint).setOnUpdate(
+            (Color val) => { _mainCamera.backgroundColor = val; });
+    }
+
 }

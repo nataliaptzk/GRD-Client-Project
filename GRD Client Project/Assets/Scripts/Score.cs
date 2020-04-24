@@ -9,8 +9,16 @@ public class Score : MonoBehaviour
     [SerializeField] private TextMeshProUGUI scoreField;
 
     public int correct;
+
     public int incorrect;
+
     // [NonSerialized] public int score;
+    private Level _level;
+
+    private void Awake()
+    {
+        _level = FindObjectOfType<Level>();
+    }
 
     private void Start()
     {
@@ -29,7 +37,7 @@ public class Score : MonoBehaviour
 
     private void UpdateScoreUI()
     {
-        scoreField.text =  SessionManager.Score.ToString();
+        scoreField.text = SessionManager.Score.ToString();
     }
 
     public void AddScore(int points)
@@ -42,10 +50,12 @@ public class Score : MonoBehaviour
     public void CountCorrect()
     {
         correct++;
+        _level.FlashCorrectColour();
     }
 
     public void CountIncorrect()
     {
         incorrect++;
+        _level.FlashIncorrectColour();
     }
 }
