@@ -10,6 +10,7 @@ using UnityEngine.Networking;
 public class Quiz : Level
 {
     [SerializeField] private TextMeshProUGUI _questionField;
+    [SerializeField] private TextMeshProUGUI _questionNumberField;
 
     [SerializeField] private List<GameObject> answerObjects = new List<GameObject>();
 
@@ -18,6 +19,7 @@ public class Quiz : Level
     private int _currentQuestion;
     private List<Vector3> _answersPositions;
     [NonSerialized] public int correctAnswer = 0; // the correct answer is Always the answer with index 0, the json with questions contains correct answers ALWAYS in ANSWER1 variable
+
 
     private void Awake()
     {
@@ -38,8 +40,12 @@ public class Quiz : Level
     private void FirstQuestion()
     {
         _questionField.text = _currentDifficultyQuestions[_currentQuestion].question;
-
         DisplayQuestionAndAnswers();
+    }
+
+    private void UpdateQuestionNumber()
+    {
+        _questionNumberField.text = _currentQuestion+1 + "/" + _currentDifficultyQuestions.Count;
     }
 
     public void NextQuestion()
@@ -68,6 +74,7 @@ public class Quiz : Level
 
     private void DisplayQuestionAndAnswers()
     {
+        UpdateQuestionNumber();
         _questionField.text = _currentDifficultyQuestions[_currentQuestion].question;
 
         answerObjects[0].gameObject.transform.GetChild(0).transform.GetChild(0).GetComponent<TextMeshProUGUI>().text = _currentDifficultyQuestions[_currentQuestion].answer1;
