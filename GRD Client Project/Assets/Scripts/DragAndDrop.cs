@@ -21,7 +21,7 @@ public class DragAndDrop : MonoBehaviour
     private void OnMouseUp()
     {
         BoxCollider2D myCollider = gameObject.GetComponent<BoxCollider2D>();
-        BoxCollider2D[] colliders = new BoxCollider2D[1];
+        BoxCollider2D[] colliders = new BoxCollider2D[15];
         ContactFilter2D contactFilter = new ContactFilter2D();
         int colliderCount = myCollider.OverlapCollider(contactFilter, colliders);
 
@@ -30,26 +30,30 @@ public class DragAndDrop : MonoBehaviour
             gameObject.GetComponent<Rigidbody2D>().bodyType = RigidbodyType2D.Dynamic;
         }
 
-        if (colliders[0] != null && colliders[0].gameObject.HasComponent<Bin>())
+        for (int i = 0; i < colliderCount; i++)
         {
-            if (colliders[0].gameObject.GetComponent<Bin>().type == gameObject.GetComponent<Rubbish>().type)
+            if (colliders[i].gameObject.HasComponent<Bin>())
             {
-                _score.AddScore(1 * SessionManager.CurrentDifficulty.pointsGainWhenCorrect);
-                _score.CountCorrect();
-                DataCollectionFileManager.WriteStringContinuation(gameObject.GetComponent<Rubbish>().type.ToString(), true);
-                DataCollectionFileManager.WriteStringContinuation("correct", true);
-            }
+                if (colliders[i].gameObject.GetComponent<Bin>().type == gameObject.GetComponent<Rubbish>().type)
+                {
+                    _score.AddScore(1 * SessionManager.CurrentDifficulty.pointsGainWhenCorrect);
+                    _score.CountCorrect();
+                    DataCollectionFileManager.WriteStringContinuation(gameObject.GetComponent<Rubbish>().type.ToString(), true);
+                    DataCollectionFileManager.WriteStringContinuation("correct", true);
+                }
 
-            else
-            {
-                _score.AddScore(-1 * SessionManager.CurrentDifficulty.pointsLossWhenIncorrect);
-                _score.CountIncorrect();
-                DataCollectionFileManager.WriteStringContinuation(gameObject.GetComponent<Rubbish>().type.ToString(), true);
-                DataCollectionFileManager.WriteStringContinuation("incorrect", true);
-            }
+                else
+                {
+                    _score.AddScore(-1 * SessionManager.CurrentDifficulty.pointsLossWhenIncorrect);
+                    _score.CountIncorrect();
+                    DataCollectionFileManager.WriteStringContinuation(gameObject.GetComponent<Rubbish>().type.ToString(), true);
+                    DataCollectionFileManager.WriteStringContinuation("incorrect", true);
+                }
 
-            _sortingGame.CheckIfFinished();
-            Destroy(gameObject);
+                _sortingGame.CheckIfFinished();
+                Destroy(gameObject);
+                break;
+            }
         }
     }
 
