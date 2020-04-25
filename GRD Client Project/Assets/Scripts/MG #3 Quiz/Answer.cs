@@ -49,9 +49,9 @@ public class Answer : MonoBehaviour
                 _score.AddScore(-1 * SessionManager.CurrentDifficulty.pointsLossWhenIncorrect);
                 _score.CountIncorrect();
                 DataCollectionFileManager.WriteStringContinuation("incorrect", true);
-
             }
 
+            gameObject.SetActive(false);
             //   ResetToStartPosition();
             _quiz.NextQuestion();
         }

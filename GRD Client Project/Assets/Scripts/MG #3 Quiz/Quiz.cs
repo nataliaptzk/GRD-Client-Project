@@ -45,7 +45,7 @@ public class Quiz : Level
 
     private void UpdateQuestionNumber()
     {
-        _questionNumberField.text = _currentQuestion+1 + "/" + _currentDifficultyQuestions.Count;
+        _questionNumberField.text = _currentQuestion + 1 + "/" + _currentDifficultyQuestions.Count;
     }
 
     public void NextQuestion()
@@ -59,15 +59,6 @@ public class Quiz : Level
         }
         else if (_currentQuestion >= _currentDifficultyQuestions.Count)
         {
-            // Count the difference between amount of questions, and fill in remaining fields with N/A text (for custom data collection)
-            int tempQuestionCount = 0;
-            tempQuestionCount = 8 - _currentDifficultyQuestions.Count;
-
-            for (int i = 0; i < tempQuestionCount; i++)
-            {
-              //  DataCollectionFileManager.WriteStringContinuation("N/A", true);
-            }
-
             Invoke("FinishMiniGame", 1f);
         }
     }
@@ -77,8 +68,13 @@ public class Quiz : Level
         UpdateQuestionNumber();
         _questionField.text = _currentDifficultyQuestions[_currentQuestion].question;
 
+        answerObjects[0].gameObject.SetActive(true);
         answerObjects[0].gameObject.transform.GetChild(0).transform.GetChild(0).GetComponent<TextMeshProUGUI>().text = _currentDifficultyQuestions[_currentQuestion].answer1;
+
+        answerObjects[1].gameObject.SetActive(true);
         answerObjects[1].gameObject.transform.GetChild(0).transform.GetChild(0).GetComponent<TextMeshProUGUI>().text = _currentDifficultyQuestions[_currentQuestion].answer2;
+
+        answerObjects[2].gameObject.SetActive(true);
         answerObjects[2].gameObject.transform.GetChild(0).transform.GetChild(0).GetComponent<TextMeshProUGUI>().text = _currentDifficultyQuestions[_currentQuestion].answer3;
     }
 
