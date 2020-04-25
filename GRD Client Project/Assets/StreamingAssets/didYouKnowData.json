@@ -1,27 +1,27 @@
 ﻿{
     "messages": [
         {
-            "didYouKnowMessage": "There is an area of the Pacific Ocean three times the size of France which contains 80 000 tonnes of plastic rubbish",
+            "didYouKnowMessage": "There is an area of the Pacific Ocean three times the size of France which contains <br><style=DYK>80 000 tonnes</style><br>of plastic rubbish.",
             "difficulty": "easy"
         },
         {
-            "didYouKnowMessage": "359 million tonnes of plastic were produced in 2018 (Almost 50 kg of plastic for every person on the Planet)",
+            "didYouKnowMessage": "<style=DYK>359 million tonnes</style> of plastic were produced in 2018 (Almost <style=DYK>50 kg</style> of plastic for every person on the Planet).",
             "difficulty": "easy"
         },
         {
-            "didYouKnowMessage": "Only 2% of the world's plastic is recycled into similar products. 8% is recycled to make lower-value plastics. The rest is burned, put in landfill, or leaks into the environment.",
+            "didYouKnowMessage": "Only <style=DYK>2%</style> of the world's plastic is recycled into similar products. <br><style=DYK>8%</style> is recycled to make lower-value plastics. The rest is burned, put in landfill, or leaks into the environment.",
             "difficulty": "normal"
         },
         {
-            "didYouKnowMessage": "In 2014, 6% of the world's oil consumption was used for making plastics.",
+            "didYouKnowMessage": "In 2014, <style=DYK>6%</style> of the world's oil consumption was used for making plastics.",
             "difficulty": "normal"
         },
         {
-            "didYouKnowMessage": "In 2015 it was estimated that 12.7 million pieces of plastics entered the ocean every year",
+            "didYouKnowMessage": "In 2015 it was estimated that <style=DYK>12.7 million</style> pieces of plastics entered the ocean every year.",
             "difficulty": "hard"
         },
         {
-            "didYouKnowMessage": "40% of plastic is produced for packaging and is only used once before being disposed of",
+            "didYouKnowMessage": "<style=DYK>40%</style> of plastic is produced for packaging and is only used once before being disposed of.",
             "difficulty": "hard"
         }
     ]

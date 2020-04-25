@@ -16,7 +16,7 @@ public class SessionManagerHandler : MonoBehaviour
         if (SessionManager.CurrentDifficulty == null && SceneManager.GetActiveScene().buildIndex > 2)
         {
             _gameManager = FindObjectOfType<GameManager>();
-            SessionManager.CurrentDifficulty = _gameManager.Difficulties[0];
+            SessionManager.CurrentDifficulty = _gameManager.Difficulties[0]; //set easy by deafult
         }
     }
 

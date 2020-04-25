@@ -18,6 +18,7 @@ public class DidYouKnow : MonoBehaviour
     private void Awake()
     {
         _timer = GetComponent<Timer>();
+        
     }
 
     private void Start()

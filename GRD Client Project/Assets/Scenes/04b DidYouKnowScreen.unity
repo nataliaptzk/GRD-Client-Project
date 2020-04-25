@@ -627,6 +627,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: DYKPanel
       objectReference: {fileID: 0}
+    - target: {fileID: 5165118191461674519, guid: 0d2bc50db2021074c9d2ddef863d1caf,
+        type: 3}
+      propertyPath: m_isRightToLeft
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 5165118192204150979, guid: 0d2bc50db2021074c9d2ddef863d1caf,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -756,6 +761,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_SizeDelta.x
       value: 773.1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5165118191461674512, guid: 0d2bc50db2021074c9d2ddef863d1caf,
+        type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 750
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 0d2bc50db2021074c9d2ddef863d1caf, type: 3}
