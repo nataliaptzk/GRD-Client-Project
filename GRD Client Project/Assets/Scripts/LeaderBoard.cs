@@ -42,11 +42,12 @@ public class LeaderBoard : MonoBehaviour
     {
         if (SceneManager.GetActiveScene().name == "07 EndScreen")
         {
-            ReadLeaderboardFile(false);
+           // ReadLeaderboardFile(false);
+           SaveFinalResultToLeaderboardFile();
         }
     }
 
-    private void ReadLeaderboardFile(bool usedForSaving)
+    private void ReadLeaderboardFile()
     {
         string filePath = Path.Combine(Application.persistentDataPath, "leaderboard.json");
 
@@ -62,17 +63,21 @@ public class LeaderBoard : MonoBehaviour
         {
             Entry[] tempLoadListData = JsonHelper.FromJson<Entry>(jsonToLoad);
             _entries = tempLoadListData.OfType<Entry>().ToList();
+
+            string checkDate = _entries[0].sessionID;
+
+            if (checkDate.Contains(DateTime.Today.ToShortDateString()) == false) // if the leaderboard file contains entries from a different day than today
+            {
+                System.IO.File.WriteAllText(filePath, "");
+                _entries = new List<Entry>();
+            }
         }
 
-        if (!usedForSaving)
-        {
-            DisplayLeaderboard();
-        }
     }
 
     public void SaveFinalResultToLeaderboardFile()
     {
-        ReadLeaderboardFile(true);
+        ReadLeaderboardFile();
 
         Entry saveData = new Entry(SessionManager.Nickname, SessionManager.Score, SessionManager.CurrentDifficulty.name, SessionManager.SessionId);
         _entries.Add(saveData);
@@ -82,6 +87,7 @@ public class LeaderBoard : MonoBehaviour
         string jsonToSave = JsonHelper.ToJson(_entries.ToArray());
 
         File.WriteAllText(filePath, jsonToSave);
+        DisplayLeaderboard();
     }
 
     private void DisplayLeaderboard()

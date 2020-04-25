@@ -50,7 +50,7 @@ public class Level : MonoBehaviour
         Quiz quiz = GetComponent<Quiz>();
         if (quiz)
         {
-            GetComponent<LeaderBoard>().SaveFinalResultToLeaderboardFile();
+          //  GetComponent<LeaderBoard>().SaveFinalResultToLeaderboardFile();
             quiz.FillInDataCollectionForRemainingObjects();
             DisplayFinishedLevelInfo(false);
         }
