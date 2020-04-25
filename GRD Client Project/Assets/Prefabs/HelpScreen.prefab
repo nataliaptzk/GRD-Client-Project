@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 2104807722965801583}
   - component: {fileID: 7357551566328367849}
   m_Layer: 5
-  m_Name: Text (TMP) (1)
+  m_Name: TipText (TMP)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -277,7 +277,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 8201562709135809186}
+      - m_Target: {fileID: 1434299805077916280}
         m_MethodName: LeftButton
         m_Mode: 1
         m_Arguments:
@@ -375,6 +375,7 @@ GameObject:
   m_Component:
   - component: {fileID: 3978027065629566623}
   - component: {fileID: 8201562709135809186}
+  - component: {fileID: 1434299805077916280}
   m_Layer: 5
   m_Name: HelpScreen
   m_TagString: Untagged
@@ -418,6 +419,18 @@ MonoBehaviour:
   - {fileID: 7341800805485654942}
   - {fileID: 5035305694591205103}
   - {fileID: 3238894693391965676}
+--- !u!114 &1434299805077916280
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3978027065629566622}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 76f181245fd390d40a74fa6d2ba3153a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
   _textBox: {fileID: 7357551566328367849}
 --- !u!1 &3978027065655877147
 GameObject:
@@ -922,7 +935,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 8201562709135809186}
+      - m_Target: {fileID: 1434299805077916280}
         m_MethodName: RightButton
         m_Mode: 1
         m_Arguments:

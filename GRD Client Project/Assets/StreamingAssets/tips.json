@@ -1,0 +1,84 @@
+﻿{
+    "tips": [
+        {
+            "tip": "Biodegradable plastics can be broken down by microorganisms.",
+            "difficulty": "easy"
+        },
+        {
+            "tip": "Compostable plastic can be broken down in an industrial composting plant.",
+            "difficulty": "hard"
+        },
+        {
+            "tip": "Renewable means that the amount of something can be restored in less than a human lifetime.",
+            "difficulty": "hard"
+        },
+        {
+            "tip": "Plastic is a long molecule made from carbon and hydrogen chains.",
+            "difficulty": "normal"
+        },
+        {
+            "tip": "Plastic is cheap, lightweight and durable material.",
+            "difficulty": "easy"
+        },
+        {
+            "tip": "Bioplastic is made from renewable biomass sources",
+            "difficulty": "easy"
+        },
+        {
+            "tip": "Not all biodegradable plastics are renewable.",
+            "difficulty": "easy"
+        },
+        {
+            "tip": "Not all renewable plastics are biodegradable.",
+            "difficulty": "easy"
+        },
+        {
+            "tip": "Biodegradable plastics can be made from oil.",
+            "difficulty": "normal"
+        },
+        {
+            "tip": "Plastics can be made from various materials.",
+            "difficulty": "easy"
+        },
+        {
+            "tip": "Renewable plastics are made from sustainable resources.",
+            "difficulty": "hard"
+        },
+        {
+            "tip": "Biodegradable plastics are able to degrade into harmless molecules under the right conditions.",
+            "difficulty": "hard"
+        },
+        {
+            "tip": "Scientists predict plastics in oceans will weight more than fish in 2050.",
+            "difficulty": "normal"
+        },
+        {
+            "tip": "PLA can only be recycled using an industrial composter.",
+            "difficulty": "hard"
+        },
+        {
+            "tip": "PLA is made from corn starch or sugar cane.",
+            "difficulty": "hard"
+        },
+        {
+            "tip": "Currently the most common source of plastic is crude oil.",
+            "difficulty": "normal"
+        },
+        {
+            "tip": "Plastic bottles made from PET can be recycled in a plastics recycling bin.",
+            "difficulty": "easy"
+        },
+        {
+            "tip": "PLA - Polylactic acid is biodegradable and renewable.",
+            "difficulty": "hard"
+        },
+        {
+            "tip": "Traditional plastic lasts for hunder of years in the environment.",
+            "difficulty": "hard"
+        },
+        {
+            "tip": "PGA - Polyglycolic acid is able to degrade into harmless molecules and is made from oil.",
+            "difficulty": "normal"
+        }
+    ]
+}

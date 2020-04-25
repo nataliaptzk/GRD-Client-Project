@@ -1,17 +1,19 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
-using TMPro;
+using System.IO;
+using System.Linq;
 using UnityEngine;
+using TMPro;
+using UnityEngine.Networking;
 
 public class HelpScreenSetup : MonoBehaviour
 {
     [SerializeField] private List<GameObject> _helps = new List<GameObject>();
 
-    [SerializeField] private TextMeshProUGUI _textBox;
     private void Start()
     {
         HelpSetup();
-        LoadJsonTips();
     }
 
     private void HelpSetup()
@@ -27,32 +29,12 @@ public class HelpScreenSetup : MonoBehaviour
             _helps[0].SetActive(false);
             _helps[1].SetActive(true);
             _helps[2].SetActive(false);
-
         }
         else if (SessionManager.CurrentDifficulty.name == "hard")
         {
             _helps[0].SetActive(false);
             _helps[1].SetActive(false);
             _helps[2].SetActive(true);
-
         }
-    }
-
-    public void LeftButton()
-    {
-        DisplayTip(-1);
-    }
-
-    public void RightButton()
-    {
-        DisplayTip(1);
-    }
-
-    private void DisplayTip(int index)
-    {
-    }
-
-    private void LoadJsonTips()
-    {
     }
 }

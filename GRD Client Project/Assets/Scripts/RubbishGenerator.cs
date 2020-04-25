@@ -33,13 +33,11 @@ public class RubbishGenerator : MonoBehaviour
         {
             cap = 3;
             remaining = slotsParent.transform.childCount % cap;
-            Debug.Log(remaining);
         }
         else if (myDifficulty == 2)
         {
             cap = 5;
             remaining = slotsParent.transform.childCount % cap;
-            Debug.Log(remaining);
         }
 
 
