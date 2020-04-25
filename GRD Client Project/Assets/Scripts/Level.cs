@@ -50,10 +50,12 @@ public class Level : MonoBehaviour
         Quiz quiz = GetComponent<Quiz>();
         if (quiz)
         {
-          //  GetComponent<LeaderBoard>().SaveFinalResultToLeaderboardFile();
+            //  GetComponent<LeaderBoard>().SaveFinalResultToLeaderboardFile();
             quiz.FillInDataCollectionForRemainingObjects();
             DisplayFinishedLevelInfo(false);
         }
+
+        Time.timeScale = 0;
     }
 
     public void LoadNextLevel()
@@ -65,7 +67,11 @@ public class Level : MonoBehaviour
     {
         _endScreen.SetActive(true);
         _titleTextBox.text = GameInfo.title;
-        _remainingTimeTextBox.text = _timer.timeLeft.ToString();
+
+        int min = Mathf.FloorToInt(_timer.timeLeft / 60);
+        int sec = Mathf.FloorToInt(_timer.timeLeft % 60);
+
+        _remainingTimeTextBox.text = min.ToString("00") + ":" + sec.ToString("00");
         _correctAnswersTextBox.text = _gameManager.GetComponent<Score>().correct.ToString();
         _incorrectAnswersTextBox.text = _gameManager.GetComponent<Score>().incorrect.ToString();
         _scoreTextBox.text = SessionManager.Score.ToString();
