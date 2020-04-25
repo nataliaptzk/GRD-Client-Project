@@ -75,7 +75,7 @@ public static class DataCollectionFileManager
             var fileContent = File.ReadLines(path).ToList();
 
             fileContent[fileContent.Count - 1] = newRow;
-            string newLines = string.Join("", fileContent.ToArray());
+            string newLines = string.Join("\n", fileContent.ToArray());
             File.WriteAllText(path, newLines);
         }
     }
