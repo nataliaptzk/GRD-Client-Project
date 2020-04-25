@@ -17,6 +17,7 @@ public class LeaderBoard : MonoBehaviour
     [SerializeField] private List<TextMeshProUGUI> _names = new List<TextMeshProUGUI>();
     [SerializeField] private List<TextMeshProUGUI> _scores = new List<TextMeshProUGUI>();
     [SerializeField] private List<TextMeshProUGUI> _indexes = new List<TextMeshProUGUI>();
+    [SerializeField] private List<TextMeshProUGUI> _youIndicators = new List<TextMeshProUGUI>();
     [SerializeField] private TextMeshProUGUI _title;
 
     [SerializeField] private List<Entry> _entries = new List<Entry>();
@@ -42,8 +43,8 @@ public class LeaderBoard : MonoBehaviour
     {
         if (SceneManager.GetActiveScene().name == "07 EndScreen")
         {
-           // ReadLeaderboardFile(false);
-           SaveFinalResultToLeaderboardFile();
+            // ReadLeaderboardFile(false);
+            SaveFinalResultToLeaderboardFile();
         }
     }
 
@@ -72,7 +73,6 @@ public class LeaderBoard : MonoBehaviour
                 _entries = new List<Entry>();
             }
         }
-
     }
 
     public void SaveFinalResultToLeaderboardFile()
@@ -106,27 +106,37 @@ public class LeaderBoard : MonoBehaviour
             checkLength = sortedPlayersCurrentDifficulty.Count;
         }
 
+        int currentPlayerIndex = sortedPlayersCurrentDifficulty.FindIndex(entry => entry.sessionID == SessionManager.SessionId);
 
         for (int i = 0; i < checkLength; i++)
         {
             _indexes[i].gameObject.SetActive(true);
             _names[i].gameObject.SetActive(true);
             _scores[i].gameObject.SetActive(true);
-
+            _youIndicators[i].gameObject.SetActive(true);
             _names[i].text = sortedPlayersCurrentDifficulty[i].name;
             _scores[i].text = sortedPlayersCurrentDifficulty[i].finalScore.ToString();
+            if (currentPlayerIndex == i)
+            {
+                _youIndicators[i].text = "you";
+            }
         }
 
-        int currentPlayerIndex = sortedPlayersCurrentDifficulty.FindIndex(entry => entry.sessionID == SessionManager.SessionId);
 
-        if (currentPlayerIndex >= 5)
+        if (currentPlayerIndex >= 5) // if the player is further than 5th place, show his details below in smaller font
         {
             _indexes[5].gameObject.SetActive(true);
             _names[5].gameObject.SetActive(true);
             _scores[5].gameObject.SetActive(true);
-            _indexes[5].text = currentPlayerIndex.ToString();
+            _youIndicators[5].gameObject.SetActive(true);
+            _indexes[5].text = currentPlayerIndex + 1 + ".";
             _names[5].text = sortedPlayersCurrentDifficulty[currentPlayerIndex].name;
             _scores[5].text = sortedPlayersCurrentDifficulty[currentPlayerIndex].finalScore.ToString();
+            _youIndicators[5].text = "you";
+        }
+
+        for (int i = 0; i < checkLength; i++)
+        {
         }
     }
 }
