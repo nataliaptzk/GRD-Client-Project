@@ -1,6 +1,8 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using System.IO;
+using System.Linq;
 using UnityEditor;
 using UnityEngine;
 
@@ -48,6 +50,33 @@ public static class DataCollectionFileManager
 
             outputFile.Flush();
             outputFile.Close();
+        }
+    }
+
+    public static void AdjustDataFileForReplay(int columnsAmountToRemove)
+    {
+        if (SessionManager.Consent)
+        {
+            string path = Application.persistentDataPath + _fileName;
+            var row = File.ReadLines(path).Last();
+
+
+            string[] columns = row.Split(new char[] {';'});
+            string[] goodColumns = new string[columns.Length - columnsAmountToRemove];
+
+
+            Array.Copy(columns, goodColumns, goodColumns.Length);
+
+            string newRow = String.Join(";", goodColumns);
+
+            newRow = newRow + ";";
+
+
+            var fileContent = File.ReadLines(path).ToList();
+
+            fileContent[fileContent.Count - 1] = newRow;
+            string newLines = string.Join("", fileContent.ToArray());
+            File.WriteAllText(path, newLines);
         }
     }
 }

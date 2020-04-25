@@ -54,7 +54,7 @@ public class RubbishGenerator : MonoBehaviour
                     initial = 0;
                 }
             }
-            else if (i == slotsParent.transform.childCount-1)
+            else if (i == slotsParent.transform.childCount - 1)
             {
                 tempValues.Add(Random.Range(0, cap));
             }
@@ -64,8 +64,8 @@ public class RubbishGenerator : MonoBehaviour
 
         for (int i = 0; i < tempValues.Count; i++)
         {
-            //     var randomContainer = Random.Range(0, _containers.Count);
-            //     slotsParent.transform.GetChild(i).GetComponent<SpriteRenderer>().sprite = _containers[randomContainer];
+            var randomContainer = Random.Range(0, _containers.Count);
+            slotsParent.transform.GetChild(i).GetComponent<SpriteRenderer>().sprite = _containers[randomContainer];
             int randomSprite = 0;
 
 

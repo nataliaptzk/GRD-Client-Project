@@ -33,11 +33,10 @@ public class Level : MonoBehaviour
 
     public void FinishMiniGame()
     {
-        // In case of time running out collect data
         SortingGame sortingGame = GetComponent<SortingGame>();
         if (sortingGame)
         {
-            sortingGame.FillInDataCollectionForRemainingObjects();
+            sortingGame.FillInDataCollectionForRemainingObjects(); // In case of time running out collect data
             DisplayFinishedLevelInfo(true);
         }
 
@@ -135,6 +134,24 @@ public class Level : MonoBehaviour
 
     public void ReplayLevel()
     {
+        SortingGame sortingGame = GetComponent<SortingGame>();
+        if (sortingGame)
+        {
+            DataCollectionFileManager.AdjustDataFileForReplay(22); // 22 columns to remove from the file from the current session's row
+        }
+
+        InvestigationGame investigationGame = GetComponent<InvestigationGame>();
+        if (investigationGame)
+        {
+            DataCollectionFileManager.AdjustDataFileForReplay(22); // 22 columns to remove from the file from the current session's row
+        }
+
+        Quiz quiz = GetComponent<Quiz>();
+        if (quiz)
+        {
+            DataCollectionFileManager.AdjustDataFileForReplay(9); // 9 columns to remove from the file from the current session's row
+        }
+
         SessionManager.Score = SessionManager.scoreBeforeStartLevel;
         _sceneSwitcher.SwitchScene(SceneManager.GetActiveScene().name);
     }

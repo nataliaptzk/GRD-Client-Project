@@ -65,7 +65,7 @@ public class Quiz : Level
 
             for (int i = 0; i < tempQuestionCount; i++)
             {
-                DataCollectionFileManager.WriteStringContinuation("N/A", true);
+              //  DataCollectionFileManager.WriteStringContinuation("N/A", true);
             }
 
             Invoke("FinishMiniGame", 1f);
