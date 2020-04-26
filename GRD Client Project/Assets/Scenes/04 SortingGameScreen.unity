@@ -528,6 +528,21 @@ PrefabInstance:
       propertyPath: _score
       value: 
       objectReference: {fileID: 0}
+    - target: {fileID: 3893356435314226541, guid: 72e0b609a749bd74e8c5cdf26d49504d,
+        type: 3}
+      propertyPath: _pauseScreen
+      value: 
+      objectReference: {fileID: 976613384}
+    - target: {fileID: 3893356435314226541, guid: 72e0b609a749bd74e8c5cdf26d49504d,
+        type: 3}
+      propertyPath: _helpScreen
+      value: 
+      objectReference: {fileID: 1633305754}
+    - target: {fileID: 3893356435314226541, guid: 72e0b609a749bd74e8c5cdf26d49504d,
+        type: 3}
+      propertyPath: _tutorialScreen
+      value: 
+      objectReference: {fileID: 107166580}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 72e0b609a749bd74e8c5cdf26d49504d, type: 3}
 --- !u!4 &233613619 stripped
@@ -603,7 +618,7 @@ MonoBehaviour:
   m_fontMaterials: []
   m_fontColor32:
     serializedVersion: 2
-    rgba: 4294967295
+    rgba: 4278190080
   m_fontColor: {r: 0, g: 0, b: 0, a: 1}
   m_enableVertexGradient: 0
   m_colorMode: 3
@@ -929,6 +944,21 @@ PrefabInstance:
       propertyPath: _score
       value: 
       objectReference: {fileID: 0}
+    - target: {fileID: 3893356435314226541, guid: 72e0b609a749bd74e8c5cdf26d49504d,
+        type: 3}
+      propertyPath: _pauseScreen
+      value: 
+      objectReference: {fileID: 976613384}
+    - target: {fileID: 3893356435314226541, guid: 72e0b609a749bd74e8c5cdf26d49504d,
+        type: 3}
+      propertyPath: _helpScreen
+      value: 
+      objectReference: {fileID: 1633305754}
+    - target: {fileID: 3893356435314226541, guid: 72e0b609a749bd74e8c5cdf26d49504d,
+        type: 3}
+      propertyPath: _tutorialScreen
+      value: 
+      objectReference: {fileID: 107166580}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 72e0b609a749bd74e8c5cdf26d49504d, type: 3}
 --- !u!4 &327115812 stripped
@@ -1424,6 +1454,21 @@ PrefabInstance:
       propertyPath: _score
       value: 
       objectReference: {fileID: 0}
+    - target: {fileID: 3893356435314226541, guid: 72e0b609a749bd74e8c5cdf26d49504d,
+        type: 3}
+      propertyPath: _pauseScreen
+      value: 
+      objectReference: {fileID: 976613384}
+    - target: {fileID: 3893356435314226541, guid: 72e0b609a749bd74e8c5cdf26d49504d,
+        type: 3}
+      propertyPath: _helpScreen
+      value: 
+      objectReference: {fileID: 1633305754}
+    - target: {fileID: 3893356435314226541, guid: 72e0b609a749bd74e8c5cdf26d49504d,
+        type: 3}
+      propertyPath: _tutorialScreen
+      value: 
+      objectReference: {fileID: 107166580}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 72e0b609a749bd74e8c5cdf26d49504d, type: 3}
 --- !u!4 &401274835 stripped
@@ -1509,6 +1554,21 @@ PrefabInstance:
       propertyPath: _score
       value: 
       objectReference: {fileID: 0}
+    - target: {fileID: 3893356435314226541, guid: 72e0b609a749bd74e8c5cdf26d49504d,
+        type: 3}
+      propertyPath: _pauseScreen
+      value: 
+      objectReference: {fileID: 976613384}
+    - target: {fileID: 3893356435314226541, guid: 72e0b609a749bd74e8c5cdf26d49504d,
+        type: 3}
+      propertyPath: _helpScreen
+      value: 
+      objectReference: {fileID: 1633305754}
+    - target: {fileID: 3893356435314226541, guid: 72e0b609a749bd74e8c5cdf26d49504d,
+        type: 3}
+      propertyPath: _tutorialScreen
+      value: 
+      objectReference: {fileID: 107166580}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 72e0b609a749bd74e8c5cdf26d49504d, type: 3}
 --- !u!1 &526534251
@@ -1823,7 +1883,7 @@ MonoBehaviour:
   m_fontMaterials: []
   m_fontColor32:
     serializedVersion: 2
-    rgba: 4294967295
+    rgba: 4278190080
   m_fontColor: {r: 0, g: 0, b: 0, a: 1}
   m_enableVertexGradient: 0
   m_colorMode: 3
@@ -1883,7 +1943,7 @@ MonoBehaviour:
   m_margin: {x: 0, y: 0, z: 0, w: 0}
   m_textInfo:
     textComponent: {fileID: 585035346}
-    characterCount: 7
+    characterCount: 10
     spriteCount: 0
     spaceCount: 0
     wordCount: 1
@@ -2090,6 +2150,21 @@ PrefabInstance:
       propertyPath: _score
       value: 
       objectReference: {fileID: 0}
+    - target: {fileID: 3893356435314226541, guid: 72e0b609a749bd74e8c5cdf26d49504d,
+        type: 3}
+      propertyPath: _pauseScreen
+      value: 
+      objectReference: {fileID: 976613384}
+    - target: {fileID: 3893356435314226541, guid: 72e0b609a749bd74e8c5cdf26d49504d,
+        type: 3}
+      propertyPath: _helpScreen
+      value: 
+      objectReference: {fileID: 1633305754}
+    - target: {fileID: 3893356435314226541, guid: 72e0b609a749bd74e8c5cdf26d49504d,
+        type: 3}
+      propertyPath: _tutorialScreen
+      value: 
+      objectReference: {fileID: 107166580}
     - target: {fileID: 1188823744166978654, guid: 72e0b609a749bd74e8c5cdf26d49504d,
         type: 3}
       propertyPath: m_SpriteTilingProperty.border.x
@@ -2621,6 +2696,21 @@ PrefabInstance:
       propertyPath: m_AnchoredPosition.y
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4994888096558667143, guid: e813e5e3dc1110c4f82a0eef94534622,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4994888096558667143, guid: e813e5e3dc1110c4f82a0eef94534622,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4994888096558667143, guid: e813e5e3dc1110c4f82a0eef94534622,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 2198004225138005428, guid: e813e5e3dc1110c4f82a0eef94534622,
         type: 3}
       propertyPath: m_AnchorMin.y
@@ -2986,7 +3076,7 @@ MonoBehaviour:
   m_fontMaterials: []
   m_fontColor32:
     serializedVersion: 2
-    rgba: 4294967295
+    rgba: 4278190080
   m_fontColor: {r: 0, g: 0, b: 0, a: 1}
   m_enableVertexGradient: 0
   m_colorMode: 3
@@ -3731,12 +3821,12 @@ PrefabInstance:
     - target: {fileID: 5475469582475329311, guid: 72e0b609a749bd74e8c5cdf26d49504d,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 1.24
+      value: 0.75
       objectReference: {fileID: 0}
     - target: {fileID: 5475469582475329311, guid: 72e0b609a749bd74e8c5cdf26d49504d,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: -0.06
+      value: 0.72
       objectReference: {fileID: 0}
     - target: {fileID: 5475469582475329311, guid: 72e0b609a749bd74e8c5cdf26d49504d,
         type: 3}
@@ -3793,6 +3883,21 @@ PrefabInstance:
       propertyPath: _score
       value: 
       objectReference: {fileID: 0}
+    - target: {fileID: 3893356435314226541, guid: 72e0b609a749bd74e8c5cdf26d49504d,
+        type: 3}
+      propertyPath: _pauseScreen
+      value: 
+      objectReference: {fileID: 976613384}
+    - target: {fileID: 3893356435314226541, guid: 72e0b609a749bd74e8c5cdf26d49504d,
+        type: 3}
+      propertyPath: _helpScreen
+      value: 
+      objectReference: {fileID: 1633305754}
+    - target: {fileID: 3893356435314226541, guid: 72e0b609a749bd74e8c5cdf26d49504d,
+        type: 3}
+      propertyPath: _tutorialScreen
+      value: 
+      objectReference: {fileID: 107166580}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 72e0b609a749bd74e8c5cdf26d49504d, type: 3}
 --- !u!4 &1164672847 stripped
@@ -3932,6 +4037,21 @@ PrefabInstance:
       propertyPath: _score
       value: 
       objectReference: {fileID: 0}
+    - target: {fileID: 3893356435314226541, guid: 72e0b609a749bd74e8c5cdf26d49504d,
+        type: 3}
+      propertyPath: _pauseScreen
+      value: 
+      objectReference: {fileID: 976613384}
+    - target: {fileID: 3893356435314226541, guid: 72e0b609a749bd74e8c5cdf26d49504d,
+        type: 3}
+      propertyPath: _helpScreen
+      value: 
+      objectReference: {fileID: 1633305754}
+    - target: {fileID: 3893356435314226541, guid: 72e0b609a749bd74e8c5cdf26d49504d,
+        type: 3}
+      propertyPath: _tutorialScreen
+      value: 
+      objectReference: {fileID: 107166580}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 72e0b609a749bd74e8c5cdf26d49504d, type: 3}
 --- !u!4 &1296779994 stripped
@@ -4077,12 +4197,12 @@ PrefabInstance:
     - target: {fileID: 5475469582475329311, guid: 72e0b609a749bd74e8c5cdf26d49504d,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: -1.72
+      value: -1.58
       objectReference: {fileID: 0}
     - target: {fileID: 5475469582475329311, guid: 72e0b609a749bd74e8c5cdf26d49504d,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0.14
+      value: 0.58
       objectReference: {fileID: 0}
     - target: {fileID: 5475469582475329311, guid: 72e0b609a749bd74e8c5cdf26d49504d,
         type: 3}
@@ -4139,6 +4259,21 @@ PrefabInstance:
       propertyPath: _score
       value: 
       objectReference: {fileID: 0}
+    - target: {fileID: 3893356435314226541, guid: 72e0b609a749bd74e8c5cdf26d49504d,
+        type: 3}
+      propertyPath: _pauseScreen
+      value: 
+      objectReference: {fileID: 976613384}
+    - target: {fileID: 3893356435314226541, guid: 72e0b609a749bd74e8c5cdf26d49504d,
+        type: 3}
+      propertyPath: _helpScreen
+      value: 
+      objectReference: {fileID: 1633305754}
+    - target: {fileID: 3893356435314226541, guid: 72e0b609a749bd74e8c5cdf26d49504d,
+        type: 3}
+      propertyPath: _tutorialScreen
+      value: 
+      objectReference: {fileID: 107166580}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 72e0b609a749bd74e8c5cdf26d49504d, type: 3}
 --- !u!4 &1410036678 stripped
@@ -4755,12 +4890,12 @@ PrefabInstance:
     - target: {fileID: 5475469582475329311, guid: 72e0b609a749bd74e8c5cdf26d49504d,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: -1.76
+      value: -1.66
       objectReference: {fileID: 0}
     - target: {fileID: 5475469582475329311, guid: 72e0b609a749bd74e8c5cdf26d49504d,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 2.7
+      value: 3.38
       objectReference: {fileID: 0}
     - target: {fileID: 5475469582475329311, guid: 72e0b609a749bd74e8c5cdf26d49504d,
         type: 3}
@@ -4817,6 +4952,21 @@ PrefabInstance:
       propertyPath: _score
       value: 
       objectReference: {fileID: 0}
+    - target: {fileID: 3893356435314226541, guid: 72e0b609a749bd74e8c5cdf26d49504d,
+        type: 3}
+      propertyPath: _pauseScreen
+      value: 
+      objectReference: {fileID: 976613384}
+    - target: {fileID: 3893356435314226541, guid: 72e0b609a749bd74e8c5cdf26d49504d,
+        type: 3}
+      propertyPath: _helpScreen
+      value: 
+      objectReference: {fileID: 1633305754}
+    - target: {fileID: 3893356435314226541, guid: 72e0b609a749bd74e8c5cdf26d49504d,
+        type: 3}
+      propertyPath: _tutorialScreen
+      value: 
+      objectReference: {fileID: 107166580}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 72e0b609a749bd74e8c5cdf26d49504d, type: 3}
 --- !u!4 &1911120746 stripped
@@ -4939,12 +5089,12 @@ PrefabInstance:
     - target: {fileID: 5475469582475329311, guid: 72e0b609a749bd74e8c5cdf26d49504d,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 5.55
+      value: 6.12
       objectReference: {fileID: 0}
     - target: {fileID: 5475469582475329311, guid: 72e0b609a749bd74e8c5cdf26d49504d,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0.09
+      value: 0.51
       objectReference: {fileID: 0}
     - target: {fileID: 5475469582475329311, guid: 72e0b609a749bd74e8c5cdf26d49504d,
         type: 3}
@@ -5001,6 +5151,21 @@ PrefabInstance:
       propertyPath: _score
       value: 
       objectReference: {fileID: 0}
+    - target: {fileID: 3893356435314226541, guid: 72e0b609a749bd74e8c5cdf26d49504d,
+        type: 3}
+      propertyPath: _pauseScreen
+      value: 
+      objectReference: {fileID: 976613384}
+    - target: {fileID: 3893356435314226541, guid: 72e0b609a749bd74e8c5cdf26d49504d,
+        type: 3}
+      propertyPath: _helpScreen
+      value: 
+      objectReference: {fileID: 1633305754}
+    - target: {fileID: 3893356435314226541, guid: 72e0b609a749bd74e8c5cdf26d49504d,
+        type: 3}
+      propertyPath: _tutorialScreen
+      value: 
+      objectReference: {fileID: 107166580}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 72e0b609a749bd74e8c5cdf26d49504d, type: 3}
 --- !u!4 &2051698838 stripped
@@ -5428,6 +5593,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: TutorialScreen
       objectReference: {fileID: 0}
+    - target: {fileID: 2285252354702261225, guid: c6f215e3c974427449ecb4012333480b,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 2285252354702261224, guid: c6f215e3c974427449ecb4012333480b,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -5587,6 +5757,10 @@ PrefabInstance:
         type: 3}
       propertyPath: m_textInfo.pageCount
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 644316567, guid: c6f215e3c974427449ecb4012333480b, type: 3}
+      propertyPath: m_Enabled
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c6f215e3c974427449ecb4012333480b, type: 3}

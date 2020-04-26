@@ -8,6 +8,10 @@ public class DragAndDropGame : MonoBehaviour
     private Score _score;
     private SortingGame _sortingGame;
 
+    [SerializeField] private GameObject _pauseScreen;
+    [SerializeField] private GameObject _helpScreen;
+    [SerializeField] private GameObject _tutorialScreen;
+
     private void Awake()
     {
         _sortingGame = FindObjectOfType<SortingGame>();
@@ -20,50 +24,56 @@ public class DragAndDropGame : MonoBehaviour
 
     private void OnMouseUp()
     {
-        BoxCollider2D myCollider = gameObject.GetComponent<BoxCollider2D>();
-        BoxCollider2D[] colliders = new BoxCollider2D[15];
-        ContactFilter2D contactFilter = new ContactFilter2D();
-        int colliderCount = myCollider.OverlapCollider(contactFilter, colliders);
-
-        if (gameObject.HasComponent<Rigidbody2D>())
+        if (!_pauseScreen.activeInHierarchy && !_helpScreen.activeInHierarchy && !_tutorialScreen.activeInHierarchy)
         {
-            gameObject.GetComponent<Rigidbody2D>().bodyType = RigidbodyType2D.Dynamic;
-        }
+            BoxCollider2D myCollider = gameObject.GetComponent<BoxCollider2D>();
+            BoxCollider2D[] colliders = new BoxCollider2D[15];
+            ContactFilter2D contactFilter = new ContactFilter2D();
+            int colliderCount = myCollider.OverlapCollider(contactFilter, colliders);
 
-        for (int i = 0; i < colliderCount; i++)
-        {
-            if (colliders[i].gameObject.HasComponent<Bin>())
+            if (gameObject.HasComponent<Rigidbody2D>())
             {
-                if (colliders[i].gameObject.GetComponent<Bin>().type == gameObject.GetComponent<Rubbish>().type)
-                {
-                    _score.AddScore(1 * SessionManager.CurrentDifficulty.pointsGainWhenCorrect);
-                    _score.CountCorrect();
-                    DataCollectionFileManager.WriteStringContinuation(gameObject.GetComponent<Rubbish>().type.ToString(), true);
-                    DataCollectionFileManager.WriteStringContinuation("correct", true);
-                }
+                gameObject.GetComponent<Rigidbody2D>().bodyType = RigidbodyType2D.Dynamic;
+            }
 
-                else
+            for (int i = 0; i < colliderCount; i++)
+            {
+                if (colliders[i].gameObject.HasComponent<Bin>())
                 {
-                    _score.AddScore(-1 * SessionManager.CurrentDifficulty.pointsLossWhenIncorrect);
-                    _score.CountIncorrect();
-                    DataCollectionFileManager.WriteStringContinuation(gameObject.GetComponent<Rubbish>().type.ToString(), true);
-                    DataCollectionFileManager.WriteStringContinuation("incorrect", true);
-                }
+                    if (colliders[i].gameObject.GetComponent<Bin>().type == gameObject.GetComponent<Rubbish>().type)
+                    {
+                        _score.AddScore(1 * SessionManager.CurrentDifficulty.pointsGainWhenCorrect);
+                        _score.CountCorrect();
+                        DataCollectionFileManager.WriteStringContinuation(gameObject.GetComponent<Rubbish>().type.ToString(), true);
+                        DataCollectionFileManager.WriteStringContinuation("correct", true);
+                    }
 
-                _sortingGame.CheckIfFinished();
-                Destroy(gameObject);
-                break;
+                    else
+                    {
+                        _score.AddScore(-1 * SessionManager.CurrentDifficulty.pointsLossWhenIncorrect);
+                        _score.CountIncorrect();
+                        DataCollectionFileManager.WriteStringContinuation(gameObject.GetComponent<Rubbish>().type.ToString(), true);
+                        DataCollectionFileManager.WriteStringContinuation("incorrect", true);
+                    }
+
+                    _sortingGame.CheckIfFinished();
+                    Destroy(gameObject);
+                    break;
+                }
             }
         }
     }
 
     public void OnMouseDrag()
     {
-        Vector2 mousePos = Camera.main.ScreenToWorldPoint(Input.mousePosition) - transform.position;
-        transform.Translate(mousePos);
-        if (gameObject.HasComponent<Rigidbody2D>())
+        if (!_pauseScreen.activeInHierarchy && !_helpScreen.activeInHierarchy && !_tutorialScreen.activeInHierarchy)
         {
-            gameObject.GetComponent<Rigidbody2D>().bodyType = RigidbodyType2D.Static;
+            Vector2 mousePos = Camera.main.ScreenToWorldPoint(Input.mousePosition) - transform.position;
+            transform.Translate(mousePos);
+            if (gameObject.HasComponent<Rigidbody2D>())
+            {
+                gameObject.GetComponent<Rigidbody2D>().bodyType = RigidbodyType2D.Static;
+            }
         }
     }
 }
