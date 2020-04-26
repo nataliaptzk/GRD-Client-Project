@@ -362,8 +362,8 @@ MonoBehaviour:
   SoundName: Slider
   IgnoreListenerPause: 1
   Volume:
-    MinValue: 0
-    MaxValue: 0
+    MinValue: -18.7
+    MaxValue: -18.7
   Pitch:
     MinValue: 0
     MaxValue: 0

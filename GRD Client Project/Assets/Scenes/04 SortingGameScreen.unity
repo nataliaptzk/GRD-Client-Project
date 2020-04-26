@@ -2821,6 +2821,16 @@ PrefabInstance:
       propertyPath: m_AdditionalShaderChannelsFlag
       value: 25
       objectReference: {fileID: 0}
+    - target: {fileID: 4592475915719639202, guid: e813e5e3dc1110c4f82a0eef94534622,
+        type: 3}
+      propertyPath: ShowBehavior.OnStart.SoundData.DatabaseName
+      value: Example Slides
+      objectReference: {fileID: 0}
+    - target: {fileID: 4592475915719639202, guid: e813e5e3dc1110c4f82a0eef94534622,
+        type: 3}
+      propertyPath: ShowBehavior.OnStart.SoundData.SoundName
+      value: Slider
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e813e5e3dc1110c4f82a0eef94534622, type: 3}
 --- !u!1 &976613384 stripped
@@ -5567,6 +5577,16 @@ PrefabInstance:
       propertyPath: OnClick.OnTrigger.Event.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 72301656}
+    - target: {fileID: 7351431491702384665, guid: 836128fa96e85264b9732b137f0788e1,
+        type: 3}
+      propertyPath: ShowBehavior.OnStart.SoundData.DatabaseName
+      value: Example Slides
+      objectReference: {fileID: 0}
+    - target: {fileID: 7351431491702384665, guid: 836128fa96e85264b9732b137f0788e1,
+        type: 3}
+      propertyPath: ShowBehavior.OnStart.SoundData.SoundName
+      value: Slider
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 836128fa96e85264b9732b137f0788e1, type: 3}
 --- !u!114 &770836245753874124 stripped
@@ -5762,6 +5782,16 @@ PrefabInstance:
       propertyPath: m_Enabled
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 4847571673134389346, guid: c6f215e3c974427449ecb4012333480b,
+        type: 3}
+      propertyPath: ShowBehavior.OnStart.SoundData.DatabaseName
+      value: Example Slides
+      objectReference: {fileID: 0}
+    - target: {fileID: 4847571673134389346, guid: c6f215e3c974427449ecb4012333480b,
+        type: 3}
+      propertyPath: ShowBehavior.OnStart.SoundData.SoundName
+      value: Slider
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c6f215e3c974427449ecb4012333480b, type: 3}
 --- !u!1001 &3978027066152395268
@@ -5940,6 +5970,16 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalRotation.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6672111691302416142, guid: f108db0a1c4cfc444af84dc99d2db039,
+        type: 3}
+      propertyPath: ShowBehavior.OnStart.SoundData.DatabaseName
+      value: Example Slides
+      objectReference: {fileID: 0}
+    - target: {fileID: 6672111691302416142, guid: f108db0a1c4cfc444af84dc99d2db039,
+        type: 3}
+      propertyPath: ShowBehavior.OnStart.SoundData.SoundName
+      value: Slider
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f108db0a1c4cfc444af84dc99d2db039, type: 3}
