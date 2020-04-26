@@ -1,5 +1,6 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
+using Doozy.Engine.UI;
 using UnityEngine;
 
 public class PauseState : MonoBehaviour
@@ -18,6 +19,7 @@ public class PauseState : MonoBehaviour
         if (_isPaused)
         {
             Time.timeScale = 1;
+            _pauseMenu.GetComponentInChildren<UIView>().InstantHide();
             _pauseMenu.SetActive(false);
             _isPaused = false;
         }
@@ -25,6 +27,7 @@ public class PauseState : MonoBehaviour
         {
             Time.timeScale = 0;
             _pauseMenu.SetActive(true);
+            _pauseMenu.transform.GetChild(0).gameObject.SetActive(true);
             _isPaused = true;
         }
     }

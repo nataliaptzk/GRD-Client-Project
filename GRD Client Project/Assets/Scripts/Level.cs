@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections;
 using System.Collections.Generic;
+using Doozy.Engine.UI;
 using TMPro;
 using UnityEngine;
 using UnityEngine.SceneManagement;
@@ -110,7 +111,7 @@ public class Level : MonoBehaviour
     {
         Time.timeScale = 1;
 
-        _helpScreen.SetActive(false);
+        _helpScreen.GetComponent<UIView>().InstantHide();
     }
 
     public void FlashCorrectColour()

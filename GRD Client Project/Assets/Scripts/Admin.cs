@@ -5,6 +5,7 @@ using System.IO;
 using System.Linq;
 using System.Security.Cryptography;
 using System.Text;
+using Doozy.Engine.UI;
 using TMPro;
 using UnityEngine;
 using UnityEngine.SceneManagement;
@@ -52,6 +53,7 @@ public class Admin : MonoBehaviour
         System.IO.File.WriteAllText(filePath, "");
         _removeFinishedWindow.SetActive(true);
         _confirmationWindow.SetActive(false);
+        _confirmationWindow.gameObject.GetComponent<UIView>().InstantHide();
     }
 
     public void AdminLoginAttempt(TMP_InputField enteredPassword)
