@@ -12345,8 +12345,8 @@ MonoBehaviour:
       m_Calls: []
     m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-  m_Sprite: {fileID: 21300000, guid: a89bd54b44777a94892aefe7b8935905, type: 3}
-  m_Type: 0
+  m_Sprite: {fileID: 21300000, guid: 03e4ebfc1e2e9f64a8b69b525ddb5743, type: 3}
+  m_Type: 1
   m_PreserveAspect: 0
   m_FillCenter: 1
   m_FillMethod: 4
@@ -12420,7 +12420,7 @@ MonoBehaviour:
       m_Calls: []
     m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-  m_text: "If you are an unauthorized to use admin settings,\r\nplease return to the
+  m_text: "If you are unauthorized to use admin settings,\r\nplease return to the
     main menu."
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 42644ebbd1dfeff438ed3a7d5de16754, type: 2}
@@ -15815,7 +15815,7 @@ Canvas:
   m_OverrideSorting: 0
   m_OverridePixelPerfect: 0
   m_SortingBucketNormalizedSize: 0
-  m_AdditionalShaderChannelsFlag: 0
+  m_AdditionalShaderChannelsFlag: 25
   m_SortingLayerID: 0
   m_SortingOrder: 0
   m_TargetDisplay: 0
