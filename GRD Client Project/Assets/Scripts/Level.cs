@@ -31,6 +31,9 @@ public class Level : MonoBehaviour
     private Color32 _cameraDefault;
     public MiniGameInfo GameInfo => _gameInfo;
 
+    [SerializeField] private AudioSource _audioSource;
+    [SerializeField] private AudioClip _incorrectClip;
+    [SerializeField] private AudioClip _correctClip;
 
     public void FinishMiniGame()
     {
@@ -116,8 +119,10 @@ public class Level : MonoBehaviour
 
     public void FlashCorrectColour()
     {
-        Color newColour = new Color32(0, 205, 41, 0);
+        _audioSource.clip = _correctClip;
+        _audioSource.Play();
 
+        Color newColour = new Color32(0, 205, 41, 0);
 
         LeanTween.value(_mainCamera.gameObject, _cameraDefault, newColour, .4f).setEase(LeanTweenType.easeInOutQuint).setOnUpdate(
             (Color val) => { _mainCamera.backgroundColor = val; }
@@ -126,6 +131,9 @@ public class Level : MonoBehaviour
 
     public void FlashIncorrectColour()
     {
+        _audioSource.clip = _incorrectClip;
+        _audioSource.Play();
+
         Color newColour = new Color32(227, 63, 44, 0);
 
         LeanTween.value(_mainCamera.gameObject, _cameraDefault, newColour, .4f).setEase(LeanTweenType.easeInOutQuint).setOnUpdate(
