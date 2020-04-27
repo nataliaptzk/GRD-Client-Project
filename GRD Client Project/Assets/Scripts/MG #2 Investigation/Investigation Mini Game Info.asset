@@ -14,3 +14,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   title: Expert Help
   sceneTitleToLoad: 05b DidYouKnowScreen
+  description: "The local recycling plant is having issues with their sorting machines!
+    As a recycling extraordinaire you\x19ve been hired to help out while they fix
+    things."

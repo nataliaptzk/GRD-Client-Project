@@ -7,5 +7,5 @@ public class MiniGameInfo : ScriptableObject
 {
     public string title;
     public string sceneTitleToLoad;
-    
+    public string description;
 }

@@ -14,3 +14,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   title: Litter Picking
   sceneTitleToLoad: 04b DidYouKnowScreen
+  description: Your hometown's streets are overrunning with rubbish! The local council
+    has asked for your expert advice and litter picking skills to help resolve the
+    situation.
