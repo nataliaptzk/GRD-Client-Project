@@ -14,5 +14,5 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   title: Final Quiz
   sceneTitleToLoad: 07 EndScreen
-  description: "It\x19s the final round of the quiz, your team is counting on you
-    to cover the questions on sustainability. Good luck!"
+  description: It's the final round of the quiz, your team is counting on you to cover
+    the questions on sustainability. Good luck!

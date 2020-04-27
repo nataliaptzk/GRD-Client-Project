@@ -642,26 +642,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: GameScreen
       objectReference: {fileID: 0}
-    - target: {fileID: 5531355840822142326, guid: 3c8380c3e4493234c9d48362927cba80,
-        type: 3}
-      propertyPath: m_textInfo.characterCount
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5531355840822142326, guid: 3c8380c3e4493234c9d48362927cba80,
-        type: 3}
-      propertyPath: m_textInfo.wordCount
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5531355840822142326, guid: 3c8380c3e4493234c9d48362927cba80,
-        type: 3}
-      propertyPath: m_textInfo.lineCount
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5531355840822142326, guid: 3c8380c3e4493234c9d48362927cba80,
-        type: 3}
-      propertyPath: m_textInfo.pageCount
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 5531355841675604398, guid: 3c8380c3e4493234c9d48362927cba80,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -767,6 +747,26 @@ PrefabInstance:
       propertyPath: m_Pivot.y
       value: 0.5
       objectReference: {fileID: 0}
+    - target: {fileID: 5531355840822142326, guid: 3c8380c3e4493234c9d48362927cba80,
+        type: 3}
+      propertyPath: m_textInfo.characterCount
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5531355840822142326, guid: 3c8380c3e4493234c9d48362927cba80,
+        type: 3}
+      propertyPath: m_textInfo.wordCount
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5531355840822142326, guid: 3c8380c3e4493234c9d48362927cba80,
+        type: 3}
+      propertyPath: m_textInfo.lineCount
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5531355840822142326, guid: 3c8380c3e4493234c9d48362927cba80,
+        type: 3}
+      propertyPath: m_textInfo.pageCount
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 5531355840201873082, guid: 3c8380c3e4493234c9d48362927cba80,
         type: 3}
       propertyPath: m_textInfo.characterCount
@@ -819,6 +819,130 @@ PrefabInstance:
       propertyPath: OnClick.OnTrigger.Event.m_PersistentCalls.m_Calls.Array.data[2].m_Arguments.m_ObjectArgumentAssemblyTypeName
       value: UnityEngine.Object, UnityEngine
       objectReference: {fileID: 0}
+    - target: {fileID: 137858796, guid: 3c8380c3e4493234c9d48362927cba80, type: 3}
+      propertyPath: OnClick.LoadSelectedPresetAtRuntime
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 137858796, guid: 3c8380c3e4493234c9d48362927cba80, type: 3}
+      propertyPath: OnClick.PunchAnimation.Move.By.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 137858796, guid: 3c8380c3e4493234c9d48362927cba80, type: 3}
+      propertyPath: OnClick.PunchAnimation.Move.By.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 137858796, guid: 3c8380c3e4493234c9d48362927cba80, type: 3}
+      propertyPath: OnClick.PunchAnimation.Move.Vibrato
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 137858796, guid: 3c8380c3e4493234c9d48362927cba80, type: 3}
+      propertyPath: OnClick.PunchAnimation.Move.Duration
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 137858796, guid: 3c8380c3e4493234c9d48362927cba80, type: 3}
+      propertyPath: OnClick.PunchAnimation.Rotate.By.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 137858796, guid: 3c8380c3e4493234c9d48362927cba80, type: 3}
+      propertyPath: OnClick.PunchAnimation.Rotate.By.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 137858796, guid: 3c8380c3e4493234c9d48362927cba80, type: 3}
+      propertyPath: OnClick.PunchAnimation.Rotate.Vibrato
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 137858796, guid: 3c8380c3e4493234c9d48362927cba80, type: 3}
+      propertyPath: OnClick.PunchAnimation.Rotate.Elasticity
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 137858796, guid: 3c8380c3e4493234c9d48362927cba80, type: 3}
+      propertyPath: OnClick.PunchAnimation.Rotate.Duration
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 137858796, guid: 3c8380c3e4493234c9d48362927cba80, type: 3}
+      propertyPath: OnClick.PunchAnimation.Scale.Enabled
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 137858796, guid: 3c8380c3e4493234c9d48362927cba80, type: 3}
+      propertyPath: OnClick.PunchAnimation.Scale.By.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 137858796, guid: 3c8380c3e4493234c9d48362927cba80, type: 3}
+      propertyPath: OnClick.PunchAnimation.Scale.By.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 137858796, guid: 3c8380c3e4493234c9d48362927cba80, type: 3}
+      propertyPath: OnClick.PunchAnimation.Scale.Vibrato
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 137858796, guid: 3c8380c3e4493234c9d48362927cba80, type: 3}
+      propertyPath: OnClick.PunchAnimation.Scale.Elasticity
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 137858796, guid: 3c8380c3e4493234c9d48362927cba80, type: 3}
+      propertyPath: OnClick.PunchAnimation.Scale.Duration
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 137858796, guid: 3c8380c3e4493234c9d48362927cba80, type: 3}
+      propertyPath: OnClick.PunchAnimation.Fade.To
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 137858796, guid: 3c8380c3e4493234c9d48362927cba80, type: 3}
+      propertyPath: OnPointerEnter.PunchAnimation.Move.By.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 137858796, guid: 3c8380c3e4493234c9d48362927cba80, type: 3}
+      propertyPath: OnPointerEnter.PunchAnimation.Move.Vibrato
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 137858796, guid: 3c8380c3e4493234c9d48362927cba80, type: 3}
+      propertyPath: OnPointerEnter.PunchAnimation.Move.Duration
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 137858796, guid: 3c8380c3e4493234c9d48362927cba80, type: 3}
+      propertyPath: OnPointerEnter.PunchAnimation.Rotate.By.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 137858796, guid: 3c8380c3e4493234c9d48362927cba80, type: 3}
+      propertyPath: OnPointerEnter.PunchAnimation.Rotate.Vibrato
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 137858796, guid: 3c8380c3e4493234c9d48362927cba80, type: 3}
+      propertyPath: OnPointerEnter.PunchAnimation.Rotate.Elasticity
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 137858796, guid: 3c8380c3e4493234c9d48362927cba80, type: 3}
+      propertyPath: OnPointerEnter.PunchAnimation.Rotate.Duration
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 137858796, guid: 3c8380c3e4493234c9d48362927cba80, type: 3}
+      propertyPath: OnPointerEnter.PunchAnimation.Scale.Enabled
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 137858796, guid: 3c8380c3e4493234c9d48362927cba80, type: 3}
+      propertyPath: OnPointerEnter.PunchAnimation.Scale.By.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 137858796, guid: 3c8380c3e4493234c9d48362927cba80, type: 3}
+      propertyPath: OnPointerEnter.PunchAnimation.Scale.By.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 137858796, guid: 3c8380c3e4493234c9d48362927cba80, type: 3}
+      propertyPath: OnPointerEnter.PunchAnimation.Scale.Vibrato
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 137858796, guid: 3c8380c3e4493234c9d48362927cba80, type: 3}
+      propertyPath: OnPointerEnter.PunchAnimation.Scale.Elasticity
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 137858796, guid: 3c8380c3e4493234c9d48362927cba80, type: 3}
+      propertyPath: OnPointerEnter.PunchAnimation.Scale.Duration
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 137858796, guid: 3c8380c3e4493234c9d48362927cba80, type: 3}
+      propertyPath: OnPointerEnter.PunchAnimation.Fade.To
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 5531355841683468847, guid: 3c8380c3e4493234c9d48362927cba80,
         type: 3}
       propertyPath: OnClick.OnTrigger.Event.m_PersistentCalls.m_Calls.Array.data[0].m_Target
@@ -828,6 +952,161 @@ PrefabInstance:
         type: 3}
       propertyPath: OnClick.OnTrigger.Event.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
       value: ChangePauseState
+      objectReference: {fileID: 0}
+    - target: {fileID: 5531355841683468847, guid: 3c8380c3e4493234c9d48362927cba80,
+        type: 3}
+      propertyPath: OnClick.LoadSelectedPresetAtRuntime
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5531355841683468847, guid: 3c8380c3e4493234c9d48362927cba80,
+        type: 3}
+      propertyPath: OnClick.PunchAnimation.Move.By.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5531355841683468847, guid: 3c8380c3e4493234c9d48362927cba80,
+        type: 3}
+      propertyPath: OnClick.PunchAnimation.Move.By.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5531355841683468847, guid: 3c8380c3e4493234c9d48362927cba80,
+        type: 3}
+      propertyPath: OnClick.PunchAnimation.Move.Vibrato
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 5531355841683468847, guid: 3c8380c3e4493234c9d48362927cba80,
+        type: 3}
+      propertyPath: OnClick.PunchAnimation.Move.Duration
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5531355841683468847, guid: 3c8380c3e4493234c9d48362927cba80,
+        type: 3}
+      propertyPath: OnClick.PunchAnimation.Rotate.By.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5531355841683468847, guid: 3c8380c3e4493234c9d48362927cba80,
+        type: 3}
+      propertyPath: OnClick.PunchAnimation.Rotate.By.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5531355841683468847, guid: 3c8380c3e4493234c9d48362927cba80,
+        type: 3}
+      propertyPath: OnClick.PunchAnimation.Rotate.Vibrato
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 5531355841683468847, guid: 3c8380c3e4493234c9d48362927cba80,
+        type: 3}
+      propertyPath: OnClick.PunchAnimation.Rotate.Elasticity
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5531355841683468847, guid: 3c8380c3e4493234c9d48362927cba80,
+        type: 3}
+      propertyPath: OnClick.PunchAnimation.Rotate.Duration
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5531355841683468847, guid: 3c8380c3e4493234c9d48362927cba80,
+        type: 3}
+      propertyPath: OnClick.PunchAnimation.Scale.Enabled
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5531355841683468847, guid: 3c8380c3e4493234c9d48362927cba80,
+        type: 3}
+      propertyPath: OnClick.PunchAnimation.Scale.By.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5531355841683468847, guid: 3c8380c3e4493234c9d48362927cba80,
+        type: 3}
+      propertyPath: OnClick.PunchAnimation.Scale.By.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5531355841683468847, guid: 3c8380c3e4493234c9d48362927cba80,
+        type: 3}
+      propertyPath: OnClick.PunchAnimation.Scale.Vibrato
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 5531355841683468847, guid: 3c8380c3e4493234c9d48362927cba80,
+        type: 3}
+      propertyPath: OnClick.PunchAnimation.Scale.Elasticity
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5531355841683468847, guid: 3c8380c3e4493234c9d48362927cba80,
+        type: 3}
+      propertyPath: OnClick.PunchAnimation.Scale.Duration
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5531355841683468847, guid: 3c8380c3e4493234c9d48362927cba80,
+        type: 3}
+      propertyPath: OnClick.PunchAnimation.Fade.To
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5531355841683468847, guid: 3c8380c3e4493234c9d48362927cba80,
+        type: 3}
+      propertyPath: OnPointerEnter.PunchAnimation.Move.By.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5531355841683468847, guid: 3c8380c3e4493234c9d48362927cba80,
+        type: 3}
+      propertyPath: OnPointerEnter.PunchAnimation.Move.Vibrato
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 5531355841683468847, guid: 3c8380c3e4493234c9d48362927cba80,
+        type: 3}
+      propertyPath: OnPointerEnter.PunchAnimation.Move.Duration
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5531355841683468847, guid: 3c8380c3e4493234c9d48362927cba80,
+        type: 3}
+      propertyPath: OnPointerEnter.PunchAnimation.Rotate.By.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5531355841683468847, guid: 3c8380c3e4493234c9d48362927cba80,
+        type: 3}
+      propertyPath: OnPointerEnter.PunchAnimation.Rotate.Vibrato
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 5531355841683468847, guid: 3c8380c3e4493234c9d48362927cba80,
+        type: 3}
+      propertyPath: OnPointerEnter.PunchAnimation.Rotate.Elasticity
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5531355841683468847, guid: 3c8380c3e4493234c9d48362927cba80,
+        type: 3}
+      propertyPath: OnPointerEnter.PunchAnimation.Rotate.Duration
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5531355841683468847, guid: 3c8380c3e4493234c9d48362927cba80,
+        type: 3}
+      propertyPath: OnPointerEnter.PunchAnimation.Scale.Enabled
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5531355841683468847, guid: 3c8380c3e4493234c9d48362927cba80,
+        type: 3}
+      propertyPath: OnPointerEnter.PunchAnimation.Scale.By.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5531355841683468847, guid: 3c8380c3e4493234c9d48362927cba80,
+        type: 3}
+      propertyPath: OnPointerEnter.PunchAnimation.Scale.By.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5531355841683468847, guid: 3c8380c3e4493234c9d48362927cba80,
+        type: 3}
+      propertyPath: OnPointerEnter.PunchAnimation.Scale.Vibrato
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 5531355841683468847, guid: 3c8380c3e4493234c9d48362927cba80,
+        type: 3}
+      propertyPath: OnPointerEnter.PunchAnimation.Scale.Elasticity
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5531355841683468847, guid: 3c8380c3e4493234c9d48362927cba80,
+        type: 3}
+      propertyPath: OnPointerEnter.PunchAnimation.Scale.Duration
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5531355841683468847, guid: 3c8380c3e4493234c9d48362927cba80,
+        type: 3}
+      propertyPath: OnPointerEnter.PunchAnimation.Fade.To
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7013996849903587115, guid: 3c8380c3e4493234c9d48362927cba80,
         type: 3}
@@ -1183,6 +1462,130 @@ PrefabInstance:
       propertyPath: OnClick.OnTrigger.Event.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
       value: ChangePauseState
       objectReference: {fileID: 0}
+    - target: {fileID: 976613391, guid: e813e5e3dc1110c4f82a0eef94534622, type: 3}
+      propertyPath: OnClick.LoadSelectedPresetAtRuntime
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 976613391, guid: e813e5e3dc1110c4f82a0eef94534622, type: 3}
+      propertyPath: OnClick.PunchAnimation.Move.By.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 976613391, guid: e813e5e3dc1110c4f82a0eef94534622, type: 3}
+      propertyPath: OnClick.PunchAnimation.Move.By.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 976613391, guid: e813e5e3dc1110c4f82a0eef94534622, type: 3}
+      propertyPath: OnClick.PunchAnimation.Move.Vibrato
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 976613391, guid: e813e5e3dc1110c4f82a0eef94534622, type: 3}
+      propertyPath: OnClick.PunchAnimation.Move.Duration
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 976613391, guid: e813e5e3dc1110c4f82a0eef94534622, type: 3}
+      propertyPath: OnClick.PunchAnimation.Rotate.By.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 976613391, guid: e813e5e3dc1110c4f82a0eef94534622, type: 3}
+      propertyPath: OnClick.PunchAnimation.Rotate.By.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 976613391, guid: e813e5e3dc1110c4f82a0eef94534622, type: 3}
+      propertyPath: OnClick.PunchAnimation.Rotate.Vibrato
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 976613391, guid: e813e5e3dc1110c4f82a0eef94534622, type: 3}
+      propertyPath: OnClick.PunchAnimation.Rotate.Elasticity
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 976613391, guid: e813e5e3dc1110c4f82a0eef94534622, type: 3}
+      propertyPath: OnClick.PunchAnimation.Rotate.Duration
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 976613391, guid: e813e5e3dc1110c4f82a0eef94534622, type: 3}
+      propertyPath: OnClick.PunchAnimation.Scale.Enabled
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 976613391, guid: e813e5e3dc1110c4f82a0eef94534622, type: 3}
+      propertyPath: OnClick.PunchAnimation.Scale.By.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 976613391, guid: e813e5e3dc1110c4f82a0eef94534622, type: 3}
+      propertyPath: OnClick.PunchAnimation.Scale.By.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 976613391, guid: e813e5e3dc1110c4f82a0eef94534622, type: 3}
+      propertyPath: OnClick.PunchAnimation.Scale.Vibrato
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 976613391, guid: e813e5e3dc1110c4f82a0eef94534622, type: 3}
+      propertyPath: OnClick.PunchAnimation.Scale.Elasticity
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 976613391, guid: e813e5e3dc1110c4f82a0eef94534622, type: 3}
+      propertyPath: OnClick.PunchAnimation.Scale.Duration
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 976613391, guid: e813e5e3dc1110c4f82a0eef94534622, type: 3}
+      propertyPath: OnClick.PunchAnimation.Fade.To
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 976613391, guid: e813e5e3dc1110c4f82a0eef94534622, type: 3}
+      propertyPath: OnPointerEnter.PunchAnimation.Move.By.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 976613391, guid: e813e5e3dc1110c4f82a0eef94534622, type: 3}
+      propertyPath: OnPointerEnter.PunchAnimation.Move.Vibrato
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 976613391, guid: e813e5e3dc1110c4f82a0eef94534622, type: 3}
+      propertyPath: OnPointerEnter.PunchAnimation.Move.Duration
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 976613391, guid: e813e5e3dc1110c4f82a0eef94534622, type: 3}
+      propertyPath: OnPointerEnter.PunchAnimation.Rotate.By.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 976613391, guid: e813e5e3dc1110c4f82a0eef94534622, type: 3}
+      propertyPath: OnPointerEnter.PunchAnimation.Rotate.Vibrato
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 976613391, guid: e813e5e3dc1110c4f82a0eef94534622, type: 3}
+      propertyPath: OnPointerEnter.PunchAnimation.Rotate.Elasticity
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 976613391, guid: e813e5e3dc1110c4f82a0eef94534622, type: 3}
+      propertyPath: OnPointerEnter.PunchAnimation.Rotate.Duration
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 976613391, guid: e813e5e3dc1110c4f82a0eef94534622, type: 3}
+      propertyPath: OnPointerEnter.PunchAnimation.Scale.Enabled
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 976613391, guid: e813e5e3dc1110c4f82a0eef94534622, type: 3}
+      propertyPath: OnPointerEnter.PunchAnimation.Scale.By.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 976613391, guid: e813e5e3dc1110c4f82a0eef94534622, type: 3}
+      propertyPath: OnPointerEnter.PunchAnimation.Scale.By.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 976613391, guid: e813e5e3dc1110c4f82a0eef94534622, type: 3}
+      propertyPath: OnPointerEnter.PunchAnimation.Scale.Vibrato
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 976613391, guid: e813e5e3dc1110c4f82a0eef94534622, type: 3}
+      propertyPath: OnPointerEnter.PunchAnimation.Scale.Elasticity
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 976613391, guid: e813e5e3dc1110c4f82a0eef94534622, type: 3}
+      propertyPath: OnPointerEnter.PunchAnimation.Scale.Duration
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 976613391, guid: e813e5e3dc1110c4f82a0eef94534622, type: 3}
+      propertyPath: OnPointerEnter.PunchAnimation.Fade.To
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 976613390, guid: e813e5e3dc1110c4f82a0eef94534622, type: 3}
       propertyPath: OnClick.OnTrigger.Event.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
@@ -1191,6 +1594,130 @@ PrefabInstance:
       propertyPath: OnClick.OnTrigger.Event.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
       value: SwitchScene
       objectReference: {fileID: 0}
+    - target: {fileID: 976613390, guid: e813e5e3dc1110c4f82a0eef94534622, type: 3}
+      propertyPath: OnClick.LoadSelectedPresetAtRuntime
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 976613390, guid: e813e5e3dc1110c4f82a0eef94534622, type: 3}
+      propertyPath: OnClick.PunchAnimation.Move.By.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 976613390, guid: e813e5e3dc1110c4f82a0eef94534622, type: 3}
+      propertyPath: OnClick.PunchAnimation.Move.By.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 976613390, guid: e813e5e3dc1110c4f82a0eef94534622, type: 3}
+      propertyPath: OnClick.PunchAnimation.Move.Vibrato
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 976613390, guid: e813e5e3dc1110c4f82a0eef94534622, type: 3}
+      propertyPath: OnClick.PunchAnimation.Move.Duration
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 976613390, guid: e813e5e3dc1110c4f82a0eef94534622, type: 3}
+      propertyPath: OnClick.PunchAnimation.Rotate.By.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 976613390, guid: e813e5e3dc1110c4f82a0eef94534622, type: 3}
+      propertyPath: OnClick.PunchAnimation.Rotate.By.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 976613390, guid: e813e5e3dc1110c4f82a0eef94534622, type: 3}
+      propertyPath: OnClick.PunchAnimation.Rotate.Vibrato
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 976613390, guid: e813e5e3dc1110c4f82a0eef94534622, type: 3}
+      propertyPath: OnClick.PunchAnimation.Rotate.Elasticity
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 976613390, guid: e813e5e3dc1110c4f82a0eef94534622, type: 3}
+      propertyPath: OnClick.PunchAnimation.Rotate.Duration
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 976613390, guid: e813e5e3dc1110c4f82a0eef94534622, type: 3}
+      propertyPath: OnClick.PunchAnimation.Scale.Enabled
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 976613390, guid: e813e5e3dc1110c4f82a0eef94534622, type: 3}
+      propertyPath: OnClick.PunchAnimation.Scale.By.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 976613390, guid: e813e5e3dc1110c4f82a0eef94534622, type: 3}
+      propertyPath: OnClick.PunchAnimation.Scale.By.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 976613390, guid: e813e5e3dc1110c4f82a0eef94534622, type: 3}
+      propertyPath: OnClick.PunchAnimation.Scale.Vibrato
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 976613390, guid: e813e5e3dc1110c4f82a0eef94534622, type: 3}
+      propertyPath: OnClick.PunchAnimation.Scale.Elasticity
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 976613390, guid: e813e5e3dc1110c4f82a0eef94534622, type: 3}
+      propertyPath: OnClick.PunchAnimation.Scale.Duration
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 976613390, guid: e813e5e3dc1110c4f82a0eef94534622, type: 3}
+      propertyPath: OnClick.PunchAnimation.Fade.To
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 976613390, guid: e813e5e3dc1110c4f82a0eef94534622, type: 3}
+      propertyPath: OnPointerEnter.PunchAnimation.Move.By.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 976613390, guid: e813e5e3dc1110c4f82a0eef94534622, type: 3}
+      propertyPath: OnPointerEnter.PunchAnimation.Move.Vibrato
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 976613390, guid: e813e5e3dc1110c4f82a0eef94534622, type: 3}
+      propertyPath: OnPointerEnter.PunchAnimation.Move.Duration
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 976613390, guid: e813e5e3dc1110c4f82a0eef94534622, type: 3}
+      propertyPath: OnPointerEnter.PunchAnimation.Rotate.By.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 976613390, guid: e813e5e3dc1110c4f82a0eef94534622, type: 3}
+      propertyPath: OnPointerEnter.PunchAnimation.Rotate.Vibrato
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 976613390, guid: e813e5e3dc1110c4f82a0eef94534622, type: 3}
+      propertyPath: OnPointerEnter.PunchAnimation.Rotate.Elasticity
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 976613390, guid: e813e5e3dc1110c4f82a0eef94534622, type: 3}
+      propertyPath: OnPointerEnter.PunchAnimation.Rotate.Duration
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 976613390, guid: e813e5e3dc1110c4f82a0eef94534622, type: 3}
+      propertyPath: OnPointerEnter.PunchAnimation.Scale.Enabled
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 976613390, guid: e813e5e3dc1110c4f82a0eef94534622, type: 3}
+      propertyPath: OnPointerEnter.PunchAnimation.Scale.By.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 976613390, guid: e813e5e3dc1110c4f82a0eef94534622, type: 3}
+      propertyPath: OnPointerEnter.PunchAnimation.Scale.By.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 976613390, guid: e813e5e3dc1110c4f82a0eef94534622, type: 3}
+      propertyPath: OnPointerEnter.PunchAnimation.Scale.Vibrato
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 976613390, guid: e813e5e3dc1110c4f82a0eef94534622, type: 3}
+      propertyPath: OnPointerEnter.PunchAnimation.Scale.Elasticity
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 976613390, guid: e813e5e3dc1110c4f82a0eef94534622, type: 3}
+      propertyPath: OnPointerEnter.PunchAnimation.Scale.Duration
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 976613390, guid: e813e5e3dc1110c4f82a0eef94534622, type: 3}
+      propertyPath: OnPointerEnter.PunchAnimation.Fade.To
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 976613389, guid: e813e5e3dc1110c4f82a0eef94534622, type: 3}
       propertyPath: OnClick.OnTrigger.Event.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
@@ -1198,6 +1725,130 @@ PrefabInstance:
     - target: {fileID: 976613389, guid: e813e5e3dc1110c4f82a0eef94534622, type: 3}
       propertyPath: OnClick.OnTrigger.Event.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
       value: QuitGame
+      objectReference: {fileID: 0}
+    - target: {fileID: 976613389, guid: e813e5e3dc1110c4f82a0eef94534622, type: 3}
+      propertyPath: OnClick.LoadSelectedPresetAtRuntime
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 976613389, guid: e813e5e3dc1110c4f82a0eef94534622, type: 3}
+      propertyPath: OnClick.PunchAnimation.Move.By.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 976613389, guid: e813e5e3dc1110c4f82a0eef94534622, type: 3}
+      propertyPath: OnClick.PunchAnimation.Move.By.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 976613389, guid: e813e5e3dc1110c4f82a0eef94534622, type: 3}
+      propertyPath: OnClick.PunchAnimation.Move.Vibrato
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 976613389, guid: e813e5e3dc1110c4f82a0eef94534622, type: 3}
+      propertyPath: OnClick.PunchAnimation.Move.Duration
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 976613389, guid: e813e5e3dc1110c4f82a0eef94534622, type: 3}
+      propertyPath: OnClick.PunchAnimation.Rotate.By.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 976613389, guid: e813e5e3dc1110c4f82a0eef94534622, type: 3}
+      propertyPath: OnClick.PunchAnimation.Rotate.By.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 976613389, guid: e813e5e3dc1110c4f82a0eef94534622, type: 3}
+      propertyPath: OnClick.PunchAnimation.Rotate.Vibrato
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 976613389, guid: e813e5e3dc1110c4f82a0eef94534622, type: 3}
+      propertyPath: OnClick.PunchAnimation.Rotate.Elasticity
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 976613389, guid: e813e5e3dc1110c4f82a0eef94534622, type: 3}
+      propertyPath: OnClick.PunchAnimation.Rotate.Duration
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 976613389, guid: e813e5e3dc1110c4f82a0eef94534622, type: 3}
+      propertyPath: OnClick.PunchAnimation.Scale.Enabled
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 976613389, guid: e813e5e3dc1110c4f82a0eef94534622, type: 3}
+      propertyPath: OnClick.PunchAnimation.Scale.By.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 976613389, guid: e813e5e3dc1110c4f82a0eef94534622, type: 3}
+      propertyPath: OnClick.PunchAnimation.Scale.By.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 976613389, guid: e813e5e3dc1110c4f82a0eef94534622, type: 3}
+      propertyPath: OnClick.PunchAnimation.Scale.Vibrato
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 976613389, guid: e813e5e3dc1110c4f82a0eef94534622, type: 3}
+      propertyPath: OnClick.PunchAnimation.Scale.Elasticity
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 976613389, guid: e813e5e3dc1110c4f82a0eef94534622, type: 3}
+      propertyPath: OnClick.PunchAnimation.Scale.Duration
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 976613389, guid: e813e5e3dc1110c4f82a0eef94534622, type: 3}
+      propertyPath: OnClick.PunchAnimation.Fade.To
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 976613389, guid: e813e5e3dc1110c4f82a0eef94534622, type: 3}
+      propertyPath: OnPointerEnter.PunchAnimation.Move.By.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 976613389, guid: e813e5e3dc1110c4f82a0eef94534622, type: 3}
+      propertyPath: OnPointerEnter.PunchAnimation.Move.Vibrato
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 976613389, guid: e813e5e3dc1110c4f82a0eef94534622, type: 3}
+      propertyPath: OnPointerEnter.PunchAnimation.Move.Duration
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 976613389, guid: e813e5e3dc1110c4f82a0eef94534622, type: 3}
+      propertyPath: OnPointerEnter.PunchAnimation.Rotate.By.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 976613389, guid: e813e5e3dc1110c4f82a0eef94534622, type: 3}
+      propertyPath: OnPointerEnter.PunchAnimation.Rotate.Vibrato
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 976613389, guid: e813e5e3dc1110c4f82a0eef94534622, type: 3}
+      propertyPath: OnPointerEnter.PunchAnimation.Rotate.Elasticity
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 976613389, guid: e813e5e3dc1110c4f82a0eef94534622, type: 3}
+      propertyPath: OnPointerEnter.PunchAnimation.Rotate.Duration
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 976613389, guid: e813e5e3dc1110c4f82a0eef94534622, type: 3}
+      propertyPath: OnPointerEnter.PunchAnimation.Scale.Enabled
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 976613389, guid: e813e5e3dc1110c4f82a0eef94534622, type: 3}
+      propertyPath: OnPointerEnter.PunchAnimation.Scale.By.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 976613389, guid: e813e5e3dc1110c4f82a0eef94534622, type: 3}
+      propertyPath: OnPointerEnter.PunchAnimation.Scale.By.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 976613389, guid: e813e5e3dc1110c4f82a0eef94534622, type: 3}
+      propertyPath: OnPointerEnter.PunchAnimation.Scale.Vibrato
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 976613389, guid: e813e5e3dc1110c4f82a0eef94534622, type: 3}
+      propertyPath: OnPointerEnter.PunchAnimation.Scale.Elasticity
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 976613389, guid: e813e5e3dc1110c4f82a0eef94534622, type: 3}
+      propertyPath: OnPointerEnter.PunchAnimation.Scale.Duration
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 976613389, guid: e813e5e3dc1110c4f82a0eef94534622, type: 3}
+      propertyPath: OnPointerEnter.PunchAnimation.Fade.To
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4994888096558667143, guid: e813e5e3dc1110c4f82a0eef94534622,
         type: 3}
@@ -1281,6 +1932,21 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4592475915719639202, guid: e813e5e3dc1110c4f82a0eef94534622,
         type: 3}
+      propertyPath: ShowBehavior.Animation.Move.AnimationCurve.m_Curve.Array.size
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4592475915719639202, guid: e813e5e3dc1110c4f82a0eef94534622,
+        type: 3}
+      propertyPath: ShowBehavior.Animation.Rotate.AnimationCurve.m_Curve.Array.size
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4592475915719639202, guid: e813e5e3dc1110c4f82a0eef94534622,
+        type: 3}
+      propertyPath: ShowBehavior.Animation.Scale.AnimationCurve.m_Curve.Array.size
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4592475915719639202, guid: e813e5e3dc1110c4f82a0eef94534622,
+        type: 3}
       propertyPath: ShowBehavior.OnStart.SoundData.DatabaseName
       value: Example Slides
       objectReference: {fileID: 0}
@@ -1288,6 +1954,141 @@ PrefabInstance:
         type: 3}
       propertyPath: ShowBehavior.OnStart.SoundData.SoundName
       value: Slider
+      objectReference: {fileID: 0}
+    - target: {fileID: 4592475915719639202, guid: e813e5e3dc1110c4f82a0eef94534622,
+        type: 3}
+      propertyPath: ShowBehavior.LoadSelectedPresetAtRuntime
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4592475915719639202, guid: e813e5e3dc1110c4f82a0eef94534622,
+        type: 3}
+      propertyPath: ShowBehavior.Animation.Move.Enabled
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4592475915719639202, guid: e813e5e3dc1110c4f82a0eef94534622,
+        type: 3}
+      propertyPath: ShowBehavior.Animation.Move.Direction
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4592475915719639202, guid: e813e5e3dc1110c4f82a0eef94534622,
+        type: 3}
+      propertyPath: ShowBehavior.Animation.Move.Ease
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4592475915719639202, guid: e813e5e3dc1110c4f82a0eef94534622,
+        type: 3}
+      propertyPath: ShowBehavior.Animation.Move.Duration
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4592475915719639202, guid: e813e5e3dc1110c4f82a0eef94534622,
+        type: 3}
+      propertyPath: ShowBehavior.Animation.Rotate.From.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4592475915719639202, guid: e813e5e3dc1110c4f82a0eef94534622,
+        type: 3}
+      propertyPath: ShowBehavior.Animation.Rotate.RotateMode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4592475915719639202, guid: e813e5e3dc1110c4f82a0eef94534622,
+        type: 3}
+      propertyPath: ShowBehavior.Animation.Rotate.Ease
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4592475915719639202, guid: e813e5e3dc1110c4f82a0eef94534622,
+        type: 3}
+      propertyPath: ShowBehavior.Animation.Rotate.Duration
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4592475915719639202, guid: e813e5e3dc1110c4f82a0eef94534622,
+        type: 3}
+      propertyPath: ShowBehavior.Animation.Scale.Enabled
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4592475915719639202, guid: e813e5e3dc1110c4f82a0eef94534622,
+        type: 3}
+      propertyPath: ShowBehavior.Animation.Scale.From.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4592475915719639202, guid: e813e5e3dc1110c4f82a0eef94534622,
+        type: 3}
+      propertyPath: ShowBehavior.Animation.Scale.From.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4592475915719639202, guid: e813e5e3dc1110c4f82a0eef94534622,
+        type: 3}
+      propertyPath: ShowBehavior.Animation.Scale.From.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4592475915719639202, guid: e813e5e3dc1110c4f82a0eef94534622,
+        type: 3}
+      propertyPath: ShowBehavior.Animation.Scale.Ease
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4592475915719639202, guid: e813e5e3dc1110c4f82a0eef94534622,
+        type: 3}
+      propertyPath: ShowBehavior.Animation.Scale.Duration
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4592475915719639202, guid: e813e5e3dc1110c4f82a0eef94534622,
+        type: 3}
+      propertyPath: ShowBehavior.Animation.Fade.To
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4592475915719639202, guid: e813e5e3dc1110c4f82a0eef94534622,
+        type: 3}
+      propertyPath: ShowBehavior.Animation.Fade.StartDelay
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4592475915719639202, guid: e813e5e3dc1110c4f82a0eef94534622,
+        type: 3}
+      propertyPath: ShowBehavior.Animation.Fade.Duration
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4897681583055977565, guid: e813e5e3dc1110c4f82a0eef94534622,
+        type: 3}
+      propertyPath: m_textInfo.characterCount
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4897681583055977565, guid: e813e5e3dc1110c4f82a0eef94534622,
+        type: 3}
+      propertyPath: m_textInfo.wordCount
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4897681583055977565, guid: e813e5e3dc1110c4f82a0eef94534622,
+        type: 3}
+      propertyPath: m_textInfo.lineCount
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4897681583055977565, guid: e813e5e3dc1110c4f82a0eef94534622,
+        type: 3}
+      propertyPath: m_textInfo.pageCount
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6976626718749524279, guid: e813e5e3dc1110c4f82a0eef94534622,
+        type: 3}
+      propertyPath: m_textInfo.characterCount
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6976626718749524279, guid: e813e5e3dc1110c4f82a0eef94534622,
+        type: 3}
+      propertyPath: m_textInfo.spaceCount
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6976626718749524279, guid: e813e5e3dc1110c4f82a0eef94534622,
+        type: 3}
+      propertyPath: m_textInfo.wordCount
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6976626718749524279, guid: e813e5e3dc1110c4f82a0eef94534622,
+        type: 3}
+      propertyPath: m_textInfo.lineCount
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6976626718749524279, guid: e813e5e3dc1110c4f82a0eef94534622,
+        type: 3}
+      propertyPath: m_textInfo.pageCount
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4906148146428550524, guid: e813e5e3dc1110c4f82a0eef94534622,
         type: 3}
@@ -1383,51 +2184,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
       value: UnityEngine.Object, UnityEngine
-      objectReference: {fileID: 0}
-    - target: {fileID: 4897681583055977565, guid: e813e5e3dc1110c4f82a0eef94534622,
-        type: 3}
-      propertyPath: m_textInfo.characterCount
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4897681583055977565, guid: e813e5e3dc1110c4f82a0eef94534622,
-        type: 3}
-      propertyPath: m_textInfo.wordCount
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4897681583055977565, guid: e813e5e3dc1110c4f82a0eef94534622,
-        type: 3}
-      propertyPath: m_textInfo.lineCount
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4897681583055977565, guid: e813e5e3dc1110c4f82a0eef94534622,
-        type: 3}
-      propertyPath: m_textInfo.pageCount
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 6976626718749524279, guid: e813e5e3dc1110c4f82a0eef94534622,
-        type: 3}
-      propertyPath: m_textInfo.characterCount
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 6976626718749524279, guid: e813e5e3dc1110c4f82a0eef94534622,
-        type: 3}
-      propertyPath: m_textInfo.spaceCount
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 6976626718749524279, guid: e813e5e3dc1110c4f82a0eef94534622,
-        type: 3}
-      propertyPath: m_textInfo.wordCount
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 6976626718749524279, guid: e813e5e3dc1110c4f82a0eef94534622,
-        type: 3}
-      propertyPath: m_textInfo.lineCount
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 6976626718749524279, guid: e813e5e3dc1110c4f82a0eef94534622,
-        type: 3}
-      propertyPath: m_textInfo.pageCount
-      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e813e5e3dc1110c4f82a0eef94534622, type: 3}
@@ -1733,6 +2489,161 @@ PrefabInstance:
       propertyPath: OnClick.OnTrigger.Event.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
       value: CloseTutorial
       objectReference: {fileID: 0}
+    - target: {fileID: 2285252354804809896, guid: c6f215e3c974427449ecb4012333480b,
+        type: 3}
+      propertyPath: OnClick.LoadSelectedPresetAtRuntime
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2285252354804809896, guid: c6f215e3c974427449ecb4012333480b,
+        type: 3}
+      propertyPath: OnClick.PunchAnimation.Move.By.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2285252354804809896, guid: c6f215e3c974427449ecb4012333480b,
+        type: 3}
+      propertyPath: OnClick.PunchAnimation.Move.By.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2285252354804809896, guid: c6f215e3c974427449ecb4012333480b,
+        type: 3}
+      propertyPath: OnClick.PunchAnimation.Move.Vibrato
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 2285252354804809896, guid: c6f215e3c974427449ecb4012333480b,
+        type: 3}
+      propertyPath: OnClick.PunchAnimation.Move.Duration
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2285252354804809896, guid: c6f215e3c974427449ecb4012333480b,
+        type: 3}
+      propertyPath: OnClick.PunchAnimation.Rotate.By.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2285252354804809896, guid: c6f215e3c974427449ecb4012333480b,
+        type: 3}
+      propertyPath: OnClick.PunchAnimation.Rotate.By.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2285252354804809896, guid: c6f215e3c974427449ecb4012333480b,
+        type: 3}
+      propertyPath: OnClick.PunchAnimation.Rotate.Vibrato
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 2285252354804809896, guid: c6f215e3c974427449ecb4012333480b,
+        type: 3}
+      propertyPath: OnClick.PunchAnimation.Rotate.Elasticity
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2285252354804809896, guid: c6f215e3c974427449ecb4012333480b,
+        type: 3}
+      propertyPath: OnClick.PunchAnimation.Rotate.Duration
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2285252354804809896, guid: c6f215e3c974427449ecb4012333480b,
+        type: 3}
+      propertyPath: OnClick.PunchAnimation.Scale.Enabled
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2285252354804809896, guid: c6f215e3c974427449ecb4012333480b,
+        type: 3}
+      propertyPath: OnClick.PunchAnimation.Scale.By.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2285252354804809896, guid: c6f215e3c974427449ecb4012333480b,
+        type: 3}
+      propertyPath: OnClick.PunchAnimation.Scale.By.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2285252354804809896, guid: c6f215e3c974427449ecb4012333480b,
+        type: 3}
+      propertyPath: OnClick.PunchAnimation.Scale.Vibrato
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 2285252354804809896, guid: c6f215e3c974427449ecb4012333480b,
+        type: 3}
+      propertyPath: OnClick.PunchAnimation.Scale.Elasticity
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2285252354804809896, guid: c6f215e3c974427449ecb4012333480b,
+        type: 3}
+      propertyPath: OnClick.PunchAnimation.Scale.Duration
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2285252354804809896, guid: c6f215e3c974427449ecb4012333480b,
+        type: 3}
+      propertyPath: OnClick.PunchAnimation.Fade.To
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2285252354804809896, guid: c6f215e3c974427449ecb4012333480b,
+        type: 3}
+      propertyPath: OnPointerEnter.PunchAnimation.Move.By.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2285252354804809896, guid: c6f215e3c974427449ecb4012333480b,
+        type: 3}
+      propertyPath: OnPointerEnter.PunchAnimation.Move.Vibrato
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 2285252354804809896, guid: c6f215e3c974427449ecb4012333480b,
+        type: 3}
+      propertyPath: OnPointerEnter.PunchAnimation.Move.Duration
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2285252354804809896, guid: c6f215e3c974427449ecb4012333480b,
+        type: 3}
+      propertyPath: OnPointerEnter.PunchAnimation.Rotate.By.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2285252354804809896, guid: c6f215e3c974427449ecb4012333480b,
+        type: 3}
+      propertyPath: OnPointerEnter.PunchAnimation.Rotate.Vibrato
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 2285252354804809896, guid: c6f215e3c974427449ecb4012333480b,
+        type: 3}
+      propertyPath: OnPointerEnter.PunchAnimation.Rotate.Elasticity
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2285252354804809896, guid: c6f215e3c974427449ecb4012333480b,
+        type: 3}
+      propertyPath: OnPointerEnter.PunchAnimation.Rotate.Duration
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2285252354804809896, guid: c6f215e3c974427449ecb4012333480b,
+        type: 3}
+      propertyPath: OnPointerEnter.PunchAnimation.Scale.Enabled
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2285252354804809896, guid: c6f215e3c974427449ecb4012333480b,
+        type: 3}
+      propertyPath: OnPointerEnter.PunchAnimation.Scale.By.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2285252354804809896, guid: c6f215e3c974427449ecb4012333480b,
+        type: 3}
+      propertyPath: OnPointerEnter.PunchAnimation.Scale.By.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2285252354804809896, guid: c6f215e3c974427449ecb4012333480b,
+        type: 3}
+      propertyPath: OnPointerEnter.PunchAnimation.Scale.Vibrato
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 2285252354804809896, guid: c6f215e3c974427449ecb4012333480b,
+        type: 3}
+      propertyPath: OnPointerEnter.PunchAnimation.Scale.Elasticity
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2285252354804809896, guid: c6f215e3c974427449ecb4012333480b,
+        type: 3}
+      propertyPath: OnPointerEnter.PunchAnimation.Scale.Duration
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2285252354804809896, guid: c6f215e3c974427449ecb4012333480b,
+        type: 3}
+      propertyPath: OnPointerEnter.PunchAnimation.Fade.To
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 6533066787237136417, guid: c6f215e3c974427449ecb4012333480b,
         type: 3}
       propertyPath: m_text
@@ -1814,6 +2725,21 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4847571673134389346, guid: c6f215e3c974427449ecb4012333480b,
         type: 3}
+      propertyPath: ShowBehavior.Animation.Move.AnimationCurve.m_Curve.Array.size
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4847571673134389346, guid: c6f215e3c974427449ecb4012333480b,
+        type: 3}
+      propertyPath: ShowBehavior.Animation.Rotate.AnimationCurve.m_Curve.Array.size
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4847571673134389346, guid: c6f215e3c974427449ecb4012333480b,
+        type: 3}
+      propertyPath: ShowBehavior.Animation.Scale.AnimationCurve.m_Curve.Array.size
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4847571673134389346, guid: c6f215e3c974427449ecb4012333480b,
+        type: 3}
       propertyPath: ShowBehavior.OnStart.SoundData.DatabaseName
       value: Example Slides
       objectReference: {fileID: 0}
@@ -1821,6 +2747,112 @@ PrefabInstance:
         type: 3}
       propertyPath: ShowBehavior.OnStart.SoundData.SoundName
       value: Slider
+      objectReference: {fileID: 0}
+    - target: {fileID: 4847571673134389346, guid: c6f215e3c974427449ecb4012333480b,
+        type: 3}
+      propertyPath: ShowBehavior.LoadSelectedPresetAtRuntime
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4847571673134389346, guid: c6f215e3c974427449ecb4012333480b,
+        type: 3}
+      propertyPath: ShowBehavior.Animation.Move.Enabled
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4847571673134389346, guid: c6f215e3c974427449ecb4012333480b,
+        type: 3}
+      propertyPath: ShowBehavior.Animation.Move.Direction
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4847571673134389346, guid: c6f215e3c974427449ecb4012333480b,
+        type: 3}
+      propertyPath: ShowBehavior.Animation.Move.Ease
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4847571673134389346, guid: c6f215e3c974427449ecb4012333480b,
+        type: 3}
+      propertyPath: ShowBehavior.Animation.Move.Duration
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4847571673134389346, guid: c6f215e3c974427449ecb4012333480b,
+        type: 3}
+      propertyPath: ShowBehavior.Animation.Rotate.From.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4847571673134389346, guid: c6f215e3c974427449ecb4012333480b,
+        type: 3}
+      propertyPath: ShowBehavior.Animation.Rotate.RotateMode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4847571673134389346, guid: c6f215e3c974427449ecb4012333480b,
+        type: 3}
+      propertyPath: ShowBehavior.Animation.Rotate.Ease
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4847571673134389346, guid: c6f215e3c974427449ecb4012333480b,
+        type: 3}
+      propertyPath: ShowBehavior.Animation.Rotate.Duration
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4847571673134389346, guid: c6f215e3c974427449ecb4012333480b,
+        type: 3}
+      propertyPath: ShowBehavior.Animation.Scale.Enabled
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4847571673134389346, guid: c6f215e3c974427449ecb4012333480b,
+        type: 3}
+      propertyPath: ShowBehavior.Animation.Scale.From.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4847571673134389346, guid: c6f215e3c974427449ecb4012333480b,
+        type: 3}
+      propertyPath: ShowBehavior.Animation.Scale.From.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4847571673134389346, guid: c6f215e3c974427449ecb4012333480b,
+        type: 3}
+      propertyPath: ShowBehavior.Animation.Scale.From.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4847571673134389346, guid: c6f215e3c974427449ecb4012333480b,
+        type: 3}
+      propertyPath: ShowBehavior.Animation.Scale.Ease
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4847571673134389346, guid: c6f215e3c974427449ecb4012333480b,
+        type: 3}
+      propertyPath: ShowBehavior.Animation.Scale.Duration
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4847571673134389346, guid: c6f215e3c974427449ecb4012333480b,
+        type: 3}
+      propertyPath: ShowBehavior.Animation.Fade.To
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4847571673134389346, guid: c6f215e3c974427449ecb4012333480b,
+        type: 3}
+      propertyPath: ShowBehavior.Animation.Fade.StartDelay
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4847571673134389346, guid: c6f215e3c974427449ecb4012333480b,
+        type: 3}
+      propertyPath: ShowBehavior.Animation.Fade.Duration
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5818196261552437499, guid: c6f215e3c974427449ecb4012333480b,
+        type: 3}
+      propertyPath: _info
+      value: 
+      objectReference: {fileID: 11400000, guid: 6bbbb70adf6cd6942986e757f5030dea,
+        type: 2}
+    - target: {fileID: 2285252355359660472, guid: c6f215e3c974427449ecb4012333480b,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7470631087886051974, guid: c6f215e3c974427449ecb4012333480b,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 2285252355359660475, guid: c6f215e3c974427449ecb4012333480b,
         type: 3}
@@ -1842,8 +2874,314 @@ PrefabInstance:
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_BoolArgument
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 644316566, guid: c6f215e3c974427449ecb4012333480b, type: 3}
-      propertyPath: m_RootOrder
+    - target: {fileID: 2285252354804809895, guid: c6f215e3c974427449ecb4012333480b,
+        type: 3}
+      propertyPath: OnClick.LoadSelectedPresetAtRuntime
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2285252354804809895, guid: c6f215e3c974427449ecb4012333480b,
+        type: 3}
+      propertyPath: OnClick.PunchAnimation.Move.By.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2285252354804809895, guid: c6f215e3c974427449ecb4012333480b,
+        type: 3}
+      propertyPath: OnClick.PunchAnimation.Move.By.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2285252354804809895, guid: c6f215e3c974427449ecb4012333480b,
+        type: 3}
+      propertyPath: OnClick.PunchAnimation.Move.Vibrato
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 2285252354804809895, guid: c6f215e3c974427449ecb4012333480b,
+        type: 3}
+      propertyPath: OnClick.PunchAnimation.Move.Duration
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2285252354804809895, guid: c6f215e3c974427449ecb4012333480b,
+        type: 3}
+      propertyPath: OnClick.PunchAnimation.Rotate.By.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2285252354804809895, guid: c6f215e3c974427449ecb4012333480b,
+        type: 3}
+      propertyPath: OnClick.PunchAnimation.Rotate.By.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2285252354804809895, guid: c6f215e3c974427449ecb4012333480b,
+        type: 3}
+      propertyPath: OnClick.PunchAnimation.Rotate.Vibrato
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 2285252354804809895, guid: c6f215e3c974427449ecb4012333480b,
+        type: 3}
+      propertyPath: OnClick.PunchAnimation.Rotate.Elasticity
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2285252354804809895, guid: c6f215e3c974427449ecb4012333480b,
+        type: 3}
+      propertyPath: OnClick.PunchAnimation.Rotate.Duration
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2285252354804809895, guid: c6f215e3c974427449ecb4012333480b,
+        type: 3}
+      propertyPath: OnClick.PunchAnimation.Scale.Enabled
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2285252354804809895, guid: c6f215e3c974427449ecb4012333480b,
+        type: 3}
+      propertyPath: OnClick.PunchAnimation.Scale.By.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2285252354804809895, guid: c6f215e3c974427449ecb4012333480b,
+        type: 3}
+      propertyPath: OnClick.PunchAnimation.Scale.By.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2285252354804809895, guid: c6f215e3c974427449ecb4012333480b,
+        type: 3}
+      propertyPath: OnClick.PunchAnimation.Scale.Vibrato
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 2285252354804809895, guid: c6f215e3c974427449ecb4012333480b,
+        type: 3}
+      propertyPath: OnClick.PunchAnimation.Scale.Elasticity
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2285252354804809895, guid: c6f215e3c974427449ecb4012333480b,
+        type: 3}
+      propertyPath: OnClick.PunchAnimation.Scale.Duration
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2285252354804809895, guid: c6f215e3c974427449ecb4012333480b,
+        type: 3}
+      propertyPath: OnClick.PunchAnimation.Fade.To
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2285252354804809895, guid: c6f215e3c974427449ecb4012333480b,
+        type: 3}
+      propertyPath: OnPointerEnter.PunchAnimation.Move.By.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2285252354804809895, guid: c6f215e3c974427449ecb4012333480b,
+        type: 3}
+      propertyPath: OnPointerEnter.PunchAnimation.Move.Vibrato
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 2285252354804809895, guid: c6f215e3c974427449ecb4012333480b,
+        type: 3}
+      propertyPath: OnPointerEnter.PunchAnimation.Move.Duration
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2285252354804809895, guid: c6f215e3c974427449ecb4012333480b,
+        type: 3}
+      propertyPath: OnPointerEnter.PunchAnimation.Rotate.By.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2285252354804809895, guid: c6f215e3c974427449ecb4012333480b,
+        type: 3}
+      propertyPath: OnPointerEnter.PunchAnimation.Rotate.Vibrato
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 2285252354804809895, guid: c6f215e3c974427449ecb4012333480b,
+        type: 3}
+      propertyPath: OnPointerEnter.PunchAnimation.Rotate.Elasticity
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2285252354804809895, guid: c6f215e3c974427449ecb4012333480b,
+        type: 3}
+      propertyPath: OnPointerEnter.PunchAnimation.Rotate.Duration
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2285252354804809895, guid: c6f215e3c974427449ecb4012333480b,
+        type: 3}
+      propertyPath: OnPointerEnter.PunchAnimation.Scale.Enabled
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2285252354804809895, guid: c6f215e3c974427449ecb4012333480b,
+        type: 3}
+      propertyPath: OnPointerEnter.PunchAnimation.Scale.By.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2285252354804809895, guid: c6f215e3c974427449ecb4012333480b,
+        type: 3}
+      propertyPath: OnPointerEnter.PunchAnimation.Scale.By.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2285252354804809895, guid: c6f215e3c974427449ecb4012333480b,
+        type: 3}
+      propertyPath: OnPointerEnter.PunchAnimation.Scale.Vibrato
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 2285252354804809895, guid: c6f215e3c974427449ecb4012333480b,
+        type: 3}
+      propertyPath: OnPointerEnter.PunchAnimation.Scale.Elasticity
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2285252354804809895, guid: c6f215e3c974427449ecb4012333480b,
+        type: 3}
+      propertyPath: OnPointerEnter.PunchAnimation.Scale.Duration
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2285252354804809895, guid: c6f215e3c974427449ecb4012333480b,
+        type: 3}
+      propertyPath: OnPointerEnter.PunchAnimation.Fade.To
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2285252354804809894, guid: c6f215e3c974427449ecb4012333480b,
+        type: 3}
+      propertyPath: OnClick.LoadSelectedPresetAtRuntime
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2285252354804809894, guid: c6f215e3c974427449ecb4012333480b,
+        type: 3}
+      propertyPath: OnClick.PunchAnimation.Move.By.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2285252354804809894, guid: c6f215e3c974427449ecb4012333480b,
+        type: 3}
+      propertyPath: OnClick.PunchAnimation.Move.By.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2285252354804809894, guid: c6f215e3c974427449ecb4012333480b,
+        type: 3}
+      propertyPath: OnClick.PunchAnimation.Move.Vibrato
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 2285252354804809894, guid: c6f215e3c974427449ecb4012333480b,
+        type: 3}
+      propertyPath: OnClick.PunchAnimation.Move.Duration
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2285252354804809894, guid: c6f215e3c974427449ecb4012333480b,
+        type: 3}
+      propertyPath: OnClick.PunchAnimation.Rotate.By.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2285252354804809894, guid: c6f215e3c974427449ecb4012333480b,
+        type: 3}
+      propertyPath: OnClick.PunchAnimation.Rotate.By.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2285252354804809894, guid: c6f215e3c974427449ecb4012333480b,
+        type: 3}
+      propertyPath: OnClick.PunchAnimation.Rotate.Vibrato
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 2285252354804809894, guid: c6f215e3c974427449ecb4012333480b,
+        type: 3}
+      propertyPath: OnClick.PunchAnimation.Rotate.Elasticity
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2285252354804809894, guid: c6f215e3c974427449ecb4012333480b,
+        type: 3}
+      propertyPath: OnClick.PunchAnimation.Rotate.Duration
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2285252354804809894, guid: c6f215e3c974427449ecb4012333480b,
+        type: 3}
+      propertyPath: OnClick.PunchAnimation.Scale.Enabled
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2285252354804809894, guid: c6f215e3c974427449ecb4012333480b,
+        type: 3}
+      propertyPath: OnClick.PunchAnimation.Scale.By.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2285252354804809894, guid: c6f215e3c974427449ecb4012333480b,
+        type: 3}
+      propertyPath: OnClick.PunchAnimation.Scale.By.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2285252354804809894, guid: c6f215e3c974427449ecb4012333480b,
+        type: 3}
+      propertyPath: OnClick.PunchAnimation.Scale.Vibrato
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 2285252354804809894, guid: c6f215e3c974427449ecb4012333480b,
+        type: 3}
+      propertyPath: OnClick.PunchAnimation.Scale.Elasticity
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2285252354804809894, guid: c6f215e3c974427449ecb4012333480b,
+        type: 3}
+      propertyPath: OnClick.PunchAnimation.Scale.Duration
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2285252354804809894, guid: c6f215e3c974427449ecb4012333480b,
+        type: 3}
+      propertyPath: OnClick.PunchAnimation.Fade.To
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2285252354804809894, guid: c6f215e3c974427449ecb4012333480b,
+        type: 3}
+      propertyPath: OnPointerEnter.PunchAnimation.Move.By.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2285252354804809894, guid: c6f215e3c974427449ecb4012333480b,
+        type: 3}
+      propertyPath: OnPointerEnter.PunchAnimation.Move.Vibrato
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 2285252354804809894, guid: c6f215e3c974427449ecb4012333480b,
+        type: 3}
+      propertyPath: OnPointerEnter.PunchAnimation.Move.Duration
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2285252354804809894, guid: c6f215e3c974427449ecb4012333480b,
+        type: 3}
+      propertyPath: OnPointerEnter.PunchAnimation.Rotate.By.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2285252354804809894, guid: c6f215e3c974427449ecb4012333480b,
+        type: 3}
+      propertyPath: OnPointerEnter.PunchAnimation.Rotate.Vibrato
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 2285252354804809894, guid: c6f215e3c974427449ecb4012333480b,
+        type: 3}
+      propertyPath: OnPointerEnter.PunchAnimation.Rotate.Elasticity
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2285252354804809894, guid: c6f215e3c974427449ecb4012333480b,
+        type: 3}
+      propertyPath: OnPointerEnter.PunchAnimation.Rotate.Duration
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2285252354804809894, guid: c6f215e3c974427449ecb4012333480b,
+        type: 3}
+      propertyPath: OnPointerEnter.PunchAnimation.Scale.Enabled
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2285252354804809894, guid: c6f215e3c974427449ecb4012333480b,
+        type: 3}
+      propertyPath: OnPointerEnter.PunchAnimation.Scale.By.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2285252354804809894, guid: c6f215e3c974427449ecb4012333480b,
+        type: 3}
+      propertyPath: OnPointerEnter.PunchAnimation.Scale.By.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2285252354804809894, guid: c6f215e3c974427449ecb4012333480b,
+        type: 3}
+      propertyPath: OnPointerEnter.PunchAnimation.Scale.Vibrato
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 2285252354804809894, guid: c6f215e3c974427449ecb4012333480b,
+        type: 3}
+      propertyPath: OnPointerEnter.PunchAnimation.Scale.Elasticity
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2285252354804809894, guid: c6f215e3c974427449ecb4012333480b,
+        type: 3}
+      propertyPath: OnPointerEnter.PunchAnimation.Scale.Duration
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2285252354804809894, guid: c6f215e3c974427449ecb4012333480b,
+        type: 3}
+      propertyPath: OnPointerEnter.PunchAnimation.Fade.To
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7470631087920878141, guid: c6f215e3c974427449ecb4012333480b,
@@ -1881,22 +3219,10 @@ PrefabInstance:
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
       value: CloseTutorial
       objectReference: {fileID: 0}
-    - target: {fileID: 7470631087886051974, guid: c6f215e3c974427449ecb4012333480b,
-        type: 3}
-      propertyPath: m_IsActive
+    - target: {fileID: 644316566, guid: c6f215e3c974427449ecb4012333480b, type: 3}
+      propertyPath: m_RootOrder
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 2285252355359660472, guid: c6f215e3c974427449ecb4012333480b,
-        type: 3}
-      propertyPath: m_RootOrder
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 5818196261552437499, guid: c6f215e3c974427449ecb4012333480b,
-        type: 3}
-      propertyPath: _info
-      value: 
-      objectReference: {fileID: 11400000, guid: 6bbbb70adf6cd6942986e757f5030dea,
-        type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c6f215e3c974427449ecb4012333480b, type: 3}
 --- !u!224 &470553856 stripped
@@ -3377,6 +4703,176 @@ PrefabInstance:
       propertyPath: OnClick.OnTrigger.Event.m_PersistentCalls.m_Calls.Array.data[2].m_Arguments.m_BoolArgument
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 3978027066152395274, guid: f108db0a1c4cfc444af84dc99d2db039,
+        type: 3}
+      propertyPath: OnClick.LoadSelectedPresetAtRuntime
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3978027066152395274, guid: f108db0a1c4cfc444af84dc99d2db039,
+        type: 3}
+      propertyPath: OnClick.PunchAnimation.Move.By.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3978027066152395274, guid: f108db0a1c4cfc444af84dc99d2db039,
+        type: 3}
+      propertyPath: OnClick.PunchAnimation.Move.By.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3978027066152395274, guid: f108db0a1c4cfc444af84dc99d2db039,
+        type: 3}
+      propertyPath: OnClick.PunchAnimation.Move.Vibrato
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 3978027066152395274, guid: f108db0a1c4cfc444af84dc99d2db039,
+        type: 3}
+      propertyPath: OnClick.PunchAnimation.Move.Duration
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3978027066152395274, guid: f108db0a1c4cfc444af84dc99d2db039,
+        type: 3}
+      propertyPath: OnClick.PunchAnimation.Rotate.By.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3978027066152395274, guid: f108db0a1c4cfc444af84dc99d2db039,
+        type: 3}
+      propertyPath: OnClick.PunchAnimation.Rotate.By.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3978027066152395274, guid: f108db0a1c4cfc444af84dc99d2db039,
+        type: 3}
+      propertyPath: OnClick.PunchAnimation.Rotate.Vibrato
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 3978027066152395274, guid: f108db0a1c4cfc444af84dc99d2db039,
+        type: 3}
+      propertyPath: OnClick.PunchAnimation.Rotate.Elasticity
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3978027066152395274, guid: f108db0a1c4cfc444af84dc99d2db039,
+        type: 3}
+      propertyPath: OnClick.PunchAnimation.Rotate.Duration
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3978027066152395274, guid: f108db0a1c4cfc444af84dc99d2db039,
+        type: 3}
+      propertyPath: OnClick.PunchAnimation.Scale.Enabled
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3978027066152395274, guid: f108db0a1c4cfc444af84dc99d2db039,
+        type: 3}
+      propertyPath: OnClick.PunchAnimation.Scale.By.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3978027066152395274, guid: f108db0a1c4cfc444af84dc99d2db039,
+        type: 3}
+      propertyPath: OnClick.PunchAnimation.Scale.By.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3978027066152395274, guid: f108db0a1c4cfc444af84dc99d2db039,
+        type: 3}
+      propertyPath: OnClick.PunchAnimation.Scale.Vibrato
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 3978027066152395274, guid: f108db0a1c4cfc444af84dc99d2db039,
+        type: 3}
+      propertyPath: OnClick.PunchAnimation.Scale.Elasticity
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3978027066152395274, guid: f108db0a1c4cfc444af84dc99d2db039,
+        type: 3}
+      propertyPath: OnClick.PunchAnimation.Scale.Duration
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3978027066152395274, guid: f108db0a1c4cfc444af84dc99d2db039,
+        type: 3}
+      propertyPath: OnClick.PunchAnimation.Fade.To
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3978027066152395274, guid: f108db0a1c4cfc444af84dc99d2db039,
+        type: 3}
+      propertyPath: OnPointerEnter.PunchAnimation.Move.By.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3978027066152395274, guid: f108db0a1c4cfc444af84dc99d2db039,
+        type: 3}
+      propertyPath: OnPointerEnter.PunchAnimation.Move.Vibrato
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 3978027066152395274, guid: f108db0a1c4cfc444af84dc99d2db039,
+        type: 3}
+      propertyPath: OnPointerEnter.PunchAnimation.Move.Duration
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3978027066152395274, guid: f108db0a1c4cfc444af84dc99d2db039,
+        type: 3}
+      propertyPath: OnPointerEnter.PunchAnimation.Rotate.By.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3978027066152395274, guid: f108db0a1c4cfc444af84dc99d2db039,
+        type: 3}
+      propertyPath: OnPointerEnter.PunchAnimation.Rotate.Vibrato
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 3978027066152395274, guid: f108db0a1c4cfc444af84dc99d2db039,
+        type: 3}
+      propertyPath: OnPointerEnter.PunchAnimation.Rotate.Elasticity
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3978027066152395274, guid: f108db0a1c4cfc444af84dc99d2db039,
+        type: 3}
+      propertyPath: OnPointerEnter.PunchAnimation.Rotate.Duration
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3978027066152395274, guid: f108db0a1c4cfc444af84dc99d2db039,
+        type: 3}
+      propertyPath: OnPointerEnter.PunchAnimation.Scale.Enabled
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3978027066152395274, guid: f108db0a1c4cfc444af84dc99d2db039,
+        type: 3}
+      propertyPath: OnPointerEnter.PunchAnimation.Scale.By.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3978027066152395274, guid: f108db0a1c4cfc444af84dc99d2db039,
+        type: 3}
+      propertyPath: OnPointerEnter.PunchAnimation.Scale.By.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3978027066152395274, guid: f108db0a1c4cfc444af84dc99d2db039,
+        type: 3}
+      propertyPath: OnPointerEnter.PunchAnimation.Scale.Vibrato
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 3978027066152395274, guid: f108db0a1c4cfc444af84dc99d2db039,
+        type: 3}
+      propertyPath: OnPointerEnter.PunchAnimation.Scale.Elasticity
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3978027066152395274, guid: f108db0a1c4cfc444af84dc99d2db039,
+        type: 3}
+      propertyPath: OnPointerEnter.PunchAnimation.Scale.Duration
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3978027066152395274, guid: f108db0a1c4cfc444af84dc99d2db039,
+        type: 3}
+      propertyPath: OnPointerEnter.PunchAnimation.Fade.To
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6672111691302416142, guid: f108db0a1c4cfc444af84dc99d2db039,
+        type: 3}
+      propertyPath: ShowBehavior.Animation.Move.AnimationCurve.m_Curve.Array.size
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6672111691302416142, guid: f108db0a1c4cfc444af84dc99d2db039,
+        type: 3}
+      propertyPath: ShowBehavior.Animation.Rotate.AnimationCurve.m_Curve.Array.size
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6672111691302416142, guid: f108db0a1c4cfc444af84dc99d2db039,
+        type: 3}
+      propertyPath: ShowBehavior.Animation.Scale.AnimationCurve.m_Curve.Array.size
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 6672111691302416142, guid: f108db0a1c4cfc444af84dc99d2db039,
         type: 3}
       propertyPath: ShowBehavior.OnStart.SoundData.DatabaseName
@@ -3386,6 +4882,251 @@ PrefabInstance:
         type: 3}
       propertyPath: ShowBehavior.OnStart.SoundData.SoundName
       value: Slider
+      objectReference: {fileID: 0}
+    - target: {fileID: 6672111691302416142, guid: f108db0a1c4cfc444af84dc99d2db039,
+        type: 3}
+      propertyPath: ShowBehavior.LoadSelectedPresetAtRuntime
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6672111691302416142, guid: f108db0a1c4cfc444af84dc99d2db039,
+        type: 3}
+      propertyPath: ShowBehavior.Animation.Move.Enabled
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6672111691302416142, guid: f108db0a1c4cfc444af84dc99d2db039,
+        type: 3}
+      propertyPath: ShowBehavior.Animation.Move.Direction
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6672111691302416142, guid: f108db0a1c4cfc444af84dc99d2db039,
+        type: 3}
+      propertyPath: ShowBehavior.Animation.Move.Ease
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6672111691302416142, guid: f108db0a1c4cfc444af84dc99d2db039,
+        type: 3}
+      propertyPath: ShowBehavior.Animation.Move.Duration
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6672111691302416142, guid: f108db0a1c4cfc444af84dc99d2db039,
+        type: 3}
+      propertyPath: ShowBehavior.Animation.Rotate.From.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6672111691302416142, guid: f108db0a1c4cfc444af84dc99d2db039,
+        type: 3}
+      propertyPath: ShowBehavior.Animation.Rotate.RotateMode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6672111691302416142, guid: f108db0a1c4cfc444af84dc99d2db039,
+        type: 3}
+      propertyPath: ShowBehavior.Animation.Rotate.Ease
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6672111691302416142, guid: f108db0a1c4cfc444af84dc99d2db039,
+        type: 3}
+      propertyPath: ShowBehavior.Animation.Rotate.Duration
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6672111691302416142, guid: f108db0a1c4cfc444af84dc99d2db039,
+        type: 3}
+      propertyPath: ShowBehavior.Animation.Scale.Enabled
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6672111691302416142, guid: f108db0a1c4cfc444af84dc99d2db039,
+        type: 3}
+      propertyPath: ShowBehavior.Animation.Scale.From.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6672111691302416142, guid: f108db0a1c4cfc444af84dc99d2db039,
+        type: 3}
+      propertyPath: ShowBehavior.Animation.Scale.From.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6672111691302416142, guid: f108db0a1c4cfc444af84dc99d2db039,
+        type: 3}
+      propertyPath: ShowBehavior.Animation.Scale.From.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6672111691302416142, guid: f108db0a1c4cfc444af84dc99d2db039,
+        type: 3}
+      propertyPath: ShowBehavior.Animation.Scale.Ease
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6672111691302416142, guid: f108db0a1c4cfc444af84dc99d2db039,
+        type: 3}
+      propertyPath: ShowBehavior.Animation.Scale.Duration
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6672111691302416142, guid: f108db0a1c4cfc444af84dc99d2db039,
+        type: 3}
+      propertyPath: ShowBehavior.Animation.Fade.To
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6672111691302416142, guid: f108db0a1c4cfc444af84dc99d2db039,
+        type: 3}
+      propertyPath: ShowBehavior.Animation.Fade.StartDelay
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6672111691302416142, guid: f108db0a1c4cfc444af84dc99d2db039,
+        type: 3}
+      propertyPath: ShowBehavior.Animation.Fade.Duration
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3978027066152395273, guid: f108db0a1c4cfc444af84dc99d2db039,
+        type: 3}
+      propertyPath: OnClick.LoadSelectedPresetAtRuntime
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3978027066152395273, guid: f108db0a1c4cfc444af84dc99d2db039,
+        type: 3}
+      propertyPath: OnClick.PunchAnimation.Move.By.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3978027066152395273, guid: f108db0a1c4cfc444af84dc99d2db039,
+        type: 3}
+      propertyPath: OnClick.PunchAnimation.Move.By.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3978027066152395273, guid: f108db0a1c4cfc444af84dc99d2db039,
+        type: 3}
+      propertyPath: OnClick.PunchAnimation.Move.Vibrato
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 3978027066152395273, guid: f108db0a1c4cfc444af84dc99d2db039,
+        type: 3}
+      propertyPath: OnClick.PunchAnimation.Move.Duration
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3978027066152395273, guid: f108db0a1c4cfc444af84dc99d2db039,
+        type: 3}
+      propertyPath: OnClick.PunchAnimation.Rotate.By.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3978027066152395273, guid: f108db0a1c4cfc444af84dc99d2db039,
+        type: 3}
+      propertyPath: OnClick.PunchAnimation.Rotate.By.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3978027066152395273, guid: f108db0a1c4cfc444af84dc99d2db039,
+        type: 3}
+      propertyPath: OnClick.PunchAnimation.Rotate.Vibrato
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 3978027066152395273, guid: f108db0a1c4cfc444af84dc99d2db039,
+        type: 3}
+      propertyPath: OnClick.PunchAnimation.Rotate.Elasticity
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3978027066152395273, guid: f108db0a1c4cfc444af84dc99d2db039,
+        type: 3}
+      propertyPath: OnClick.PunchAnimation.Rotate.Duration
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3978027066152395273, guid: f108db0a1c4cfc444af84dc99d2db039,
+        type: 3}
+      propertyPath: OnClick.PunchAnimation.Scale.Enabled
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3978027066152395273, guid: f108db0a1c4cfc444af84dc99d2db039,
+        type: 3}
+      propertyPath: OnClick.PunchAnimation.Scale.By.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3978027066152395273, guid: f108db0a1c4cfc444af84dc99d2db039,
+        type: 3}
+      propertyPath: OnClick.PunchAnimation.Scale.By.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3978027066152395273, guid: f108db0a1c4cfc444af84dc99d2db039,
+        type: 3}
+      propertyPath: OnClick.PunchAnimation.Scale.Vibrato
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 3978027066152395273, guid: f108db0a1c4cfc444af84dc99d2db039,
+        type: 3}
+      propertyPath: OnClick.PunchAnimation.Scale.Elasticity
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3978027066152395273, guid: f108db0a1c4cfc444af84dc99d2db039,
+        type: 3}
+      propertyPath: OnClick.PunchAnimation.Scale.Duration
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3978027066152395273, guid: f108db0a1c4cfc444af84dc99d2db039,
+        type: 3}
+      propertyPath: OnClick.PunchAnimation.Fade.To
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3978027066152395273, guid: f108db0a1c4cfc444af84dc99d2db039,
+        type: 3}
+      propertyPath: OnPointerEnter.PunchAnimation.Move.By.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3978027066152395273, guid: f108db0a1c4cfc444af84dc99d2db039,
+        type: 3}
+      propertyPath: OnPointerEnter.PunchAnimation.Move.Vibrato
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 3978027066152395273, guid: f108db0a1c4cfc444af84dc99d2db039,
+        type: 3}
+      propertyPath: OnPointerEnter.PunchAnimation.Move.Duration
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3978027066152395273, guid: f108db0a1c4cfc444af84dc99d2db039,
+        type: 3}
+      propertyPath: OnPointerEnter.PunchAnimation.Rotate.By.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3978027066152395273, guid: f108db0a1c4cfc444af84dc99d2db039,
+        type: 3}
+      propertyPath: OnPointerEnter.PunchAnimation.Rotate.Vibrato
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 3978027066152395273, guid: f108db0a1c4cfc444af84dc99d2db039,
+        type: 3}
+      propertyPath: OnPointerEnter.PunchAnimation.Rotate.Elasticity
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3978027066152395273, guid: f108db0a1c4cfc444af84dc99d2db039,
+        type: 3}
+      propertyPath: OnPointerEnter.PunchAnimation.Rotate.Duration
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3978027066152395273, guid: f108db0a1c4cfc444af84dc99d2db039,
+        type: 3}
+      propertyPath: OnPointerEnter.PunchAnimation.Scale.Enabled
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3978027066152395273, guid: f108db0a1c4cfc444af84dc99d2db039,
+        type: 3}
+      propertyPath: OnPointerEnter.PunchAnimation.Scale.By.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3978027066152395273, guid: f108db0a1c4cfc444af84dc99d2db039,
+        type: 3}
+      propertyPath: OnPointerEnter.PunchAnimation.Scale.By.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3978027066152395273, guid: f108db0a1c4cfc444af84dc99d2db039,
+        type: 3}
+      propertyPath: OnPointerEnter.PunchAnimation.Scale.Vibrato
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 3978027066152395273, guid: f108db0a1c4cfc444af84dc99d2db039,
+        type: 3}
+      propertyPath: OnPointerEnter.PunchAnimation.Scale.Elasticity
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3978027066152395273, guid: f108db0a1c4cfc444af84dc99d2db039,
+        type: 3}
+      propertyPath: OnPointerEnter.PunchAnimation.Scale.Duration
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3978027066152395273, guid: f108db0a1c4cfc444af84dc99d2db039,
+        type: 3}
+      propertyPath: OnPointerEnter.PunchAnimation.Fade.To
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3978027065655877157, guid: f108db0a1c4cfc444af84dc99d2db039,
         type: 3}
@@ -3406,6 +5147,161 @@ PrefabInstance:
         type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_MethodName
       value: SetActive
+      objectReference: {fileID: 0}
+    - target: {fileID: 3978027066152395272, guid: f108db0a1c4cfc444af84dc99d2db039,
+        type: 3}
+      propertyPath: OnClick.LoadSelectedPresetAtRuntime
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3978027066152395272, guid: f108db0a1c4cfc444af84dc99d2db039,
+        type: 3}
+      propertyPath: OnClick.PunchAnimation.Move.By.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3978027066152395272, guid: f108db0a1c4cfc444af84dc99d2db039,
+        type: 3}
+      propertyPath: OnClick.PunchAnimation.Move.By.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3978027066152395272, guid: f108db0a1c4cfc444af84dc99d2db039,
+        type: 3}
+      propertyPath: OnClick.PunchAnimation.Move.Vibrato
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 3978027066152395272, guid: f108db0a1c4cfc444af84dc99d2db039,
+        type: 3}
+      propertyPath: OnClick.PunchAnimation.Move.Duration
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3978027066152395272, guid: f108db0a1c4cfc444af84dc99d2db039,
+        type: 3}
+      propertyPath: OnClick.PunchAnimation.Rotate.By.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3978027066152395272, guid: f108db0a1c4cfc444af84dc99d2db039,
+        type: 3}
+      propertyPath: OnClick.PunchAnimation.Rotate.By.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3978027066152395272, guid: f108db0a1c4cfc444af84dc99d2db039,
+        type: 3}
+      propertyPath: OnClick.PunchAnimation.Rotate.Vibrato
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 3978027066152395272, guid: f108db0a1c4cfc444af84dc99d2db039,
+        type: 3}
+      propertyPath: OnClick.PunchAnimation.Rotate.Elasticity
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3978027066152395272, guid: f108db0a1c4cfc444af84dc99d2db039,
+        type: 3}
+      propertyPath: OnClick.PunchAnimation.Rotate.Duration
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3978027066152395272, guid: f108db0a1c4cfc444af84dc99d2db039,
+        type: 3}
+      propertyPath: OnClick.PunchAnimation.Scale.Enabled
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3978027066152395272, guid: f108db0a1c4cfc444af84dc99d2db039,
+        type: 3}
+      propertyPath: OnClick.PunchAnimation.Scale.By.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3978027066152395272, guid: f108db0a1c4cfc444af84dc99d2db039,
+        type: 3}
+      propertyPath: OnClick.PunchAnimation.Scale.By.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3978027066152395272, guid: f108db0a1c4cfc444af84dc99d2db039,
+        type: 3}
+      propertyPath: OnClick.PunchAnimation.Scale.Vibrato
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 3978027066152395272, guid: f108db0a1c4cfc444af84dc99d2db039,
+        type: 3}
+      propertyPath: OnClick.PunchAnimation.Scale.Elasticity
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3978027066152395272, guid: f108db0a1c4cfc444af84dc99d2db039,
+        type: 3}
+      propertyPath: OnClick.PunchAnimation.Scale.Duration
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3978027066152395272, guid: f108db0a1c4cfc444af84dc99d2db039,
+        type: 3}
+      propertyPath: OnClick.PunchAnimation.Fade.To
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3978027066152395272, guid: f108db0a1c4cfc444af84dc99d2db039,
+        type: 3}
+      propertyPath: OnPointerEnter.PunchAnimation.Move.By.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3978027066152395272, guid: f108db0a1c4cfc444af84dc99d2db039,
+        type: 3}
+      propertyPath: OnPointerEnter.PunchAnimation.Move.Vibrato
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 3978027066152395272, guid: f108db0a1c4cfc444af84dc99d2db039,
+        type: 3}
+      propertyPath: OnPointerEnter.PunchAnimation.Move.Duration
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3978027066152395272, guid: f108db0a1c4cfc444af84dc99d2db039,
+        type: 3}
+      propertyPath: OnPointerEnter.PunchAnimation.Rotate.By.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3978027066152395272, guid: f108db0a1c4cfc444af84dc99d2db039,
+        type: 3}
+      propertyPath: OnPointerEnter.PunchAnimation.Rotate.Vibrato
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 3978027066152395272, guid: f108db0a1c4cfc444af84dc99d2db039,
+        type: 3}
+      propertyPath: OnPointerEnter.PunchAnimation.Rotate.Elasticity
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3978027066152395272, guid: f108db0a1c4cfc444af84dc99d2db039,
+        type: 3}
+      propertyPath: OnPointerEnter.PunchAnimation.Rotate.Duration
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3978027066152395272, guid: f108db0a1c4cfc444af84dc99d2db039,
+        type: 3}
+      propertyPath: OnPointerEnter.PunchAnimation.Scale.Enabled
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3978027066152395272, guid: f108db0a1c4cfc444af84dc99d2db039,
+        type: 3}
+      propertyPath: OnPointerEnter.PunchAnimation.Scale.By.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3978027066152395272, guid: f108db0a1c4cfc444af84dc99d2db039,
+        type: 3}
+      propertyPath: OnPointerEnter.PunchAnimation.Scale.By.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3978027066152395272, guid: f108db0a1c4cfc444af84dc99d2db039,
+        type: 3}
+      propertyPath: OnPointerEnter.PunchAnimation.Scale.Vibrato
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 3978027066152395272, guid: f108db0a1c4cfc444af84dc99d2db039,
+        type: 3}
+      propertyPath: OnPointerEnter.PunchAnimation.Scale.Elasticity
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3978027066152395272, guid: f108db0a1c4cfc444af84dc99d2db039,
+        type: 3}
+      propertyPath: OnPointerEnter.PunchAnimation.Scale.Duration
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3978027066152395272, guid: f108db0a1c4cfc444af84dc99d2db039,
+        type: 3}
+      propertyPath: OnPointerEnter.PunchAnimation.Fade.To
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f108db0a1c4cfc444af84dc99d2db039, type: 3}
@@ -6470,9 +8366,9 @@ MonoBehaviour:
         Enabled: 0
         From: {x: 0, y: 0, z: 0}
         To: {x: 0, y: 0, z: 0}
-        By: {x: 0, y: -10, z: 0}
+        By: {x: 0, y: 0, z: 0}
         UseCustomFromAndTo: 0
-        Vibrato: 12
+        Vibrato: 10
         Elasticity: 1
         NumberOfLoops: -1
         LoopType: 1
@@ -6487,16 +8383,16 @@ MonoBehaviour:
           m_PostInfinity: 2
           m_RotationOrder: 4
         StartDelay: 0
-        Duration: 0.3
+        Duration: 1
       Rotate:
         AnimationType: 4
         Enabled: 0
         From: {x: 0, y: 0, z: 0}
         To: {x: 0, y: 0, z: 0}
-        By: {x: 0, y: 0, z: -5}
+        By: {x: 0, y: 0, z: 0}
         UseCustomFromAndTo: 0
-        Vibrato: 4
-        Elasticity: 0.5
+        Vibrato: 10
+        Elasticity: 1
         NumberOfLoops: -1
         LoopType: 1
         RotateMode: 1
@@ -6509,16 +8405,16 @@ MonoBehaviour:
           m_PostInfinity: 2
           m_RotationOrder: 4
         StartDelay: 0
-        Duration: 0.3
+        Duration: 1
       Scale:
         AnimationType: 4
-        Enabled: 1
+        Enabled: 0
         From: {x: 0, y: 0, z: 0}
         To: {x: 0, y: 0, z: 0}
-        By: {x: -0.15, y: 0.15, z: 0}
+        By: {x: 0, y: 0, z: 0}
         UseCustomFromAndTo: 0
-        Vibrato: 4
-        Elasticity: 0.5
+        Vibrato: 10
+        Elasticity: 1
         NumberOfLoops: -1
         LoopType: 1
         EaseType: 0
@@ -6530,12 +8426,12 @@ MonoBehaviour:
           m_PostInfinity: 2
           m_RotationOrder: 4
         StartDelay: 0
-        Duration: 0.3
+        Duration: 1
       Fade:
         AnimationType: 4
         Enabled: 0
         From: 0
-        To: 1
+        To: 0
         By: 0.5
         UseCustomFromAndTo: 0
         NumberOfLoops: -1
@@ -7274,7 +9170,7 @@ MonoBehaviour:
     DeselectButton: 0
     DisableInterval: 0.4
     Enabled: 1
-    LoadSelectedPresetAtRuntime: 0
+    LoadSelectedPresetAtRuntime: 1
     OnTrigger:
       AnimatorEvents: []
       Effect:
@@ -7317,9 +9213,9 @@ MonoBehaviour:
         Enabled: 0
         From: {x: 0, y: 0, z: 0}
         To: {x: 0, y: 0, z: 0}
-        By: {x: -5, y: 5, z: 0}
+        By: {x: 0, y: 0, z: 0}
         UseCustomFromAndTo: 0
-        Vibrato: 4
+        Vibrato: 10
         Elasticity: 1
         NumberOfLoops: -1
         LoopType: 1
@@ -7334,16 +9230,16 @@ MonoBehaviour:
           m_PostInfinity: 2
           m_RotationOrder: 4
         StartDelay: 0
-        Duration: 0.2
+        Duration: 1
       Rotate:
         AnimationType: 4
         Enabled: 0
         From: {x: 0, y: 0, z: 0}
         To: {x: 0, y: 0, z: 0}
-        By: {x: 0, y: -30, z: -15}
+        By: {x: 0, y: 0, z: 0}
         UseCustomFromAndTo: 0
-        Vibrato: 4
-        Elasticity: 0.5
+        Vibrato: 10
+        Elasticity: 1
         NumberOfLoops: -1
         LoopType: 1
         RotateMode: 1
@@ -7356,16 +9252,16 @@ MonoBehaviour:
           m_PostInfinity: 2
           m_RotationOrder: 4
         StartDelay: 0
-        Duration: 0.3
+        Duration: 1
       Scale:
         AnimationType: 4
-        Enabled: 1
+        Enabled: 0
         From: {x: 0, y: 0, z: 0}
         To: {x: 0, y: 0, z: 0}
-        By: {x: -0.2, y: -0.2, z: 0}
+        By: {x: 0, y: 0, z: 0}
         UseCustomFromAndTo: 0
-        Vibrato: 8
-        Elasticity: 0.5
+        Vibrato: 10
+        Elasticity: 1
         NumberOfLoops: -1
         LoopType: 1
         EaseType: 0
@@ -7377,12 +9273,12 @@ MonoBehaviour:
           m_PostInfinity: 2
           m_RotationOrder: 4
         StartDelay: 0
-        Duration: 0.3
+        Duration: 1
       Fade:
         AnimationType: 4
         Enabled: 0
         From: 0
-        To: 1
+        To: 0
         By: 0.5
         UseCustomFromAndTo: 0
         NumberOfLoops: -1
@@ -8793,9 +10689,9 @@ MonoBehaviour:
         Enabled: 0
         From: {x: 0, y: 0, z: 0}
         To: {x: 0, y: 0, z: 0}
-        By: {x: 0, y: -10, z: 0}
+        By: {x: 0, y: 0, z: 0}
         UseCustomFromAndTo: 0
-        Vibrato: 12
+        Vibrato: 10
         Elasticity: 1
         NumberOfLoops: -1
         LoopType: 1
@@ -8810,16 +10706,16 @@ MonoBehaviour:
           m_PostInfinity: 2
           m_RotationOrder: 4
         StartDelay: 0
-        Duration: 0.3
+        Duration: 1
       Rotate:
         AnimationType: 4
         Enabled: 0
         From: {x: 0, y: 0, z: 0}
         To: {x: 0, y: 0, z: 0}
-        By: {x: 0, y: 0, z: -5}
+        By: {x: 0, y: 0, z: 0}
         UseCustomFromAndTo: 0
-        Vibrato: 4
-        Elasticity: 0.5
+        Vibrato: 10
+        Elasticity: 1
         NumberOfLoops: -1
         LoopType: 1
         RotateMode: 1
@@ -8832,16 +10728,16 @@ MonoBehaviour:
           m_PostInfinity: 2
           m_RotationOrder: 4
         StartDelay: 0
-        Duration: 0.3
+        Duration: 1
       Scale:
         AnimationType: 4
-        Enabled: 1
+        Enabled: 0
         From: {x: 0, y: 0, z: 0}
         To: {x: 0, y: 0, z: 0}
-        By: {x: -0.15, y: 0.15, z: 0}
+        By: {x: 0, y: 0, z: 0}
         UseCustomFromAndTo: 0
-        Vibrato: 4
-        Elasticity: 0.5
+        Vibrato: 10
+        Elasticity: 1
         NumberOfLoops: -1
         LoopType: 1
         EaseType: 0
@@ -8853,12 +10749,12 @@ MonoBehaviour:
           m_PostInfinity: 2
           m_RotationOrder: 4
         StartDelay: 0
-        Duration: 0.3
+        Duration: 1
       Fade:
         AnimationType: 4
         Enabled: 0
         From: 0
-        To: 1
+        To: 0
         By: 0.5
         UseCustomFromAndTo: 0
         NumberOfLoops: -1
@@ -9597,7 +11493,7 @@ MonoBehaviour:
     DeselectButton: 0
     DisableInterval: 0.4
     Enabled: 1
-    LoadSelectedPresetAtRuntime: 0
+    LoadSelectedPresetAtRuntime: 1
     OnTrigger:
       AnimatorEvents: []
       Effect:
@@ -9640,9 +11536,9 @@ MonoBehaviour:
         Enabled: 0
         From: {x: 0, y: 0, z: 0}
         To: {x: 0, y: 0, z: 0}
-        By: {x: -5, y: 5, z: 0}
+        By: {x: 0, y: 0, z: 0}
         UseCustomFromAndTo: 0
-        Vibrato: 4
+        Vibrato: 10
         Elasticity: 1
         NumberOfLoops: -1
         LoopType: 1
@@ -9657,16 +11553,16 @@ MonoBehaviour:
           m_PostInfinity: 2
           m_RotationOrder: 4
         StartDelay: 0
-        Duration: 0.2
+        Duration: 1
       Rotate:
         AnimationType: 4
         Enabled: 0
         From: {x: 0, y: 0, z: 0}
         To: {x: 0, y: 0, z: 0}
-        By: {x: 0, y: -30, z: -15}
+        By: {x: 0, y: 0, z: 0}
         UseCustomFromAndTo: 0
-        Vibrato: 4
-        Elasticity: 0.5
+        Vibrato: 10
+        Elasticity: 1
         NumberOfLoops: -1
         LoopType: 1
         RotateMode: 1
@@ -9679,16 +11575,16 @@ MonoBehaviour:
           m_PostInfinity: 2
           m_RotationOrder: 4
         StartDelay: 0
-        Duration: 0.3
+        Duration: 1
       Scale:
         AnimationType: 4
-        Enabled: 1
+        Enabled: 0
         From: {x: 0, y: 0, z: 0}
         To: {x: 0, y: 0, z: 0}
-        By: {x: -0.2, y: -0.2, z: 0}
+        By: {x: 0, y: 0, z: 0}
         UseCustomFromAndTo: 0
-        Vibrato: 8
-        Elasticity: 0.5
+        Vibrato: 10
+        Elasticity: 1
         NumberOfLoops: -1
         LoopType: 1
         EaseType: 0
@@ -9700,12 +11596,12 @@ MonoBehaviour:
           m_PostInfinity: 2
           m_RotationOrder: 4
         StartDelay: 0
-        Duration: 0.3
+        Duration: 1
       Fade:
         AnimationType: 4
         Enabled: 0
         From: 0
-        To: 1
+        To: 0
         By: 0.5
         UseCustomFromAndTo: 0
         NumberOfLoops: -1
@@ -12580,7 +14476,7 @@ MonoBehaviour:
       AnimationType: 1
       Move:
         AnimationType: 1
-        Enabled: 1
+        Enabled: 0
         From: {x: 0, y: 0, z: 0}
         To: {x: 0, y: 0, z: 0}
         By: {x: 0, y: 0, z: 0}
@@ -12589,67 +14485,22 @@ MonoBehaviour:
         Elasticity: 1
         NumberOfLoops: -1
         LoopType: 1
-        Direction: 2
+        Direction: 0
         CustomPosition: {x: 0, y: 0, z: 0}
         EaseType: 0
-        Ease: 27
+        Ease: 1
         AnimationCurve:
           serializedVersion: 2
-          m_Curve:
-          - serializedVersion: 3
-            time: 0
-            value: 0
-            inSlope: 0
-            outSlope: 0
-            tangentMode: 0
-            weightedMode: 0
-            inWeight: 0.33333334
-            outWeight: 0.33333334
-          - serializedVersion: 3
-            time: 0.22816835
-            value: 1.2861733
-            inSlope: -0.08982998
-            outSlope: -0.08982998
-            tangentMode: 0
-            weightedMode: 0
-            inWeight: 0.33333334
-            outWeight: 0.33333334
-          - serializedVersion: 3
-            time: 0.6220915
-            value: 1.1371747
-            inSlope: 0.94856524
-            outSlope: 0.94856524
-            tangentMode: 0
-            weightedMode: 0
-            inWeight: 0.33333334
-            outWeight: 0.33333334
-          - serializedVersion: 3
-            time: 0.72613853
-            value: 0.73627746
-            inSlope: -1.5867386
-            outSlope: -1.5867386
-            tangentMode: 0
-            weightedMode: 0
-            inWeight: 0.33333334
-            outWeight: 0.33333334
-          - serializedVersion: 3
-            time: 1
-            value: 1
-            inSlope: 2
-            outSlope: 2
-            tangentMode: 0
-            weightedMode: 0
-            inWeight: 0.33333334
-            outWeight: 0.33333334
+          m_Curve: []
           m_PreInfinity: 2
           m_PostInfinity: 2
           m_RotationOrder: 4
         StartDelay: 0
-        Duration: 0.3
+        Duration: 1
       Rotate:
         AnimationType: 1
         Enabled: 0
-        From: {x: 90, y: 0, z: 0}
+        From: {x: 0, y: 0, z: 0}
         To: {x: 0, y: 0, z: 0}
         By: {x: 0, y: 0, z: 0}
         UseCustomFromAndTo: 0
@@ -12657,93 +14508,21 @@ MonoBehaviour:
         Elasticity: 1
         NumberOfLoops: -1
         LoopType: 1
-        RotateMode: 0
+        RotateMode: 1
         EaseType: 0
-        Ease: 27
+        Ease: 1
         AnimationCurve:
           serializedVersion: 2
-          m_Curve:
-          - serializedVersion: 3
-            time: 0
-            value: 0.0051574707
-            inSlope: 0
-            outSlope: 0
-            tangentMode: 0
-            weightedMode: 0
-            inWeight: 0.33333334
-            outWeight: 0.33333334
-          - serializedVersion: 3
-            time: 0.048303347
-            value: 0.28854316
-            inSlope: 7.8732495
-            outSlope: 7.8732495
-            tangentMode: 0
-            weightedMode: 0
-            inWeight: 0.33333334
-            outWeight: 0.33333334
-          - serializedVersion: 3
-            time: 0.10184101
-            value: -0.07756907
-            inSlope: 3.7581615
-            outSlope: 3.7581615
-            tangentMode: 0
-            weightedMode: 0
-            inWeight: 0.33333334
-            outWeight: 0.33333334
-          - serializedVersion: 3
-            time: 0.1691427
-            value: 0.5604678
-            inSlope: 5.091666
-            outSlope: 5.091666
-            tangentMode: 0
-            weightedMode: 0
-            inWeight: 0.33333334
-            outWeight: 0.33333334
-          - serializedVersion: 3
-            time: 0.6416942
-            value: -0.5875959
-            inSlope: 1.8110614
-            outSlope: 1.8110614
-            tangentMode: 0
-            weightedMode: 0
-            inWeight: 0.33333334
-            outWeight: 0.33333334
-          - serializedVersion: 3
-            time: 0.9733818
-            value: 0.67883307
-            inSlope: -4.2502594
-            outSlope: -4.2502594
-            tangentMode: 0
-            weightedMode: 0
-            inWeight: 0.33333334
-            outWeight: 0.33333334
-          - serializedVersion: 3
-            time: 0.98996425
-            value: 0.88832426
-            inSlope: -2.3853254
-            outSlope: -2.3853254
-            tangentMode: 0
-            weightedMode: 0
-            inWeight: 0.33333334
-            outWeight: 0.33333334
-          - serializedVersion: 3
-            time: 1
-            value: 1.0051575
-            inSlope: 2
-            outSlope: 2
-            tangentMode: 0
-            weightedMode: 0
-            inWeight: 0.33333334
-            outWeight: 0.33333334
+          m_Curve: []
           m_PreInfinity: 2
           m_PostInfinity: 2
           m_RotationOrder: 4
         StartDelay: 0
-        Duration: 0.45
+        Duration: 1
       Scale:
         AnimationType: 1
-        Enabled: 1
-        From: {x: 0.5, y: 0.5, z: 1}
+        Enabled: 0
+        From: {x: 0, y: 0, z: 0}
         To: {x: 0, y: 0, z: 0}
         By: {x: 0, y: 0, z: 0}
         UseCustomFromAndTo: 0
@@ -12752,65 +14531,20 @@ MonoBehaviour:
         NumberOfLoops: -1
         LoopType: 1
         EaseType: 0
-        Ease: 30
+        Ease: 1
         AnimationCurve:
           serializedVersion: 2
-          m_Curve:
-          - serializedVersion: 3
-            time: 0
-            value: 0
-            inSlope: 2
-            outSlope: 2
-            tangentMode: 0
-            weightedMode: 0
-            inWeight: 0.33333334
-            outWeight: 0.33333334
-          - serializedVersion: 3
-            time: 0.22024798
-            value: 1.9692707
-            inSlope: 0.9352582
-            outSlope: 0.9352582
-            tangentMode: 0
-            weightedMode: 0
-            inWeight: 0.33333334
-            outWeight: 0.33333334
-          - serializedVersion: 3
-            time: 0.65045136
-            value: 1.0910703
-            inSlope: 0.5003349
-            outSlope: 0.5003349
-            tangentMode: 0
-            weightedMode: 0
-            inWeight: 0.33333334
-            outWeight: 0.33333334
-          - serializedVersion: 3
-            time: 0.7293131
-            value: 0.8114508
-            inSlope: 1.217737
-            outSlope: 1.217737
-            tangentMode: 0
-            weightedMode: 0
-            inWeight: 0.33333334
-            outWeight: 0.33333334
-          - serializedVersion: 3
-            time: 1
-            value: 1
-            inSlope: -0.943337
-            outSlope: -0.943337
-            tangentMode: 0
-            weightedMode: 0
-            inWeight: 0.33333334
-            outWeight: 0.33333334
+          m_Curve: []
           m_PreInfinity: 2
           m_PostInfinity: 2
           m_RotationOrder: 4
         StartDelay: 0
-        Duration: 0.2
+        Duration: 1
       Fade:
         AnimationType: 1
         Enabled: 0
         From: 0
-        To: 1
+        To: 0
         By: 0.5
         UseCustomFromAndTo: 0
         NumberOfLoops: -1
@@ -12823,8 +14557,8 @@ MonoBehaviour:
           m_PreInfinity: 2
           m_PostInfinity: 2
           m_RotationOrder: 4
-        StartDelay: 0.2
-        Duration: 0.2
+        StartDelay: 0
+        Duration: 1
     AutoStartLoopAnimation: 1
     LoadSelectedPresetAtRuntime: 1
     InstantAnimation: 0
