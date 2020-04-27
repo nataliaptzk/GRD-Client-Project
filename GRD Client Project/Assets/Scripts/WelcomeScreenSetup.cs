@@ -16,6 +16,6 @@ public class WelcomeScreenSetup : MonoBehaviour
     {
         _titleField.text = _info.title;
         _descriptionField.text = _info.description;
-        _nameField.text = "Dear " + SessionManager.Nickname;
+        _nameField.text = "Dear " + SessionManager.Nickname + ",";
     }
 }
