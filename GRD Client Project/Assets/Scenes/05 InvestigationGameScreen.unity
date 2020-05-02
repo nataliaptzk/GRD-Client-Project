@@ -1545,7 +1545,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 344921886}
   m_LocalRotation: {x: 0, y: 0, z: -0.3420201, w: 0.9396927}
-  m_LocalPosition: {x: 0.0589, y: -0.1489, z: 0}
+  m_LocalPosition: {x: 0.0637, y: -0.1469, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1871658805}
@@ -1565,8 +1565,8 @@ FixedJoint2D:
   m_BreakForce: Infinity
   m_BreakTorque: Infinity
   m_AutoConfigureConnectedAnchor: 0
-  m_Anchor: {x: -0.00066559104, y: 0.059743114}
-  m_ConnectedAnchor: {x: -0.014859162, y: -0.040728334}
+  m_Anchor: {x: -0.0008217721, y: 0.05943903}
+  m_ConnectedAnchor: {x: -0.01036734, y: -0.04257911}
   m_DampingRatio: 0
   m_Frequency: 0
 --- !u!233 &344921889
@@ -1583,8 +1583,8 @@ HingeJoint2D:
   m_BreakForce: Infinity
   m_BreakTorque: Infinity
   m_AutoConfigureConnectedAnchor: 0
-  m_Anchor: {x: 0, y: 0.060709406}
-  m_ConnectedAnchor: {x: -0.009378235, y: -0.055957466}
+  m_Anchor: {x: -0.00082177215, y: 0.059439026}
+  m_ConnectedAnchor: {x: -0.010367344, y: -0.04257911}
   m_UseMotor: 1
   m_Motor:
     m_MotorSpeed: 0
@@ -3314,6 +3314,16 @@ PrefabInstance:
       propertyPath: OnPointerEnter.PunchAnimation.Fade.To
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5116312932867384585, guid: 3c8380c3e4493234c9d48362927cba80,
+        type: 3}
+      propertyPath: m_SortingLayerID
+      value: -315906147
+      objectReference: {fileID: 0}
+    - target: {fileID: 5116312932867384585, guid: 3c8380c3e4493234c9d48362927cba80,
+        type: 3}
+      propertyPath: m_SortingLayer
+      value: 3
+      objectReference: {fileID: 0}
     - target: {fileID: 5531355841818836161, guid: 3c8380c3e4493234c9d48362927cba80,
         type: 3}
       propertyPath: m_LocalRotation.x
@@ -3368,16 +3378,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
       value: OpenHelpScreen
-      objectReference: {fileID: 0}
-    - target: {fileID: 5116312932867384585, guid: 3c8380c3e4493234c9d48362927cba80,
-        type: 3}
-      propertyPath: m_SortingLayerID
-      value: -315906147
-      objectReference: {fileID: 0}
-    - target: {fileID: 5116312932867384585, guid: 3c8380c3e4493234c9d48362927cba80,
-        type: 3}
-      propertyPath: m_SortingLayer
-      value: 3
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 3c8380c3e4493234c9d48362927cba80, type: 3}
@@ -5656,6 +5656,7 @@ GameObject:
   - component: {fileID: 814317868}
   - component: {fileID: 814317867}
   - component: {fileID: 814317870}
+  - component: {fileID: 814317871}
   m_Layer: 0
   m_Name: Button Release
   m_TagString: Untagged
@@ -7991,8 +7992,8 @@ MonoBehaviour:
     IsPlaying: 0
     LoopAnimationType: 0
     LoadSelectedPresetAtRuntime: 0
-    PresetCategory: 
-    PresetName: 
+    PresetCategory: Uncategorized
+    PresetName: Default
   SelectedLoopAnimation:
     Animation:
       AnimationType: 3
@@ -8089,6 +8090,18 @@ MonoBehaviour:
     PresetName: 
   TargetLabel: 0
   TextLabel: {fileID: 0}
+--- !u!225 &814317871
+CanvasGroup:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 814317865}
+  m_Enabled: 1
+  m_Alpha: 1
+  m_Interactable: 1
+  m_BlocksRaycasts: 1
+  m_IgnoreParentGroups: 0
 --- !u!1 &844599193 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 770836246737729359, guid: 836128fa96e85264b9732b137f0788e1,
@@ -11584,6 +11597,7 @@ GameObject:
   - component: {fileID: 1179355341}
   - component: {fileID: 1179355340}
   - component: {fileID: 1179355343}
+  - component: {fileID: 1179355344}
   m_Layer: 5
   m_Name: AttachButton
   m_TagString: Untagged
@@ -13919,8 +13933,8 @@ MonoBehaviour:
     IsPlaying: 0
     LoopAnimationType: 0
     LoadSelectedPresetAtRuntime: 0
-    PresetCategory: 
-    PresetName: 
+    PresetCategory: Uncategorized
+    PresetName: Default
   SelectedLoopAnimation:
     Animation:
       AnimationType: 3
@@ -14017,6 +14031,18 @@ MonoBehaviour:
     PresetName: 
   TargetLabel: 0
   TextLabel: {fileID: 0}
+--- !u!225 &1179355344
+CanvasGroup:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1179355338}
+  m_Enabled: 1
+  m_Alpha: 1
+  m_Interactable: 1
+  m_BlocksRaycasts: 1
+  m_IgnoreParentGroups: 0
 --- !u!114 &1208890815 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 770836246475468517, guid: 836128fa96e85264b9732b137f0788e1,
@@ -18796,7 +18822,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1749578077}
   m_LocalRotation: {x: 0, y: 0, z: 0.3420201, w: 0.9396927}
-  m_LocalPosition: {x: -0.0592, y: -0.1468, z: 0}
+  m_LocalPosition: {x: -0.0592, y: -0.1473, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1871658805}
@@ -18809,15 +18835,15 @@ HingeJoint2D:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1749578077}
-  m_Enabled: 0
+  m_Enabled: 1
   serializedVersion: 4
   m_EnableCollision: 0
   m_ConnectedRigidBody: {fileID: 666397283}
   m_BreakForce: Infinity
   m_BreakTorque: Infinity
   m_AutoConfigureConnectedAnchor: 0
-  m_Anchor: {x: -0.010796551, y: 0.05904002}
-  m_ConnectedAnchor: {x: 0.012971089, y: -0.057198476}
+  m_Anchor: {x: -0.0006799357, y: 0.05949626}
+  m_ConnectedAnchor: {x: 0.01336146, y: -0.04145382}
   m_UseMotor: 1
   m_Motor:
     m_MotorSpeed: 0
@@ -18927,7 +18953,7 @@ FixedJoint2D:
   m_BreakTorque: Infinity
   m_AutoConfigureConnectedAnchor: 0
   m_Anchor: {x: -0.00067993574, y: 0.059496257}
-  m_ConnectedAnchor: {x: 0.013007903, y: -0.04110026}
+  m_ConnectedAnchor: {x: 0.013361464, y: -0.041453823}
   m_DampingRatio: 0
   m_Frequency: 0
 --- !u!1 &1785695668
