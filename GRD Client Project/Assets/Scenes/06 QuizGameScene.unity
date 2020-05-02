@@ -1108,6 +1108,11 @@ PrefabInstance:
       propertyPath: OnPointerEnter.PunchAnimation.Fade.To
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 6220577582057119759, guid: 3c8380c3e4493234c9d48362927cba80,
+        type: 3}
+      propertyPath: m_SortingLayerID
+      value: -315906147
+      objectReference: {fileID: 0}
     - target: {fileID: 7013996849903587115, guid: 3c8380c3e4493234c9d48362927cba80,
         type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.size
@@ -1147,11 +1152,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
       value: OpenHelpScreen
-      objectReference: {fileID: 0}
-    - target: {fileID: 6220577582057119759, guid: 3c8380c3e4493234c9d48362927cba80,
-        type: 3}
-      propertyPath: m_SortingLayerID
-      value: -315906147
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 3c8380c3e4493234c9d48362927cba80, type: 3}
