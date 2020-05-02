@@ -7,6 +7,8 @@ using TMPro;
 public class Score : MonoBehaviour
 {
     [SerializeField] private TextMeshProUGUI scoreField;
+    [SerializeField] private ParticleSystem _gainPoints;
+    [SerializeField] private ParticleSystem _losePoints;
 
     public int correct;
 
@@ -44,6 +46,23 @@ public class Score : MonoBehaviour
     {
         SessionManager.Score += points;
         SessionManager.Score = Mathf.Max(0, SessionManager.Score);
+        
+        if (points == 0)
+        {
+        }
+        else if (points < 0)
+        {
+            var losePointsMain = _losePoints.main;
+            losePointsMain.maxParticles = points * -1;
+            _losePoints.Play();
+        }
+        else if (points > 0)
+        {
+            var gainPointsMain = _gainPoints.main;
+            gainPointsMain.maxParticles = points;
+            _gainPoints.Play();
+        }
+
         UpdateScoreUI();
     }
 

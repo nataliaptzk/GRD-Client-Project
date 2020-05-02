@@ -9073,7 +9073,7 @@ MonoBehaviour:
       m_Calls: []
     m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-  m_text: you will identify object in the game using the below icons!
+  m_text: you will identify objects in the game using the below icons!
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 42644ebbd1dfeff438ed3a7d5de16754, type: 2}
   m_sharedMaterial: {fileID: 8850017372768454461, guid: 42644ebbd1dfeff438ed3a7d5de16754,

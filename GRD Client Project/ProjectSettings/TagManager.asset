@@ -52,3 +52,6 @@ TagManager:
   - name: UI GameWorld
     uniqueID: 3979061149
     locked: 0
+  - name: UI Particles
+    uniqueID: 218881603
+    locked: 0
