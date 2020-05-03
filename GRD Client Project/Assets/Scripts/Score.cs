@@ -44,13 +44,10 @@ public class Score : MonoBehaviour
 
     public void AddScore(int points)
     {
-        SessionManager.Score += points;
-        SessionManager.Score = Mathf.Max(0, SessionManager.Score);
-        
         if (points == 0)
         {
         }
-        else if (points < 0)
+        else if (points < 0 && SessionManager.Score != 0)
         {
             var losePointsMain = _losePoints.main;
             losePointsMain.maxParticles = points * -1;
@@ -62,6 +59,10 @@ public class Score : MonoBehaviour
             gainPointsMain.maxParticles = points;
             _gainPoints.Play();
         }
+
+        SessionManager.Score += points;
+        SessionManager.Score = Mathf.Max(0, SessionManager.Score);
+
 
         UpdateScoreUI();
     }
