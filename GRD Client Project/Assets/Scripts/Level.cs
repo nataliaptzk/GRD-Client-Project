@@ -1,7 +1,4 @@
-﻿using System;
-using System.Collections;
-using System.Collections.Generic;
-using Doozy.Engine.UI;
+﻿using Doozy.Engine.UI;
 using TMPro;
 using UnityEngine;
 using UnityEngine.SceneManagement;
@@ -81,10 +78,10 @@ public class Level : MonoBehaviour
         _scoreTextBox.text = SessionManager.Score.ToString();
 
         // Unity Analytics calls
-        _gameManager.GetComponent<DataCollection>().SendFinishedLevelInfo(GameInfo.title, _gameManager.GetComponent<Score>().correct, _gameManager.GetComponent<Score>().incorrect);
-        _gameManager.GetComponent<DataCollection>().HelpScreenOpened(GameInfo.title, _amountHelpScreenOpened);
+      //  _gameManager.GetComponent<DataCollection>().SendFinishedLevelInfo(GameInfo.title, _gameManager.GetComponent<Score>().correct, _gameManager.GetComponent<Score>().incorrect);
+      //  _gameManager.GetComponent<DataCollection>().HelpScreenOpened(GameInfo.title, _amountHelpScreenOpened);
         // Custom Data Collection Calls
-        DataCollectionFileManager.WriteStringContinuation(_amountHelpScreenOpened.ToString(), value);
+      //  DataCollectionFileManager.WriteStringContinuation(_amountHelpScreenOpened.ToString(), value);
     }
 
     protected void DisplayTutorialScreen()
@@ -152,19 +149,19 @@ public class Level : MonoBehaviour
         SortingGame sortingGame = GetComponent<SortingGame>();
         if (sortingGame)
         {
-            DataCollectionFileManager.AdjustDataFileForReplay(22); // 22 columns to remove from the file from the current session's row
+          //  DataCollectionFileManager.AdjustDataFileForReplay(22); // 22 columns to remove from the file from the current session's row
         }
 
         InvestigationGame investigationGame = GetComponent<InvestigationGame>();
         if (investigationGame)
         {
-            DataCollectionFileManager.AdjustDataFileForReplay(22); // 22 columns to remove from the file from the current session's row
+          //  DataCollectionFileManager.AdjustDataFileForReplay(22); // 22 columns to remove from the file from the current session's row
         }
 
         Quiz quiz = GetComponent<Quiz>();
         if (quiz)
         {
-            DataCollectionFileManager.AdjustDataFileForReplay(9); // 9 columns to remove from the file from the current session's row
+          //  DataCollectionFileManager.AdjustDataFileForReplay(9); // 9 columns to remove from the file from the current session's row
         }
 
         SessionManager.Score = SessionManager.scoreBeforeStartLevel;

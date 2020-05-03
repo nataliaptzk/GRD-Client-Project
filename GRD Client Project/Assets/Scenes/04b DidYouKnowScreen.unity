@@ -186,49 +186,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &126394414
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 126394416}
-  - component: {fileID: 126394415}
-  m_Layer: 0
-  m_Name: DataCollectionSystem
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!114 &126394415
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 126394414}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9600b6dcd00d9f948b4ad564856f146d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
---- !u!4 &126394416
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 126394414}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 902.217, y: 529.9718, z: -298.07068}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 0}
-  m_RootOrder: 6
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &135222388
 GameObject:
   m_ObjectHideFlags: 0
@@ -239,7 +196,6 @@ GameObject:
   m_Component:
   - component: {fileID: 135222390}
   - component: {fileID: 135222389}
-  - component: {fileID: 135222391}
   m_Layer: 0
   m_Name: GameManager
   m_TagString: Untagged
@@ -281,18 +237,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &135222391
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 135222388}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9600b6dcd00d9f948b4ad564856f146d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &904923667
 GameObject:
   m_ObjectHideFlags: 0
@@ -322,7 +266,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2f2e1b8f1ee92ec469e9f69b0fdf2879, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _gameManager: {fileID: 0}
+  _gameManager: {fileID: 135222389}
 --- !u!4 &904923669
 Transform:
   m_ObjectHideFlags: 0
@@ -746,12 +690,12 @@ PrefabInstance:
         type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
-      objectReference: {fileID: 135222391}
+      objectReference: {fileID: 0}
     - target: {fileID: 5165118192740532622, guid: 0d2bc50db2021074c9d2ddef863d1caf,
         type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Target
       value: 
-      objectReference: {fileID: 135222391}
+      objectReference: {fileID: 0}
     - target: {fileID: 5165118192740532622, guid: 0d2bc50db2021074c9d2ddef863d1caf,
         type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
@@ -771,12 +715,12 @@ PrefabInstance:
         type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
-      objectReference: {fileID: 135222391}
+      objectReference: {fileID: 0}
     - target: {fileID: 5165118192118232808, guid: 0d2bc50db2021074c9d2ddef863d1caf,
         type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Target
       value: 
-      objectReference: {fileID: 135222391}
+      objectReference: {fileID: 0}
     - target: {fileID: 5165118192118232808, guid: 0d2bc50db2021074c9d2ddef863d1caf,
         type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
@@ -1710,7 +1654,7 @@ MonoBehaviour:
               m_StringArgument: 05 InvestigationGameScreen
               m_BoolArgument: 0
             m_CallState: 2
-          - m_Target: {fileID: 135222391}
+          - m_Target: {fileID: 0}
             m_MethodName: DidYouKnowAnalytics
             m_Mode: 5
             m_Arguments:
@@ -4044,7 +3988,7 @@ MonoBehaviour:
               m_StringArgument: 05 InvestigationGameScreen
               m_BoolArgument: 0
             m_CallState: 2
-          - m_Target: {fileID: 135222391}
+          - m_Target: {fileID: 0}
             m_MethodName: DidYouKnowAnalytics
             m_Mode: 5
             m_Arguments:

@@ -1,5 +1,4 @@
-﻿using System;
-using System.Collections;
+﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -168,14 +167,14 @@ public class InvestigationGame : Level
 
         for (int i = 0; i < tempCount; i++)
         {
-            DataCollectionFileManager.WriteStringContinuation("run out of time", true);
-            DataCollectionFileManager.WriteStringContinuation("N/A", true);
+          //  DataCollectionFileManager.WriteStringContinuation("run out of time", true);
+        //    DataCollectionFileManager.WriteStringContinuation("N/A", true);
         }
 
         for (int i = 0; i < _rubbishSlot.transform.childCount; i++)
         {
-            DataCollectionFileManager.WriteStringContinuation("run out of time", true);
-            DataCollectionFileManager.WriteStringContinuation("N/A", true);
+        //    DataCollectionFileManager.WriteStringContinuation("run out of time", true);
+        //    DataCollectionFileManager.WriteStringContinuation("N/A", true);
         }
     }
 }

@@ -1,7 +1,6 @@
 ﻿using System;
 using System.Collections;
 using System.Collections.Generic;
-using System.IO;
 using System.Linq;
 using UnityEngine;
 using TMPro;
@@ -26,15 +25,12 @@ public class Quiz : Level
         DisplayTutorialScreen();
         _gameManager = FindObjectOfType<GameManager>();
         _currentQuestion = 0;
-        LoadJson();
-
-        _answersPositions = new List<Vector3> {answerObjects[0].transform.position, answerObjects[1].transform.position, answerObjects[2].transform.position};
+        StartCoroutine(LoadJson());
     }
 
     private void Start()
     {
-        LoadCurrentDifficultyQuestions();
-        FirstQuestion();
+        
     }
 
     private void FirstQuestion()
@@ -120,18 +116,26 @@ public class Quiz : Level
         public List<Question> questions;
     }
 
-    private void LoadJson()
+    private IEnumerator LoadJson()
     {
         string filePath = Application.streamingAssetsPath + "/quizdata.json";
 
-        UnityWebRequest www = UnityWebRequest.Get(filePath);
-        www.SendWebRequest();
-        while (!www.isDone)
+        using (UnityWebRequest www = UnityWebRequest.Get(filePath))
         {
+            yield return www.SendWebRequest();
+            if (string.IsNullOrEmpty(www.error))
+            {
+                string json = System.Text.Encoding.UTF8.GetString(www.downloadHandler.data, 3, www.downloadHandler.data.Length - 3);
+                _questions = JsonUtility.FromJson<RootObject>(json).questions;
+                _answersPositions = new List<Vector3> {answerObjects[0].transform.position, answerObjects[1].transform.position, answerObjects[2].transform.position};
+                LoadCurrentDifficultyQuestions();
+                FirstQuestion();
+            }
+            else
+            {
+                Debug.Log(www.error);
+            }
         }
-
-        string json = System.Text.Encoding.UTF8.GetString(www.downloadHandler.data, 3, www.downloadHandler.data.Length - 3);
-        _questions = JsonUtility.FromJson<RootObject>(json).questions;
     }
 
     public void FillInDataCollectionForRemainingObjects()
@@ -142,7 +146,7 @@ public class Quiz : Level
 
         for (int i = 0; i < tempCount; i++)
         {
-            DataCollectionFileManager.WriteStringContinuation("run out of time", true);
+            //     DataCollectionFileManager.WriteStringContinuation("run out of time", true);
         }
 
         // Count the difference between amount of questions, and fill in remaining fields with N/A text (for custom data collection)
@@ -151,7 +155,7 @@ public class Quiz : Level
 
         for (int i = 0; i < tempQuestionCount; i++)
         {
-            DataCollectionFileManager.WriteStringContinuation("N/A", true);
+            //    DataCollectionFileManager.WriteStringContinuation("N/A", true);
         }
     }
 }

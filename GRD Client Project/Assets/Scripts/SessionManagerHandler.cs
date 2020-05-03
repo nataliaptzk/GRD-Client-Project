@@ -1,7 +1,4 @@
-﻿using System;
-using System.Collections;
-using System.Collections.Generic;
-using TMPro;
+﻿using TMPro;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
@@ -13,7 +10,7 @@ public class SessionManagerHandler : MonoBehaviour
 
     private void Awake()
     {
-        if (SessionManager.CurrentDifficulty == null && SceneManager.GetActiveScene().buildIndex > 2)
+        if (SessionManager.CurrentDifficulty == null && SceneManager.GetActiveScene().buildIndex > 1)
         {
             _gameManager = FindObjectOfType<GameManager>();
             SessionManager.CurrentDifficulty = _gameManager.Difficulties[0]; //set easy by deafult
@@ -43,7 +40,7 @@ public class SessionManagerHandler : MonoBehaviour
 
     public void ResetSessionHandler(Difficulty difficulty)
     {
-        _gameManager.GetComponent<DataCollection>().WhenRestarted(SceneManager.GetActiveScene().name);
+       // _gameManager.GetComponent<DataCollection>().WhenRestarted(SceneManager.GetActiveScene().name);
 
         SessionManager.ResetSession(difficulty);
 
@@ -53,6 +50,6 @@ public class SessionManagerHandler : MonoBehaviour
     public void CreateSessionHandler()
     {
         SessionManager.CreateSession();
-        DataCollectionFileManager.WriteStringNewLine(SessionManager.SessionId, SessionManager.Consent.ToString());
+       // DataCollectionFileManager.WriteStringNewLine(SessionManager.SessionId, SessionManager.Consent.ToString());
     }
 }

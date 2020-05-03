@@ -1,7 +1,4 @@
-﻿using System;
-using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 
 public class DragAndDropGame : MonoBehaviour
 {
@@ -44,16 +41,16 @@ public class DragAndDropGame : MonoBehaviour
                     {
                         _score.AddScore(1 * SessionManager.CurrentDifficulty.pointsGainWhenCorrect);
                         _score.CountCorrect();
-                        DataCollectionFileManager.WriteStringContinuation(gameObject.GetComponent<Rubbish>().type.ToString(), true);
-                        DataCollectionFileManager.WriteStringContinuation("correct", true);
+               //         DataCollectionFileManager.WriteStringContinuation(gameObject.GetComponent<Rubbish>().type.ToString(), true);
+               //         DataCollectionFileManager.WriteStringContinuation("correct", true);
                     }
 
                     else
                     {
                         _score.AddScore(-1 * SessionManager.CurrentDifficulty.pointsLossWhenIncorrect);
                         _score.CountIncorrect();
-                        DataCollectionFileManager.WriteStringContinuation(gameObject.GetComponent<Rubbish>().type.ToString(), true);
-                        DataCollectionFileManager.WriteStringContinuation("incorrect", true);
+                  //      DataCollectionFileManager.WriteStringContinuation(gameObject.GetComponent<Rubbish>().type.ToString(), true);
+                 //       DataCollectionFileManager.WriteStringContinuation("incorrect", true);
                     }
 
                     _sortingGame.CheckIfFinished();

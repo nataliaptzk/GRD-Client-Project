@@ -1,7 +1,4 @@
-﻿using System;
-using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 
 public class Answer : MonoBehaviour
 {
@@ -41,14 +38,14 @@ public class Answer : MonoBehaviour
             {
                 _score.AddScore(1 * SessionManager.CurrentDifficulty.pointsGainWhenCorrect);
                 _score.CountCorrect();
-                DataCollectionFileManager.WriteStringContinuation("correct", true);
+       //         DataCollectionFileManager.WriteStringContinuation("correct", true);
             }
 
             else
             {
                 _score.AddScore(-1 * SessionManager.CurrentDifficulty.pointsLossWhenIncorrect);
                 _score.CountIncorrect();
-                DataCollectionFileManager.WriteStringContinuation("incorrect", true);
+        //        DataCollectionFileManager.WriteStringContinuation("incorrect", true);
             }
 
             gameObject.SetActive(false);

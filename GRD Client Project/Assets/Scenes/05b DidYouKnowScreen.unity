@@ -499,7 +499,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1830658445}
-  - component: {fileID: 1830658444}
   m_Layer: 0
   m_Name: DataCollectionSystem
   m_TagString: Untagged
@@ -507,18 +506,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &1830658444
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1830658443}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9600b6dcd00d9f948b4ad564856f146d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!4 &1830658445
 Transform:
   m_ObjectHideFlags: 0
@@ -684,7 +671,7 @@ PrefabInstance:
         type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
-      objectReference: {fileID: 1984084852}
+      objectReference: {fileID: 0}
     - target: {fileID: 5165118192740532622, guid: 0d2bc50db2021074c9d2ddef863d1caf,
         type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
@@ -694,7 +681,7 @@ PrefabInstance:
         type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Target
       value: 
-      objectReference: {fileID: 1984084852}
+      objectReference: {fileID: 0}
     - target: {fileID: 5165118192740532622, guid: 0d2bc50db2021074c9d2ddef863d1caf,
         type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_MethodName
@@ -714,7 +701,7 @@ PrefabInstance:
         type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
-      objectReference: {fileID: 1984084852}
+      objectReference: {fileID: 0}
     - target: {fileID: 5165118192118232808, guid: 0d2bc50db2021074c9d2ddef863d1caf,
         type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
@@ -724,7 +711,7 @@ PrefabInstance:
         type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Target
       value: 
-      objectReference: {fileID: 1984084852}
+      objectReference: {fileID: 0}
     - target: {fileID: 5165118192118232808, guid: 0d2bc50db2021074c9d2ddef863d1caf,
         type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_MethodName
@@ -1741,7 +1728,7 @@ MonoBehaviour:
               m_StringArgument: 06 QuizGameScene
               m_BoolArgument: 0
             m_CallState: 2
-          - m_Target: {fileID: 1984084852}
+          - m_Target: {fileID: 0}
             m_MethodName: DidYouKnowAnalytics
             m_Mode: 5
             m_Arguments:
@@ -4075,7 +4062,7 @@ MonoBehaviour:
               m_StringArgument: 06 QuizGameScene
               m_BoolArgument: 0
             m_CallState: 2
-          - m_Target: {fileID: 1984084852}
+          - m_Target: {fileID: 0}
             m_MethodName: DidYouKnowAnalytics
             m_Mode: 5
             m_Arguments:
@@ -6046,7 +6033,6 @@ GameObject:
   m_Component:
   - component: {fileID: 1984084851}
   - component: {fileID: 1984084850}
-  - component: {fileID: 1984084852}
   m_Layer: 0
   m_Name: GameManager
   m_TagString: Untagged
@@ -6088,15 +6074,3 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1984084852
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1984084849}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9600b6dcd00d9f948b4ad564856f146d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 

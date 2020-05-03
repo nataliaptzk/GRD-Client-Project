@@ -1,7 +1,6 @@
 ﻿using System;
 using System.Collections;
 using System.Collections.Generic;
-using System.IO;
 using TMPro;
 using UnityEngine;
 using UnityEngine.Networking;
@@ -23,7 +22,7 @@ public class DidYouKnow : MonoBehaviour
 
     private void Start()
     {
-        LoadJson();
+        StartCoroutine(LoadJson());
     }
 
 
@@ -65,19 +64,26 @@ public class DidYouKnow : MonoBehaviour
         public List<Message> messages;
     }
 
-    private void LoadJson()
+    private IEnumerator LoadJson()
     {
         string filePath = Application.streamingAssetsPath + "/didYouKnowData.json";
 
-        UnityWebRequest www = UnityWebRequest.Get(filePath);
-        www.SendWebRequest();
-        while (!www.isDone)
+        using (UnityWebRequest www = UnityWebRequest.Get(filePath))
         {
+            yield return www.SendWebRequest();
+            if (string.IsNullOrEmpty(www.error))
+            {
+                string json = System.Text.Encoding.UTF8.GetString(www.downloadHandler.data, 3, www.downloadHandler.data.Length - 3);
+
+                _DYKMessages = JsonUtility.FromJson<RootObject>(json).messages;
+                LoadCurrentDifficultyDYKMessages();
+            }
+            else
+            {
+                Debug.Log(www.error);
+            }
         }
 
-        string json = System.Text.Encoding.UTF8.GetString(www.downloadHandler.data, 3, www.downloadHandler.data.Length - 3);
 
-        _DYKMessages = JsonUtility.FromJson<RootObject>(json).messages;
-        LoadCurrentDifficultyDYKMessages();
     }
 }

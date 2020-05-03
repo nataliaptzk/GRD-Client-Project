@@ -1,7 +1,4 @@
-﻿using System;
-using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 
 public class SortingGame : Level
 {
@@ -31,8 +28,8 @@ public class SortingGame : Level
 
         for (int i = 0; i < tempCount; i++)
         {
-            DataCollectionFileManager.WriteStringContinuation("run out of time", true);
-            DataCollectionFileManager.WriteStringContinuation("N/A", true);
+        //    DataCollectionFileManager.WriteStringContinuation("run out of time", true);
+       //     DataCollectionFileManager.WriteStringContinuation("N/A", true);
 
         }
     }
