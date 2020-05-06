@@ -1883,7 +1883,7 @@ Canvas:
   m_SortingBucketNormalizedSize: 0
   m_AdditionalShaderChannelsFlag: 0
   m_SortingLayerID: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 1
   m_TargetDisplay: 0
 --- !u!1001 &403047897
 PrefabInstance:
@@ -21591,7 +21591,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _itemToFollow: {fileID: 766964486}
-  _offset: {x: 0, y: -0.25, z: -5.5}
+  _offset: {x: 0, y: 0, z: -5.5}
 --- !u!1 &2136434468
 GameObject:
   m_ObjectHideFlags: 0
