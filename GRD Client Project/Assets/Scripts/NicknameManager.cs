@@ -15,7 +15,7 @@ public class NicknameManager : MonoBehaviour
 
     private void Awake()
     {
-        LoadJsonNames();
+        StartCoroutine(LoadJsonNames());
     }
 
     public void RandomizeFirst(TMP_InputField nameAInputField)
@@ -50,19 +50,24 @@ public class NicknameManager : MonoBehaviour
         public List<SecondPart> Second;
     }
 
-    private void LoadJsonNames()
+    private IEnumerator LoadJsonNames()
     {
         string filePath = Application.streamingAssetsPath + "/names.json";
 
-        UnityWebRequest www = UnityWebRequest.Get(filePath);
-        www.SendWebRequest();
-        while (!www.isDone)
+        using (UnityWebRequest www = UnityWebRequest.Get(filePath))
         {
+            yield return www.SendWebRequest();
+            if (string.IsNullOrEmpty(www.error))
+            {
+                string json = System.Text.Encoding.UTF8.GetString(www.downloadHandler.data, 3, www.downloadHandler.data.Length - 3);
+
+                _firstPart = JsonUtility.FromJson<RootObject>(json).First;
+                _secondPart = JsonUtility.FromJson<RootObject>(json).Second;
+            }
+            else
+            {
+                Debug.Log(www.error);
+            }
         }
-
-        string json = System.Text.Encoding.UTF8.GetString(www.downloadHandler.data, 3, www.downloadHandler.data.Length - 3);
-
-        _firstPart = JsonUtility.FromJson<RootObject>(json).First;
-        _secondPart = JsonUtility.FromJson<RootObject>(json).Second;
     }
 }

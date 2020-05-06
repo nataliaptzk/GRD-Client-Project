@@ -1,7 +1,6 @@
 ﻿using System;
 using System.Collections;
 using System.Collections.Generic;
-using System.IO;
 using System.Linq;
 using UnityEngine;
 using TMPro;
@@ -26,16 +25,9 @@ public class Quiz : Level
         DisplayTutorialScreen();
         _gameManager = FindObjectOfType<GameManager>();
         _currentQuestion = 0;
-        LoadJson();
-
-        _answersPositions = new List<Vector3> {answerObjects[0].transform.position, answerObjects[1].transform.position, answerObjects[2].transform.position};
+        StartCoroutine(LoadJson());
     }
 
-    private void Start()
-    {
-        LoadCurrentDifficultyQuestions();
-        FirstQuestion();
-    }
 
     private void FirstQuestion()
     {
@@ -120,18 +112,26 @@ public class Quiz : Level
         public List<Question> questions;
     }
 
-    private void LoadJson()
+    private IEnumerator LoadJson()
     {
         string filePath = Application.streamingAssetsPath + "/quizdata.json";
 
-        UnityWebRequest www = UnityWebRequest.Get(filePath);
-        www.SendWebRequest();
-        while (!www.isDone)
+        using (UnityWebRequest www = UnityWebRequest.Get(filePath))
         {
+            yield return www.SendWebRequest();
+            if (string.IsNullOrEmpty(www.error))
+            {
+                string json = System.Text.Encoding.UTF8.GetString(www.downloadHandler.data, 3, www.downloadHandler.data.Length - 3);
+                _questions = JsonUtility.FromJson<RootObject>(json).questions;
+                _answersPositions = new List<Vector3> {answerObjects[0].transform.position, answerObjects[1].transform.position, answerObjects[2].transform.position};
+                LoadCurrentDifficultyQuestions();
+                FirstQuestion();
+            }
+            else
+            {
+                Debug.Log(www.error);
+            }
         }
-
-        string json = System.Text.Encoding.UTF8.GetString(www.downloadHandler.data, 3, www.downloadHandler.data.Length - 3);
-        _questions = JsonUtility.FromJson<RootObject>(json).questions;
     }
 
     public void FillInDataCollectionForRemainingObjects()

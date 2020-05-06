@@ -17,8 +17,7 @@ public class TipSetup : MonoBehaviour
     private void Start()
     {
         _currentTipIndex = 0;
-        LoadJsonTips();
-        DisplayTip(0);
+        StartCoroutine(LoadJsonTips());
     }
 
     public void LeftButton()
@@ -61,20 +60,27 @@ public class TipSetup : MonoBehaviour
         public List<Tips> tips;
     }
 
-    private void LoadJsonTips()
+    private IEnumerator LoadJsonTips()
     {
         string filePath = Application.streamingAssetsPath + "/tips.json";
 
-        UnityWebRequest www = UnityWebRequest.Get(filePath);
-        www.SendWebRequest();
-        while (!www.isDone)
+
+        using (UnityWebRequest www = UnityWebRequest.Get(filePath))
         {
+            yield return www.SendWebRequest();
+            if (string.IsNullOrEmpty(www.error))
+            {
+                string json = System.Text.Encoding.UTF8.GetString(www.downloadHandler.data, 3, www.downloadHandler.data.Length - 3);
+                _tips = JsonUtility.FromJson<RootObject>(json).tips;
+
+                LoadCurrentDifficultyTips();
+                DisplayTip(0);
+            }
+            else
+            {
+                Debug.Log(www.error);
+            }
         }
-
-        string json = System.Text.Encoding.UTF8.GetString(www.downloadHandler.data, 3, www.downloadHandler.data.Length - 3);
-        _tips = JsonUtility.FromJson<RootObject>(json).tips;
-
-        LoadCurrentDifficultyTips();
     }
 
     private void LoadCurrentDifficultyTips()
