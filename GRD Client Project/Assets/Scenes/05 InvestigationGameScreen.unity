@@ -1883,7 +1883,7 @@ Canvas:
   m_SortingBucketNormalizedSize: 0
   m_AdditionalShaderChannelsFlag: 0
   m_SortingLayerID: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 1
   m_TargetDisplay: 0
 --- !u!1001 &403047897
 PrefabInstance:
@@ -3324,21 +3324,6 @@ PrefabInstance:
       propertyPath: m_SortingLayer
       value: 3
       objectReference: {fileID: 0}
-    - target: {fileID: 5531355841818836161, guid: 3c8380c3e4493234c9d48362927cba80,
-        type: 3}
-      propertyPath: m_LocalRotation.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5531355841818836161, guid: 3c8380c3e4493234c9d48362927cba80,
-        type: 3}
-      propertyPath: m_LocalRotation.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5531355841818836161, guid: 3c8380c3e4493234c9d48362927cba80,
-        type: 3}
-      propertyPath: m_LocalRotation.z
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 7013996849903587115, guid: 3c8380c3e4493234c9d48362927cba80,
         type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.size
@@ -3368,6 +3353,21 @@ PrefabInstance:
         type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
       value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
+    - target: {fileID: 5531355841818836161, guid: 3c8380c3e4493234c9d48362927cba80,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5531355841818836161, guid: 3c8380c3e4493234c9d48362927cba80,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5531355841818836161, guid: 3c8380c3e4493234c9d48362927cba80,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5531355841818836160, guid: 3c8380c3e4493234c9d48362927cba80,
         type: 3}
@@ -21617,7 +21617,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _itemToFollow: {fileID: 766964486}
-  _offset: {x: 0, y: -0.25, z: -5.5}
+  _offset: {x: 0, y: 0, z: -5.5}
 --- !u!1 &2136434468
 GameObject:
   m_ObjectHideFlags: 0
