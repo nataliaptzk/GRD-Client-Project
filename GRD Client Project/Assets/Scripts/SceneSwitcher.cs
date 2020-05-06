@@ -1,8 +1,10 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 using UnityEngine.SceneManagement;
 
+/// <summary>
+/// This class is responsible for changing scenes and quitting the game.
+/// - Natalia Pietrzak
+/// </summary>
 public class SceneSwitcher : MonoBehaviour
 {
     public void SwitchScene(string sceneName)

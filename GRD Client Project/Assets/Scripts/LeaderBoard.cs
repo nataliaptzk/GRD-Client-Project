@@ -1,17 +1,16 @@
 ﻿using System;
-using System.Collections;
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
-using System.Text;
-using Newtonsoft.Json.Utilities;
 using TMPro;
 using UnityEngine;
-using UnityEngine.Networking;
 using UnityEngine.SceneManagement;
 
-// https://stackoverflow.com/questions/44658808/unity-json-add-data-to-existing-json-data
 
+/// <summary>
+/// This class manages the leader board. It reads and writes to the .json file the score entries.
+/// - Natalia Pietrzak
+/// </summary>
 public class LeaderBoard : MonoBehaviour
 {
     [SerializeField] private List<TextMeshProUGUI> _names = new List<TextMeshProUGUI>();
@@ -133,10 +132,6 @@ public class LeaderBoard : MonoBehaviour
             _names[5].text = sortedPlayersCurrentDifficulty[currentPlayerIndex].name;
             _scores[5].text = sortedPlayersCurrentDifficulty[currentPlayerIndex].finalScore.ToString();
             _youIndicators[5].text = "you";
-        }
-
-        for (int i = 0; i < checkLength; i++)
-        {
         }
     }
 }

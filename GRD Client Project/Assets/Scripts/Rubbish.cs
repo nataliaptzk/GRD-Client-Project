@@ -1,7 +1,9 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 
+/// <summary>
+/// This class contains the defition of the rubbish types.
+/// - Natalia Pietrzak
+/// </summary>
 public class Rubbish : MonoBehaviour
 {
     public rubbishTypes type;

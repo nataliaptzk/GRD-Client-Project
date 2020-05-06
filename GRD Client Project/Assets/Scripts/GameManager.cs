@@ -1,9 +1,11 @@
-﻿using System;
-using System.Collections;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using UnityEngine;
 
 
+/// <summary>
+/// This class hold mini-games profiles and game difficulties.
+/// - Natalia Pietrzak
+/// </summary>
 public class GameManager : MonoBehaviour
 {
     [SerializeField] private List<MiniGameInfo> _miniGames = new List<MiniGameInfo>();

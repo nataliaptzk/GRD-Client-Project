@@ -5,6 +5,10 @@ using TMPro;
 using UnityEngine;
 using UnityEngine.Networking;
 
+/// <summary>
+/// This class is responsible for setting up the tips screen in the help screen for the current difficulty. This class reads the tips from the .json file.
+/// - Natalia Pietrzak
+/// </summary>
 public class TipSetup : MonoBehaviour
 {
     [SerializeField] private TextMeshProUGUI _textBox;

@@ -1,11 +1,14 @@
 ﻿using System;
 using System.Collections;
 using System.Collections.Generic;
-using System.Linq;
 using UnityEngine;
 using TMPro;
 using UnityEngine.Networking;
 
+/// <summary>
+/// This class is class responsible for the behaviour of the Quiz game. It reads the questions from the .json file, displays the questions and answers on the screen and fills in data in data collection file when the player exits the game before finishing
+/// - Natalia Pietrzak
+/// </summary>\
 public class Quiz : Level
 {
     [SerializeField] private TextMeshProUGUI _questionField;

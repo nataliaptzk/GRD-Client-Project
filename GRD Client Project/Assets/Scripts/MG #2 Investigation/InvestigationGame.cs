@@ -1,8 +1,12 @@
-﻿using System;
-using System.Collections;
+﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+/// <summary>
+/// This class is class responsible for the behaviour of the investigation game. It calls the rubbish generation and fills in data in data collection file when the player exits the game before finishing.
+/// It also manages the behaviour of the machine hook and manages the players input.
+/// - Natalia Pietrzak
+/// </summary>
 public class InvestigationGame : Level
 {
     [SerializeField] private GameObject _rubbishSlotsParent;

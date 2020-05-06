@@ -1,8 +1,9 @@
-﻿using System;
-using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 
+/// <summary>
+/// This class checks the collisions the bin has with rubbish game objects.
+/// - Natalia Pietrzak
+/// </summary>\
 public class CheckBin : MonoBehaviour
 {
     private Score _score;

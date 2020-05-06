@@ -1,10 +1,12 @@
 ﻿using System;
-using System.Collections;
 using System.Collections.Generic;
-using System.Linq;
 using UnityEngine;
 using Random = UnityEngine.Random;
 
+/// <summary>
+/// This class generates random rubbish items in the sorting and investigation mini-games.
+/// - Natalia Pietrzak
+/// </summary>
 public class RubbishGenerator : MonoBehaviour
 {
     [SerializeField] private List<Sprite> _containers = new List<Sprite>();

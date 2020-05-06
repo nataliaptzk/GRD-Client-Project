@@ -1,9 +1,10 @@
-﻿using System;
-using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 using TMPro;
 
+/// <summary>
+/// This class manages the score.
+/// - Natalia Pietrzak
+/// </summary>
 public class Score : MonoBehaviour
 {
     [SerializeField] private TextMeshProUGUI scoreField;

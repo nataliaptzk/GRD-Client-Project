@@ -1,7 +1,9 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 
+/// <summary>
+/// This class is a serializable object asset, and allows to create new difficulty levels and change their values.
+/// - Natalia Pietrzak
+/// </summary>
 [CreateAssetMenu(menuName = "Difficulties/New Difficulty")]
 public class Difficulty : ScriptableObject
 {

@@ -1,11 +1,12 @@
-﻿using System;
-using System.Collections;
-using System.Collections.Generic;
-using Doozy.Engine.UI;
+﻿using Doozy.Engine.UI;
 using TMPro;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
+/// <summary>
+/// This class is a parent class for all mini-games. It consists of general behaviours for the levels, such as displaying tutorial, help screen etc.
+/// - Natalia Pietrzak
+/// </summary>
 public class Level : MonoBehaviour
 {
     [SerializeField] protected MiniGameInfo _gameInfo;

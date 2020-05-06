@@ -1,7 +1,9 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 
+/// <summary>
+/// This class is attached to the game object in the main menu to prevent the background audio game object being destroyed on scene reload.
+/// - Natalia Pietrzak
+/// </summary>
 public class BGMusic : MonoBehaviour
 {
     private static BGMusic _bgMusic;

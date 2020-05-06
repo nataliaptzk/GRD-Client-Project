@@ -1,8 +1,10 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using Doozy.Engine.UI;
+﻿using Doozy.Engine.UI;
 using UnityEngine;
 
+/// <summary>
+/// This class is responsible for the pause menu.
+/// - Natalia Pietrzak
+/// </summary>
 public class PauseState : MonoBehaviour
 {
     private bool _isPaused;

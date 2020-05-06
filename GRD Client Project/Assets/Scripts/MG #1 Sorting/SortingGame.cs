@@ -1,8 +1,9 @@
-﻿using System;
-using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 
+/// <summary>
+/// This class is class responsible for the behaviour of the Sorting game. It calls the rubbish generation and fills in data in data collection file when the player exits the game before finishing.
+/// - Natalia Pietrzak
+/// </summary>
 public class SortingGame : Level
 {
     [SerializeField] private GameObject _rubbishSlotsParent;
@@ -33,7 +34,6 @@ public class SortingGame : Level
         {
             DataCollectionFileManager.WriteStringContinuation("run out of time", true);
             DataCollectionFileManager.WriteStringContinuation("N/A", true);
-
         }
     }
 

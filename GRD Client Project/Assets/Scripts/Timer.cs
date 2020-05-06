@@ -1,10 +1,12 @@
-﻿using System;
-using System.Collections;
-using System.Collections.Generic;
+﻿using System.Collections;
 using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
 
+/// <summary>
+/// This class is responsible for counting the time in the mini-games.
+/// - Natalia Pietrzak
+/// </summary>
 public class Timer : MonoBehaviour
 {
     [SerializeField] private TextMeshProUGUI timeText;

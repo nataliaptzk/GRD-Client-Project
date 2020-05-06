@@ -6,6 +6,10 @@ using UnityEngine;
 using UnityEngine.Networking;
 using UnityEngine.SceneManagement;
 
+/// <summary>
+/// This class is responsible for reading the did you know information from the file and displaying it on the screen.
+/// - Natalia Pietrzak
+/// </summary>\
 public class DidYouKnow : MonoBehaviour
 {
     [SerializeField] private List<Message> _DYKMessages = new List<Message>();

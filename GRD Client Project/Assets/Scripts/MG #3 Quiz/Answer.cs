@@ -1,8 +1,9 @@
-﻿using System;
-using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 
+/// <summary>
+/// This class is attached to the answers game objects. This object can be dragged and dropped. This class checks for overlapping collision when the objects is dropped.
+/// - Natalia Pietrzak
+/// </summary>
 public class Answer : MonoBehaviour
 {
     public int answerIndex;

@@ -1,9 +1,10 @@
-﻿using System;
-using System.Collections;
-using System.Collections.Generic;
-using TMPro;
+﻿using TMPro;
 using UnityEngine;
 
+/// <summary>
+/// This class sets up the welcome panel on each of the mini-games.
+/// - Natalia Pietrzak
+/// </summary>
 public class WelcomeScreenSetup : MonoBehaviour
 {
     [SerializeField] private TextMeshProUGUI _titleField;

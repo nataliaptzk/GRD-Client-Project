@@ -1,10 +1,10 @@
-﻿using System;
-using System.Collections;
-using System.Collections.Generic;
-using System.IO;
+﻿using System.Collections.Generic;
 using UnityEngine;
 
-
+/// <summary>
+/// This class contains additional extenstion functions.
+/// - Natalia Pietrzak
+/// </summary>
 public static class Extensions
 {
     public static bool HasComponent<T>(this GameObject obj) where T : Component

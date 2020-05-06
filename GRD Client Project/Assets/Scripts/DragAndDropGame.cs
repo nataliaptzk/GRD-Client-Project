@@ -1,8 +1,9 @@
-﻿using System;
-using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 
+/// <summary>
+/// This class is attached to rubbish game objects in the sorting mini-game. When the drag ends, it checks for overlapping colliders and checks for bin colliders.
+/// - Natalia Pietrzak
+/// </summary>
 public class DragAndDropGame : MonoBehaviour
 {
     private Score _score;

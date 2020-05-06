@@ -1,8 +1,10 @@
 ﻿using System;
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
+/// <summary>
+/// This static class holds values from the current session.
+/// - Natalia Pietrzak
+/// </summary>
 public static class SessionManager
 {
     private static Difficulty _currentDifficulty;

@@ -1,7 +1,4 @@
-﻿using System;
-using System.Collections;
-using System.Collections.Generic;
-using System.IO;
+﻿using System.IO;
 using System.Linq;
 using System.Security.Cryptography;
 using System.Text;
@@ -11,8 +8,10 @@ using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityGoogleDrive;
 
-//using UnityEngine.Windows;
-
+/// <summary>
+/// This class manages the admin options.
+/// - Natalia Pietrzak
+/// </summary>
 public class Admin : MonoBehaviour
 {
     [SerializeField] private GameObject _incorrectMessage;

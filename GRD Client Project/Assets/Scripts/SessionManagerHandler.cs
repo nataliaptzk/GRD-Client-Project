@@ -1,11 +1,12 @@
-﻿using System;
-using System.Collections;
-using System.Collections.Generic;
-using TMPro;
+﻿using TMPro;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
+/// <summary>
+/// This class is a handler class to change values of the SessionManager.cs through the UI buttons.
+/// - Natalia Pietrzak
+/// </summary>
 public class SessionManagerHandler : MonoBehaviour
 {
     [SerializeField] private GameManager _gameManager;

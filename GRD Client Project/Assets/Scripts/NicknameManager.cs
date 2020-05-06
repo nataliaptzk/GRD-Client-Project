@@ -1,12 +1,15 @@
 ﻿using System;
 using System.Collections;
 using System.Collections.Generic;
-using System.IO;
 using TMPro;
 using UnityEngine;
 using UnityEngine.Networking;
 using Random = UnityEngine.Random;
 
+/// <summary>
+/// This class reads the names from the .json file and displays it on the screen. The user can randomise using UI buttons.
+/// - Natalia Pietrzak
+/// </summary>
 public class NicknameManager : MonoBehaviour
 {
     [SerializeField] private List<FirstPart> _firstPart = new List<FirstPart>();

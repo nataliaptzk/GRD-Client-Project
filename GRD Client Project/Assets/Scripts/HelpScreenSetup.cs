@@ -1,12 +1,10 @@
-﻿using System;
-using System.Collections;
-using System.Collections.Generic;
-using System.IO;
-using System.Linq;
+﻿using System.Collections.Generic;
 using UnityEngine;
-using TMPro;
-using UnityEngine.Networking;
 
+/// <summary>
+/// This class is responsible for setting up the help screen for the current difficulty.
+/// - Natalia Pietrzak
+/// </summary>
 public class HelpScreenSetup : MonoBehaviour
 {
     [SerializeField] private List<GameObject> _helps = new List<GameObject>();

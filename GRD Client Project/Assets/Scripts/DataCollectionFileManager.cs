@@ -1,11 +1,12 @@
 ﻿using System;
-using System.Collections;
-using System.Collections.Generic;
 using System.IO;
 using System.Linq;
-using UnityEditor;
 using UnityEngine;
 
+/// <summary>
+/// This class is responsible for custom data collection and saving it to the file.
+/// - Natalia Pietrzak
+/// </summary>\
 public static class DataCollectionFileManager
 {
     private static string _fileName = "/datacollection.txt";

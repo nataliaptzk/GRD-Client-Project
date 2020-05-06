@@ -1,9 +1,12 @@
-﻿using System.Collections;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Analytics;
 using UnityEngine.SceneManagement;
 
+/// <summary>
+/// This class is responsible for Unity Analytics data collection.
+/// - Natalia Pietrzak
+/// </summary>\
 public class DataCollection : MonoBehaviour
 {
     public void SendFinishedLevelInfo(string title, int correctAmount, int incorrectAmount)
@@ -65,7 +68,7 @@ public class DataCollection : MonoBehaviour
             didYouKnowInfo.Add("TimeSpentOnThePage", Time.timeSinceLevelLoad);
 
             // Custom Data Collection
-            DataCollectionFileManager.WriteStringContinuation(answer,true);
+            DataCollectionFileManager.WriteStringContinuation(answer, true);
             DataCollectionFileManager.WriteStringContinuation(Time.timeSinceLevelLoad.ToString(), true);
 
             AnalyticsResult ar = Analytics.CustomEvent("DYK_INFO", didYouKnowInfo);

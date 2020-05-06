@@ -1,8 +1,10 @@
-﻿using System;
-using System.Collections;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using UnityEngine;
 
+/// <summary>
+/// This class sets up bins when the scene starts.
+/// - Natalia Pietrzak
+/// </summary>
 public class BinsSetup : MonoBehaviour
 {
     [SerializeField] private List<GameObject> _bins = new List<GameObject>();

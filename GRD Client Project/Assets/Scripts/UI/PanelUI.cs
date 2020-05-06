@@ -1,9 +1,10 @@
-﻿using System;
-using System.Collections;
-using System.Collections.Generic;
-using Doozy.Engine.UI;
+﻿using Doozy.Engine.UI;
 using UnityEngine;
 
+/// <summary>
+/// This class manages the behaviours of UI panels and the animations.
+/// - Natalia Pietrzak
+/// </summary>
 public class PanelUI : MonoBehaviour
 {
     [SerializeField] private UIView _uiView;
@@ -13,7 +14,7 @@ public class PanelUI : MonoBehaviour
         _uiView.Show();
     }
 
-[ContextMenu("GetMyReference")]
+    [ContextMenu("GetMyReference")]
     public void GetMyReference()
     {
         _uiView = gameObject.GetComponent<UIView>();
